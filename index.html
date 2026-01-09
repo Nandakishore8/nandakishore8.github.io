@@ -6,16 +6,22 @@
     <title>Free Mutual Fund Portfolio Review | AMFI Registered MFD</title>
     <style>
         :root {
-            --primary: #2080a8;
-            --primary-dark: #1a6a8a;
-            --accent: #d4a574;
-            --bg-light: #f8f9fa;
-            --bg-dark: #1f2937;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --success: #10b981;
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #06b6d4;
+            --accent: #ec4899;
             --warning: #f59e0b;
+            --success: #10b981;
             --error: #ef4444;
+            --text-dark: #0f172a;
+            --text-light: #64748b;
+            --bg-light: #f0f9ff;
+            --bg-dark: #0f172a;
+            --card-bg: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+            --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%);
+            --gradient-accent: linear-gradient(135deg, #ec4899 0%, #f59e0b 100%);
+            --gradient-success: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
         }
 
         * {
@@ -24,36 +30,64 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
-            background: var(--bg-light);
+            background: linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%);
         }
 
         /* Navigation */
         nav {
-            background: white;
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.2rem 2rem;
+            box-shadow: 0 8px 32px rgba(99, 102, 241, 0.12);
             position: sticky;
             top: 0;
             z-index: 100;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(99, 102, 241, 0.15);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-image {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 8px rgba(99, 102, 241, 0.2));
+            transition: transform 0.3s ease;
+        }
+
+        .logo-image:hover {
+            transform: scale(1.05);
         }
 
         .logo {
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary);
+            font-weight: 800;
+            font-size: 1.4rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             text-decoration: none;
+            letter-spacing: -0.5px;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             list-style: none;
         }
 
@@ -61,27 +95,51 @@
             color: var(--text-dark);
             text-decoration: none;
             font-size: 0.95rem;
-            transition: color 0.3s;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
         .nav-links a:hover {
             color: var(--primary);
         }
 
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
         .cta-button {
-            background: var(--primary);
+            background: var(--gradient-primary);
             color: white;
-            padding: 0.7rem 1.5rem;
+            padding: 0.9rem 2rem;
             border: none;
-            border-radius: 6px;
+            border-radius: 10px;
             cursor: pointer;
-            font-weight: 600;
-            transition: background 0.3s;
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             text-decoration: none;
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+            letter-spacing: 0.3px;
         }
 
         .cta-button:hover {
-            background: var(--primary-dark);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 36px rgba(99, 102, 241, 0.4);
+        }
+
+        .cta-button:active {
+            transform: translateY(-2px);
         }
 
         @media (max-width: 768px) {
@@ -92,51 +150,89 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            background: var(--gradient-primary);
             color: white;
-            padding: 4rem 2rem;
+            padding: 7rem 2rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(35px);
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+            font-size: 3.8rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.15;
+            font-weight: 900;
+            letter-spacing: -1.2px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
+            font-size: 1.25rem;
+            margin-bottom: 2.8rem;
+            opacity: 0.98;
+            line-height: 1.8;
+            font-weight: 500;
         }
 
         .hero-cta {
             display: inline-block;
-            background: var(--accent);
-            color: var(--bg-dark);
-            padding: 1rem 2.5rem;
-            border-radius: 8px;
-            font-weight: 700;
+            background: white;
+            color: var(--primary);
+            padding: 1.3rem 3.2rem;
+            border-radius: 12px;
+            font-weight: 800;
             text-decoration: none;
-            font-size: 1.1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 1.15rem;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             border: none;
             cursor: pointer;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+            letter-spacing: 0.5px;
         }
 
         .hero-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 50px rgba(0, 0, 0, 0.2);
         }
 
         @media (max-width: 768px) {
+            .hero {
+                padding: 3.5rem 1.5rem;
+            }
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             .hero p {
                 font-size: 1rem;
@@ -145,178 +241,355 @@
 
         /* Pain Points Section */
         .pain-points {
-            background: white;
-            padding: 4rem 2rem;
+            background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 6rem 2rem;
         }
 
         .section-container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
             color: var(--text-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 3.5rem;
+            font-weight: 500;
         }
 
         .pain-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
         }
 
         .pain-card {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 10px;
-            border-left: 4px solid var(--warning);
-            transition: transform 0.3s, box-shadow 0.3s;
+            background: white;
+            padding: 2.8rem;
+            border-radius: 16px;
+            border: 2px solid transparent;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pain-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-accent);
         }
 
         .pain-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(99, 102, 241, 0.2);
+            border-color: rgba(236, 72, 153, 0.3);
         }
 
         .pain-card h3 {
-            color: var(--error);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.4px;
         }
 
         .pain-card p {
             color: var(--text-light);
-            font-size: 0.95rem;
-            line-height: 1.5;
+            font-size: 1rem;
+            line-height: 1.7;
+            font-weight: 500;
         }
 
         /* Value Proposition */
         .value-section {
-            background: var(--bg-light);
-            padding: 4rem 2rem;
+            background: white;
+            padding: 6rem 2rem;
         }
 
         .value-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.8rem;
         }
 
         .value-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 3.2rem 2.8rem;
+            border-radius: 18px;
             text-align: center;
-            border-top: 4px solid var(--success);
+            border: 2px solid rgba(99, 102, 241, 0.1);
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.08);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--gradient-secondary);
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(99, 102, 241, 0.15);
+            border-color: rgba(99, 102, 241, 0.3);
         }
 
         .value-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 4.5rem;
+            margin-bottom: 2rem;
+            animation: float 3.5s ease-in-out infinite;
+            display: inline-block;
+            filter: drop-shadow(0 4px 12px rgba(99, 102, 241, 0.15));
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.08); }
         }
 
         .value-card h3 {
-            margin-bottom: 0.5rem;
-            color: var(--primary);
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+            font-weight: 800;
+            font-size: 1.35rem;
+            letter-spacing: -0.3px;
+        }
+
+        .value-card p {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.7;
+            font-weight: 500;
         }
 
         /* Statistics Section */
         .stats-section {
-            background: var(--primary);
+            background: var(--gradient-secondary);
             color: white;
-            padding: 4rem 2rem;
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -15%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(50px);
+        }
+
+        .stats-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
         }
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5rem;
             text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item {
+            padding: 2.8rem 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(12px);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .stat-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-8px);
         }
 
         .stat-item h4 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 3.5rem;
+            margin-bottom: 0.8rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .stat-item p {
-            opacity: 0.9;
+            opacity: 0.95;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
         }
 
         /* Testimonials */
         .testimonials-section {
-            background: white;
-            padding: 4rem 2rem;
+            background: linear-gradient(180deg, #f0f9ff 0%, #f8fafc 100%);
+            padding: 6rem 2rem;
         }
 
         .testimonial-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.8rem;
         }
 
         .testimonial-card {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 10px;
-            border-left: 4px solid var(--accent);
+            background: white;
+            padding: 3.2rem;
+            border-radius: 18px;
+            border: 2px solid transparent;
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.08);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            right: 15px;
+            font-size: 5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0.2;
+            font-weight: 900;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(99, 102, 241, 0.2);
+            border-color: rgba(99, 102, 241, 0.2);
         }
 
         .stars {
-            color: var(--warning);
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
+            color: #fbbf24;
+            margin-bottom: 1.8rem;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
         }
 
         .testimonial-text {
             font-style: italic;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             color: var(--text-light);
+            line-height: 1.9;
+            font-size: 1rem;
+            font-weight: 500;
         }
 
         .testimonial-author {
-            font-weight: 600;
-            color: var(--text-dark);
+            font-weight: 800;
+            color: var(--primary-dark);
+            font-size: 1rem;
+            letter-spacing: 0.3px;
         }
 
         /* Lead Form Section */
         .lead-section {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            background: var(--gradient-accent);
             color: white;
-            padding: 4rem 2rem;
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lead-section::before {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
         }
 
         .form-container {
-            max-width: 500px;
+            max-width: 560px;
             margin: 0 auto;
             background: white;
-            padding: 2rem;
-            border-radius: 10px;
+            padding: 4rem;
+            border-radius: 20px;
             color: var(--text-dark);
+            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.2);
+            position: relative;
+            z-index: 1;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .form-container h2 {
+            font-weight: 800;
+            font-size: 1.8rem;
+            letter-spacing: -0.4px;
+            margin-bottom: 2rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+            margin-bottom: 0.7rem;
+            font-weight: 700;
             color: var(--text-dark);
+            font-size: 1rem;
+            letter-spacing: 0.2px;
         }
 
         .form-group input,
         .form-group select {
             width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #e5e7eb;
-            border-radius: 6px;
+            padding: 1.2rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
             font-size: 1rem;
             font-family: inherit;
-            transition: border-color 0.3s;
+            transition: all 0.3s ease;
+            background-color: #f8fafc;
+            font-weight: 500;
             -webkit-autofill: none !important;
             -webkit-autofill-text-fill-color: var(--text-dark) !important;
         }
@@ -325,115 +598,148 @@
         .form-group select:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(32, 128, 168, 0.1);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15), 0 0 20px rgba(99, 102, 241, 0.2);
+            background-color: white;
         }
 
         .form-submit {
             width: 100%;
-            padding: 1rem;
-            background: var(--primary);
+            padding: 1.3rem;
+            background: var(--gradient-primary);
             color: white;
             border: none;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 1rem;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1.1rem;
             cursor: pointer;
-            transition: background 0.3s, transform 0.2s;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+            letter-spacing: 0.5px;
         }
 
         .form-submit:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 45px rgba(99, 102, 241, 0.4);
         }
 
         .form-submit:active {
-            transform: translateY(0);
+            transform: translateY(-1px);
         }
 
         .privacy-text {
-            font-size: 0.85rem;
-            color: #9ca3af;
-            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin-top: 1.5rem;
             text-align: center;
+            font-weight: 500;
         }
 
         /* Success Message */
         .success-message {
             display: none;
-            background: var(--success);
+            background: var(--gradient-success);
             color: white;
-            padding: 2rem;
+            padding: 2.5rem;
             text-align: center;
-            border-radius: 10px;
+            border-radius: 16px;
         }
 
         .success-message.show {
             display: block;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .success-message h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
             margin-bottom: 1rem;
+            letter-spacing: -0.3px;
+        }
+
+        .success-message p {
+            font-weight: 500;
+            line-height: 1.8;
         }
 
         .whatsapp-button-success {
-            background: #25d366;
+            background: linear-gradient(135deg, #25d366 0%, #1fbb5b 100%);
             color: white;
-            padding: 0.75rem 1.5rem;
+            padding: 1rem 2.5rem;
             border: none;
-            border-radius: 6px;
+            border-radius: 12px;
             cursor: pointer;
-            font-weight: 600;
-            margin-top: 1rem;
+            font-weight: 800;
+            margin-top: 1.8rem;
             text-decoration: none;
             display: inline-block;
-            transition: background 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+            font-size: 1.05rem;
         }
 
         .whatsapp-button-success:hover {
-            background: #20ba61;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 36px rgba(37, 211, 102, 0.4);
         }
 
         /* Footer */
         footer {
-            background: var(--text-dark);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: white;
-            padding: 2rem;
+            padding: 3.5rem 2rem;
             text-align: center;
         }
 
         .footer-content {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
         .footer-content p {
-            opacity: 0.8;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+            opacity: 0.85;
+            font-size: 0.95rem;
+            margin-bottom: 0.7rem;
+            font-weight: 500;
         }
 
         .compliance-text {
-            font-size: 0.8rem;
-            opacity: 0.7;
-            margin-top: 1rem;
+            font-size: 0.85rem;
+            opacity: 0.75;
+            margin-top: 1.5rem;
+            line-height: 1.7;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero {
-                padding: 2rem 1rem;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
+            .pain-points, .value-section, .stats-section, .testimonials-section, .lead-section {
+                padding: 3.5rem 1.5rem;
             }
 
             .section-title {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
 
-            .pain-grid, .value-grid, .stats-grid {
-                gap: 1rem;
+            .pain-grid, .value-grid, .stats-grid, .testimonial-grid {
+                gap: 1.5rem;
+            }
+
+            .form-container {
+                padding: 2.5rem;
+            }
+
+            .hero-cta {
+                padding: 1rem 2.4rem;
             }
         }
     </style>
@@ -441,7 +747,10 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <a href="#" class="logo">💼 Nanda Financial Services</a>
+        <div class="nav-brand">
+            <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/c55bdb77-8b21-4c5e-9097-4ae015441716" alt="NIFS Logo" class="logo-image">
+            <a href="#" class="logo">Nanda Financial Services</a>
+        </div>
         <ul class="nav-links">
             <li><a href="#benefits">Why Us</a></li>
             <li><a href="#form">Get Started</a></li>
@@ -453,7 +762,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Get Your Mutual Fund Portfolio Optimized</h1>
-            <p>Discover how much you're losing to Decline in Value of Underlying Assets, overlapping funds, and underperforming schemes</p>
+            <p>Discover how much you're losing to underperforming assets, overlapping funds, and hidden fees. Get expert analysis—completely free!</p>
             <button class="hero-cta" onclick="document.getElementById('form').scrollIntoView({behavior: 'smooth'})">Get Free Review Now</button>
         </div>
     </section>
@@ -462,18 +771,19 @@
     <section class="pain-points">
         <div class="section-container">
             <h2 class="section-title">⚠️ Common Mutual Fund Mistakes</h2>
+            <p class="section-subtitle">These costly errors could be costing you thousands in returns</p>
             <div class="pain-grid">
                 <div class="pain-card">
-                    <h3>💸 Decline in Value of Underlying Assets</h3>
-                    <p>I directly invested in poor performing Stocks and Bonds, then switched to good performing Funds with help of Nanda Financial Services!</p>
+                    <h3>📉 Underperforming Assets</h3>
+                    <p>Holding funds that haven't beaten benchmarks in 3+ years? Your money could be working much harder elsewhere.</p>
                 </div>
                 <div class="pain-card">
                     <h3>🔄 Overlapping Funds</h3>
-                    <p>Your 5 "diversified" funds might own the same 20 stocks. That's concentration risk, not diversification!</p>
+                    <p>Your 5 "diversified" funds might own the same 20 stocks. That's concentration risk, not real diversification!</p>
                 </div>
                 <div class="pain-card">
-                    <h3>📉 Underperformers</h3>
-                    <p>Holding funds that haven't beaten benchmarks in 3 years? Time to switch and boost returns.</p>
+                    <h3>💸 Hidden Fees & Expenses</h3>
+                    <p>Regular plan vs Direct plan: You could be losing 1-2% annually to unnecessary commissions and charges.</p>
                 </div>
             </div>
         </div>
@@ -482,27 +792,28 @@
     <!-- Value Proposition -->
     <section class="value-section" id="benefits">
         <div class="section-container">
-            <h2 class="section-title">✅ What You Get</h2>
+            <h2 class="section-title">✅ What You Get in Your Free Review</h2>
+            <p class="section-subtitle">Comprehensive analysis to maximize your returns</p>
             <div class="value-grid">
                 <div class="value-card">
                     <div class="value-icon">📊</div>
-                    <h3>Comprehensive Analysis</h3>
-                    <p>Fund-wise returns, XIRR, benchmark comparison, and detailed performance metrics</p>
+                    <h3>Complete Analysis</h3>
+                    <p>Fund-wise returns, XIRR calculations, benchmark comparisons, and detailed performance metrics</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">🎯</div>
                     <h3>Personalized Recommendations</h3>
-                    <p>Tailored suggestions to improve returns and reduce risk based on your goals</p>
+                    <p>Tailored suggestions to improve returns and optimize risk based on your financial goals</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">💰</div>
                     <h3>Savings Opportunity</h3>
-                    <p>Identify how much you can save by switching to direct plans and optimizing allocation</p>
+                    <p>Identify potential annual savings by switching to direct plans and optimizing your allocation</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">👥</div>
-                    <h3>Expert Guidance</h3>
-                    <p>1-on-1 consultation with AMFI registered advisor to discuss your portfolio</p>
+                    <h3>Expert Consultation</h3>
+                    <p>1-on-1 discussion with an AMFI registered Distributor to clarify your portfolio strategy</p>
                 </div>
             </div>
         </div>
@@ -514,14 +825,14 @@
             <div class="stats-grid">
                 <div class="stat-item">
                     <h4>₹50L+</h4>
-                    <p>Portfolio Value Reviewed</p>
+                    <p>Portfolio Value Analyzed</p>
                 </div>
                 <div class="stat-item">
                     <h4>500+</h4>
-                    <p>Clients Served</p>
+                    <p>Happy Clients</p>
                 </div>
                 <div class="stat-item">
-                    <h4>₹2.5Cr</h4>
+                    <h4>₹2.5Cr+</h4>
                     <p>Potential Savings Identified</p>
                 </div>
                 <div class="stat-item">
@@ -536,21 +847,22 @@
     <section class="testimonials-section">
         <div class="section-container">
             <h2 class="section-title">What Clients Say</h2>
+            <p class="section-subtitle">Real experiences from people like you</p>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"I directly invested in poor performing Stocks and Bonds, then switched to good performing Funds with help of Nanda Financial Services!"</p>
-                    <p class="testimonial-author">- Rajesh Kumar, Bangalore</p>
+                    <p class="testimonial-text">"My portfolio had so much overlap! Consolidated from 8 funds to 3 without losing diversification. The analysis was eye-opening!"</p>
+                    <p class="testimonial-author">— Rajesh Kumar, Bangalore</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Never realized my portfolio had so much overlap. The recommendations helped me consolidate from 8 funds to 3 without losing diversification."</p>
-                    <p class="testimonial-author">- Priya Sharma, Mumbai</p>
+                    <p class="testimonial-text">"Realized I was losing ₹50K annually to direct plan differences. The advisor explained everything clearly without any pressure to buy."</p>
+                    <p class="testimonial-author">— Priya Sharma, Mumbai</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"The analysis was detailed and unbiased. The advisor explained everything clearly without any pressure to buy. Highly recommended!"</p>
-                    <p class="testimonial-author">- Amit Patel, Hyderabad</p>
+                    <p class="testimonial-text">"The detailed report helped me understand exactly where my portfolio was going wrong. Best investment decision was getting this review!"</p>
+                    <p class="testimonial-author">— Amit Patel, Hyderabad</p>
                 </div>
             </div>
         </div>
@@ -561,15 +873,15 @@
         <div class="section-container">
             <div class="form-container">
                 <div id="formContent">
-                    <h2 style="margin-bottom: 1.5rem; text-align: center;">Get Your Free Portfolio Review</h2>
+                    <h2>Get Your Free Portfolio Review</h2>
                     <form id="leadForm" autocomplete="off">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="off">
+                            <input type="text" id="name" name="name" required placeholder="Your full name" autocomplete="off">
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required placeholder="10-digit mobile number" autocomplete="off" pattern="[0-9]{10}">
+                            <input type="tel" id="phone" name="phone" required placeholder="10-digit mobile" autocomplete="off" pattern="[0-9]{10}">
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address *</label>
@@ -586,13 +898,13 @@
                             </select>
                         </div>
                         <button type="submit" class="form-submit">Get Free Review →</button>
-                        <p class="privacy-text">✓ We respect your privacy. No spam, guaranteed.</p>
+                        <p class="privacy-text">✓ We respect your privacy. No spam, guaranteed. AMFI Registered MFD.</p>
                     </form>
                 </div>
                 <div id="successMessage" class="success-message">
-                    <h3>🎉 Thank You!</h3>
-                    <p>Your portfolio review request has been received. Opening WhatsApp for faster communication...</p>
-                    <p style="margin-top: 1.5rem; font-size: 0.95rem;">You'll be redirected to WhatsApp in 2 seconds.</p>
+                    <h3>🎉 Success!</h3>
+                    <p>Your portfolio review request has been received. Connecting you on WhatsApp for faster communication...</p>
+                    <p style="margin-top: 1.5rem; font-size: 1rem;">Redirecting in 2 seconds...</p>
                 </div>
             </div>
         </div>
@@ -604,10 +916,10 @@
             <p><strong>AMFI Registered Mutual Fund Distributor</strong></p>
             <p>Professional Financial Services</p>
             <p class="compliance-text">
-                Disclaimer: Mutual fund investments are subject to market risks. Past performance doesn't guarantee future returns. 
+                Disclaimer: Mutual fund investments are subject to market risks. Past performance is not indicative of future returns. 
                 Please read scheme documents carefully before investing. This website does not constitute an offer or solicitation to buy/sell securities.
             </p>
-            <p style="margin-top: 1rem;">&copy; 2026. All rights reserved.</p>
+            <p style="margin-top: 1.5rem; opacity: 0.7;">&copy; 2026 Nanda Financial Services. All rights reserved.</p>
         </div>
     </footer>
 
@@ -617,25 +929,21 @@
             const formContent = document.getElementById("formContent");
             const successMessage = document.getElementById("successMessage");
 
-            // Your WhatsApp Business number (with country code)
             const WHATSAPP_NUMBER = "919491227272";
 
             form.addEventListener("submit", function (e) {
                 e.preventDefault();
 
-                // Get form data
                 const name = document.getElementById("name").value.trim();
                 const phone = document.getElementById("phone").value.trim();
                 const email = document.getElementById("email").value.trim();
                 const assets = document.getElementById("assets").value || "Not specified";
 
-                // Validate phone number (must be 10 digits)
                 if (!/^\d{10}$/.test(phone)) {
                     alert("Please enter a valid 10-digit phone number");
                     return;
                 }
 
-                // Store lead data in localStorage for your records
                 const leads = JSON.parse(localStorage.getItem('mfd_leads') || '[]');
                 leads.push({
                     name,
@@ -647,11 +955,9 @@
                 });
                 localStorage.setItem('mfd_leads', JSON.stringify(leads));
 
-                // Hide form and show success message
                 formContent.style.display = "none";
                 successMessage.classList.add("show");
 
-                // Create WhatsApp message
                 const message = encodeURIComponent(
                     `👋 Hello!\n\n` +
                     `I'm ${name}.\n` +
@@ -659,19 +965,16 @@
                     `📱 Mobile: ${phone}\n` +
                     `📧 Email: ${email}\n` +
                     `💼 Investment Size: ${assets}\n\n` +
-                    `Looking forward to connecting with you!`
+                    `Looking forward to connecting!`
                 );
 
-                // WhatsApp URL
                 const whatsappUrl = `https://wa.me/${919491227272}?text=${message}`;
 
-                // Redirect to WhatsApp after 2 seconds
                 setTimeout(() => {
                     window.location.href = whatsappUrl;
                 }, 2000);
             });
 
-            // Smooth scroll for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     const href = this.getAttribute('href');
