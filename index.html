@@ -3,225 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Optimization | Nanda Investment and Financial Services</title>
-    <meta name="description" content="Optimize your mutual fund portfolio for maximum efficiency. Get a professional review to align your investments with your future goals.">
+    <title>Portfolio Excellence | Nanda Investment and Financial Services</title>
+    <meta name="description" content="Professional portfolio optimization for your life goals. Align your mutual funds with your dreams of retirement, education, and home ownership.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #00a8cc;
             --secondary: #ff6b35;
             --accent: #004e89;
             --success: #06a77d;
-            --warning: #ff9f1c;
-            --text-dark: #1a1a2e;
-            --text-light: #666;
-            --bg-light: #f5f7fa;
+            --text-dark: #0f172a;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
             --white: #ffffff;
-            --gold: #d4af37;
+            --glass: rgba(255, 255, 255, 0.8);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.5; color: var(--text-dark); background: var(--bg-light); }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-dark); background-color: var(--bg-light); overflow-x: hidden; }
 
-        /* Header */
-        header { background: var(--white); padding: 12px 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-        .header-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo-section { display: flex; align-items: center; gap: 12px; }
-        .logo-text h1 { font-size: 16px; color: var(--accent); margin: 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-        .logo-text p { font-size: 10px; color: var(--text-light); margin: 0; }
+        /* Premium Navigation */
+        header { 
+            background: var(--glass); 
+            backdrop-filter: blur(12px); 
+            padding: 15px 40px; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .header-content { max-width: 1300px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo-section { display: flex; align-items: center; gap: 15px; }
+        .logo-section img { width: 45px; height: 45px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .logo-text h1 { font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); font-weight: 800; margin: 0; }
+        .logo-text p { font-size: 10px; color: var(--text-light); font-weight: 600; }
 
-        /* Dynamic Greeting / Doodle Section */
-        .doodle-greeting { background: #fffbe6; padding: 8px; text-align: center; font-size: 13px; font-weight: 600; color: #856404; border-bottom: 1px solid #ffeeba; }
+        /* Dynamic Google-Style Doodle Bar */
+        .doodle-bar { 
+            background: linear-gradient(90deg, #fff5f0 0%, #fffbe6 100%); 
+            padding: 10px; 
+            text-align: center; 
+            font-size: 13px; 
+            font-weight: 600; 
+            color: #856404; 
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
 
-        /* Hero Section */
-        .hero { background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%); color: var(--white); padding: 60px 20px; text-align: center; }
-        .hero-content { max-width: 800px; margin: 0 auto; }
-        .hero h1 { font-size: 36px; margin-bottom: 15px; font-weight: 800; line-height: 1.2; }
-        .hero p { font-size: 18px; margin-bottom: 25px; opacity: 0.95; }
-        .highlight { color: var(--warning); }
+        /* Hero Section - Matching Dezerv/Scripbox Aesthetic */
+        .hero { 
+            padding: 100px 20px; 
+            text-align: center; 
+            background: radial-gradient(circle at top right, #e0f2fe, #f8fafc);
+            position: relative;
+        }
+        .hero-content { max-width: 900px; margin: 0 auto; position: relative; z-index: 2; }
+        .hero h1 { font-size: 48px; font-weight: 800; color: var(--text-dark); line-height: 1.1; margin-bottom: 20px; letter-spacing: -1px; }
+        .hero h1 span { color: var(--primary); }
+        .hero p { font-size: 20px; color: var(--text-light); margin-bottom: 35px; max-width: 700px; margin-left: auto; margin-right: auto; }
 
-        /* CTA Buttons */
-        .cta-button { background: linear-gradient(135deg, var(--secondary) 0%, #ff5722 100%); color: var(--white); padding: 14px 28px; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; transition: 0.3s; text-decoration: none; display: inline-block; box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3); }
-        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(255, 107, 53, 0.4); }
-        .cta-secondary { background: var(--white); color: var(--accent); margin-left: 10px; border: 2px solid var(--white); }
+        /* Modern CTA Buttons */
+        .btn { padding: 16px 32px; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; transition: 0.3s; text-decoration: none; display: inline-block; border: none; }
+        .btn-primary { background: var(--text-dark); color: white; box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2); }
+        .btn-primary:hover { transform: translateY(-3px); background: var(--accent); }
+        .btn-whatsapp { background: #25D366; color: white; margin-left: 15px; }
+        .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2); }
 
-        /* Optimization Section (Formerly Overlap Alert) */
-        .opt-box { background: #e6f7ff; border: 2px solid var(--primary); border-radius: 12px; padding: 30px; margin: 20px 0; text-align: center; }
-        .opt-box h3 { color: var(--accent); margin-bottom: 10px; font-size: 22px; }
+        /* Goal-Based Grid - Suggestion: Education, Home, Retirement */
+        .container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 32px; font-weight: 800; color: var(--text-dark); }
+        .section-title p { color: var(--text-light); margin-top: 10px; }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
-        h2 { font-size: 28px; color: var(--accent); margin-bottom: 30px; text-align: center; font-weight: 800; }
+        .goal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .goal-card { background: white; padding: 40px; border-radius: 24px; border: 1px solid rgba(0,0,0,0.05); transition: 0.3s; }
+        .goal-card:hover { border-color: var(--primary); transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .goal-icon { font-size: 40px; margin-bottom: 20px; display: block; }
+        .goal-card h3 { font-size: 20px; margin-bottom: 15px; color: var(--accent); }
+        .goal-card p { font-size: 15px; color: var(--text-light); }
 
-        /* Grid Layouts */
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: var(--white); padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-
-        /* Lead Magnet Quiz */
-        .quiz-container { background: var(--white); border-radius: 15px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-top: -40px; position: relative; z-index: 10; border-top: 5px solid var(--secondary); }
+        /* Interactive Quiz Card */
+        .quiz-section { margin-top: -60px; position: relative; z-index: 10; }
+        .quiz-card { 
+            background: white; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 50px; 
+            border-radius: 30px; 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.1); 
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
         .quiz-step { display: none; }
         .quiz-step.active { display: block; }
-        .quiz-option { display: block; width: 100%; padding: 15px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; text-align: left; cursor: pointer; background: #f9f9f9; font-weight: 600; }
-        .quiz-option:hover { background: var(--primary); color: white; }
+        .option-btn { 
+            display: block; width: 100%; padding: 18px; margin: 12px 0; 
+            border: 2px solid #f1f5f9; border-radius: 15px; 
+            text-align: left; cursor: pointer; background: #f8fafc; 
+            font-size: 16px; font-weight: 600; color: var(--text-dark); transition: 0.2s;
+        }
+        .option-btn:hover { border-color: var(--primary); background: #f0f9ff; color: var(--primary); }
 
-        /* About Section */
-        .about-section { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: center; background: var(--accent); color: white; padding: 60px 40px; border-radius: 20px; }
-        .about-logo { background: white; width: 130px; height: 130px; border-radius: 20px; padding: 15px; display: flex; align-items: center; justify-content: center; }
-        .about-logo img { width: 100%; height: 100%; object-fit: contain; }
+        /* About Section - No Abbreviations */
+        .about-wrap { 
+            background: var(--text-dark); color: white; 
+            padding: 80px 40px; border-radius: 40px; 
+            display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: center; 
+        }
+        .about-image img { width: 160px; height: 160px; background: white; padding: 20px; border-radius: 30px; }
+        .about-text h2 { font-size: 32px; margin-bottom: 20px; }
+        .about-text p { font-size: 17px; opacity: 0.8; margin-bottom: 20px; }
 
-        footer { background: var(--text-dark); color: var(--white); padding: 40px 20px; text-align: center; font-size: 13px; }
-        .arn-tag { background: var(--secondary); padding: 4px 12px; border-radius: 4px; font-weight: bold; display: inline-block; margin-bottom: 10px; }
+        /* Footer & Compliance */
+        footer { padding: 60px 20px; text-align: center; border-top: 1px solid #e2e8f0; }
+        .compliance-box { font-size: 12px; color: var(--text-light); max-width: 900px; margin: 40px auto; columns: 2; text-align: left; gap: 40px; }
+        .arn-badge { background: #f1f5f9; padding: 6px 15px; border-radius: 20px; font-weight: 700; color: var(--accent); font-size: 12px; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 26px; }
-            .about-section { grid-template-columns: 1fr; text-align: center; }
-            .about-logo { margin: 0 auto; }
-            .cta-button { width: 100%; margin-bottom: 10px; }
-            .cta-secondary { margin-left: 0; }
+            .hero h1 { font-size: 32px; }
+            .about-wrap { grid-template-columns: 1fr; text-align: center; }
+            .about-image { margin: 0 auto; }
+            .btn-whatsapp { margin-left: 0; margin-top: 15px; width: 100%; }
+            .btn-primary { width: 100%; }
+            .compliance-box { columns: 1; }
         }
     </style>
 </head>
 <body>
 
-    <div id="doodle-bar" class="doodle-greeting">
-        ✨ Welcome to a New Year of Wealth Creation!
-    </div>
+    <div id="doodle-bar" class="doodle-bar">✨ Loading your financial potential...</div>
 
     <header>
         <div class="header-content">
             <div class="logo-section">
-                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/1af75f63-8170-45d7-bd01-d0ac49b743dd" alt="Logo" style="width: 40px; height: 40px; border-radius: 6px;">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/1af75f63-8170-45d7-bd01-d0ac49b743dd" alt="Logo">
                 <div class="logo-text">
                     <h1>Nanda Investment and Financial Services</h1>
-                    <p>AMFI-Registered Mutual Fund Distributor | ARN-332725</p>
+                    <p>AMFI Registered Mutual Fund Distributor</p>
                 </div>
             </div>
-            <button class="cta-button" style="padding: 8px 16px; font-size: 12px;" onclick="openWhatsApp()">WhatsApp</button>
+            <span class="arn-badge">ARN-332725</span>
         </div>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Is Your Portfolio Reaching Its <span class="highlight">Full Potential?</span></h1>
-            <p>Discover the clarity of a professional Portfolio Analysis. Align your investments with your future aspirations today.</p>
-            <div class="hero-btns">
-                <button class="cta-button" onclick="scrollToSection('quiz')">Check Portfolio Health</button>
-                <button class="cta-button cta-secondary" onclick="openWhatsApp()">Talk to an Expert</button>
-            </div>
+            <h1>Expert Portfolio Analysis for <span>Wealth Creators.</span></h1>
+            <p>Move beyond generic investing. Get a professional perspective to ensure your mutual funds are optimized for the life you want to build.</p>
+            <button class="btn btn-primary" onclick="scrollToSection('quiz')">Get Started</button>
+            <button class="btn btn-whatsapp" onclick="openWhatsApp()">Chat with an Expert</button>
         </div>
     </section>
 
-    <div class="container" id="quiz">
-        <div class="quiz-container">
-            <div id="quiz-step-1" class="quiz-step active">
-                <h2 style="margin-bottom: 10px;">Investment Clarity Quiz</h2>
-                <p style="text-align: center; margin-bottom: 20px;">How many mutual fund schemes do you currently manage?</p>
-                <button class="quiz-option" onclick="nextQuiz(2)">1 - 5 Schemes (Focused Portfolio)</button>
-                <button class="quiz-option" onclick="nextQuiz(2)">6 - 12 Schemes (Diversified Portfolio)</button>
-                <button class="quiz-option" onclick="nextQuiz(2)">12+ Schemes (Complex Portfolio)</button>
+    <section class="container quiz-section" id="quiz">
+        <div class="quiz-card">
+            <div id="step-1" class="quiz-step active">
+                <h2 style="margin-bottom: 10px;">Portfolio Health Check</h2>
+                <p style="margin-bottom: 30px;">How many mutual fund schemes do you currently hold?</p>
+                <button class="option-btn" onclick="nextStep(2)">1 - 6 Schemes (Lean Portfolio)</button>
+                <button class="option-btn" onclick="nextStep(2)">7 - 15 Schemes (Moderately Diversified)</button>
+                <button class="option-btn" onclick="nextStep(2)">15+ Schemes (Needs Optimization)</button>
             </div>
-            <div id="quiz-step-2" class="quiz-step">
-                <h2 style="margin-bottom: 10px;">One Last Question...</h2>
-                <p style="text-align: center; margin-bottom: 20px;">Do you know how much of your portfolio is invested in the same top-10 stocks across different funds?</p>
-                <button class="quiz-option" onclick="showQuizResult()">Yes, I track stock-level overlap</button>
-                <button class="quiz-option" onclick="showQuizResult()">I'm not sure about overlap</button>
-                <button class="quiz-option" onclick="showQuizResult()">I would like to find out</button>
+            <div id="step-2" class="quiz-step">
+                <h2 style="margin-bottom: 10px;">One More Detail</h2>
+                <p style="margin-bottom: 30px;">Are your investments currently mapped to specific life milestones?</p>
+                <button class="option-btn" onclick="showResult()">Yes, I have clear goals for every SIP</button>
+                <button class="option-btn" onclick="showResult()">Partially, but needs better structure</button>
+                <button class="option-btn" onclick="showResult()">No, I'm just investing for returns</button>
             </div>
-            <div id="quiz-result" class="quiz-step" style="text-align: center;">
-                <h2 style="color: var(--success);">Discovery Ready!</h2>
-                <p>There are opportunities to <strong>streamline your investments</strong> for better efficiency.</p>
-                <p style="margin: 15px 0;">Let's generate your custom Portfolio X-Ray on WhatsApp.</p>
-                <button class="cta-button" onclick="openWhatsApp()">Get My Custom Analysis</button>
-            </div>
-        </div>
-    </div>
-
-    <section class="container" style="padding-top: 20px;">
-        <div class="opt-box">
-            <h3>📈 The Advantage of Strategic Consolidation</h3>
-            <p>Smart investing isn't just about owning many funds—it's about making sure every fund has a unique purpose. We help you <strong>identify stock-level overlap</strong> so your money works harder in unique opportunities rather than repeating the same bets.</p>
-        </div>
-    </section>
-
-    <section class="container" style="background: white; border-radius: 20px;">
-        <h2>The Portfolio Excellence Framework</h2>
-        <div class="grid-3">
-            <div class="card">
-                <strong style="color: var(--primary); font-size: 18px;">Precision Diversification</strong>
-                <p style="margin-top: 10px; font-size: 14px; color: var(--text-light);">We verify that your funds aren't just clones of each other, ensuring you have true exposure across various sectors and market caps.</p>
-            </div>
-            <div class="card">
-                <strong style="color: var(--primary); font-size: 18px;">Risk Calibration</strong>
-                <p style="margin-top: 10px; font-size: 14px; color: var(--text-light);">We ensure your current asset allocation matches your comfort level and the timeframe of your financial goals.</p>
-            </div>
-            <div class="card">
-                <strong style="color: var(--primary); font-size: 18px;">Goal Synchronization</strong>
-                <p style="margin-top: 10px; font-size: 14px; color: var(--text-light);">A clear roadmap that connects your existing SIPs and Lumpsums directly to your life's milestones.</p>
+            <div id="result" class="quiz-step">
+                <h2 style="color: var(--success); margin-bottom: 15px;">Analysis Ready</h2>
+                <p style="margin-bottom: 30px;">We’ve identified opportunities to better align your portfolio with your aspirations. Let's discuss your custom roadmap.</p>
+                <button class="btn btn-primary" onclick="openWhatsApp()">View My Roadmap on WhatsApp</button>
             </div>
         </div>
     </section>
 
     <section class="container">
-        <div class="about-section">
-            <div class="about-logo">
+        <div class="section-title">
+            <h2>Wealth Architecture for Every Milestone</h2>
+            <p>We help you build a portfolio that is mathematically aligned with your dreams.</p>
+        </div>
+        <div class="goal-grid">
+            <div class="goal-card">
+                <span class="goal-icon">🎓</span>
+                <h3>Children's Future</h3>
+                <p>Ensure your child has the financial backing for top-tier higher education, regardless of inflation or market cycles.</p>
+            </div>
+            <div class="goal-card">
+                <span class="goal-icon">🏠</span>
+                <h3>Dream Home</h3>
+                <p>Strategically accumulate the corpus needed for your dream property without compromising your other financial needs.</p>
+            </div>
+            <div class="goal-card">
+                <span class="goal-icon">🏖️</span>
+                <h3>Retirement Comfort</h3>
+                <p>Build a sustainable "Passive Income" engine that allows you to maintain your lifestyle long after you stop working.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="padding-top: 0;">
+        <div class="about-wrap">
+            <div class="about-image">
                 <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/1af75f63-8170-45d7-bd01-d0ac49b743dd" alt="Official Logo">
             </div>
-            <div>
-                <h2 style="color: white; text-align: left; margin-bottom: 15px;">Trust Nanda Investment and Financial Services</h2>
-                <p style="margin-bottom: 15px;">At Nanda Investment and Financial Services, we believe that an informed investor is a successful investor. Our mission is to provide you with the data and transparency you need to manage your wealth with confidence.</p>
-                <p>As an AMFI-registered distributor, we focus on high-quality investor education and data-driven insights to help you navigate the mutual fund landscape with ease.</p>
+            <div class="about-text">
+                <h2>Excellence in Financial Guidance</h2>
+                <p>At **Nanda Investment and Financial Services**, we don't believe in "one-size-fits-all." We treat your wealth as a unique blueprint that requires precision and care.</p>
+                <p>Our role as an AMFI-registered distributor is to bring institutional-grade portfolio insights to individual investors like you, ensuring full transparency every step of the way.</p>
             </div>
-        </div>
-    </section>
-
-    <section class="container" style="background: #eef2f5; border-radius: 20px; margin-top: 40px;">
-        <h2 style="font-size: 18px; margin-bottom: 20px;">Regulatory & Compliance Standards</h2>
-        <div style="font-size: 12px; color: var(--text-light); columns: 2; column-gap: 40px;">
-            <p><strong>Registration:</strong> AMFI-registered Mutual Fund Distributor (ARN-332725). We are not SEBI-registered Investment Advisers.</p>
-            <p><strong>Commission:</strong> We earn trail commissions from AMCs as per industry standards. All services are transparent and compliant with AMFI norms.</p>
-            <p><strong>Market Risk:</strong> Mutual fund investments are subject to market risks. Please read all scheme-related documents carefully before investing.</p>
-            <p><strong>Decision Power:</strong> All final investment decisions rest solely with the investor.</p>
-        </div>
-    </section>
-
-    <section class="hero" style="background: var(--secondary);">
-        <div class="hero-content">
-            <h2>Start Your Journey to a Cleaner Portfolio</h2>
-            <p>Simply share your fund list on WhatsApp for a professional perspective.</p>
-            <button class="cta-button" style="background: var(--accent);" onclick="openWhatsApp()">📱 Connect on WhatsApp</button>
         </div>
     </section>
 
     <footer>
-        <div class="arn-tag">ARN: 332725</div>
-        <p>© 2026 Nanda Investment and Financial Services</p>
-        <p style="opacity: 0.6; margin-top: 10px;">Committed to Transparency | Dedicated to Investor Success</p>
+        <div class="container" style="padding: 0;">
+            <p style="font-weight: 700; margin-bottom: 10px;">Nanda Investment and Financial Services</p>
+            <div class="arn-badge">ARN-332725</div>
+            
+            <div class="compliance-box">
+                <p><strong>Regulatory Status:</strong> AMFI-registered Mutual Fund Distributor. We do not provide fee-based investment advisory or financial planning. Not a SEBI-registered Investment Adviser.</p>
+                <p><strong>Market Risk:</strong> Mutual fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future results.</p>
+                <p><strong>Commission Disclosure:</strong> We earn trail commissions from Mutual Fund Companies (AMCs) as per industry standards. All services are focused on investor education and distribution support.</p>
+                <p><strong>Investor Responsibility:</strong> All final investment decisions rest with the investor. Please consult your tax advisor for specific tax-related implications of your investments.</p>
+            </div>
+            
+            <p style="margin-top: 40px; font-size: 13px; color: var(--text-light);">© 2026 Nanda Investment and Financial Services. All rights reserved.</p>
+        </div>
     </footer>
 
     <script>
-        // Dynamic Greeting (Doodle Style)
-        function setDynamicGreeting() {
+        // Professional Dynamic Doodle
+        function updateDoodle() {
             const bar = document.getElementById('doodle-bar');
-            const now = new Date();
-            const month = now.getMonth(); // 0-11
-            const hour = now.getHours();
-
-            let greeting = "✨ Empowering Your Financial Future Today!";
-
-            if (month === 0) greeting = "🚀 New Year, New Goals: Let's Optimize Your Portfolio!";
-            else if (hour < 12) greeting = "☀️ Good Morning! A great day to review your wealth progress.";
-            else if (hour < 17) greeting = "☕ Good Afternoon! Ready for a 5-minute portfolio health check?";
+            const hour = new Date().getHours();
+            const month = new Date().getMonth();
             
-            bar.innerHTML = greeting;
+            let msg = "🚀 Building India's Wealth, One Portfolio at a Time.";
+            if (month === 0) msg = "✨ 2026: The Year of Financial Clarity. Start your Review today.";
+            else if (hour < 12) msg = "☀️ A fresh morning to align your investments with your goals.";
+            else if (hour > 18) msg = "🌙 Planning for tomorrow starts tonight. Get your X-Ray report.";
+            
+            bar.innerText = msg;
         }
-        setDynamicGreeting();
+        updateDoodle();
 
-        function nextQuiz(step) {
+        function nextStep(step) {
             document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
-            document.getElementById('quiz-step-' + step).classList.add('active');
+            document.getElementById('step-' + step).classList.add('active');
         }
 
-        function showQuizResult() {
+        function showResult() {
             document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
-            document.getElementById('quiz-result').classList.add('active');
+            document.getElementById('result').classList.add('active');
         }
 
         function scrollToSection(id) {
@@ -229,9 +262,8 @@
         }
 
         function openWhatsApp() {
-            const message = encodeURIComponent("Hi! I'm interested in a professional portfolio review from Nanda Investment and Financial Services. Can you help me analyze my current mutual fund holdings?");
-            const phoneNumber = "919491227272";
-            window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+            const msg = encodeURIComponent("Hello Nanda Investment and Financial Services! I am interested in a professional review of my mutual fund portfolio to align with my life goals.");
+            window.open(`https://wa.me/919491227272?text=${msg}`, '_blank');
         }
     </script>
 </body>
