@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Portfolio Review | Nanda Investment and Financial Services</title>
+    <meta name="description" content="Get a free professional portfolio review. Identify tax-saving opportunities, simplify your holdings, and align your investments with your life goals.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00a8cc;
+            --secondary: #ff6b35;
+            --accent: #004e89;
+            --success: #06a77d;
+            --text-dark: #0f172a;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-dark); 
+            background-color: var(--bg-light);
+        }
+
+        .landing-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .landing-hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 20px; }
+        .landing-hero p { font-size: 20px; opacity: 0.95; max-width: 700px; margin: 0 auto 40px; }
+        
+        .benefits-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .benefit-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .benefit-icon { font-size: 48px; margin-bottom: 20px; }
+        .benefit-card h3 { font-size: 24px; font-weight: 800; color: var(--text-dark); margin-bottom: 15px; }
+        .benefit-card p { color: var(--text-light); line-height: 1.8; }
+
+        .cta-section {
+            background: var(--text-dark);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .cta-box {
+            background: white;
+            color: var(--text-dark);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 50px;
+            border-radius: 30px;
+        }
+        .btn {
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            border: none;
+            margin: 10px;
+        }
+        .btn-primary {
+            background: var(--text-dark);
+            color: white;
+        }
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-hero">
+        <h1>Get Your Free Portfolio Review</h1>
+        <p>Discover how to save on taxes, simplify your holdings, and align your investments with your life goals through our comprehensive portfolio analysis.</p>
+        <a href="#form" class="btn" style="background: white; color: var(--primary);">Get Started Now</a>
+    </div>
+
+    <div class="benefits-section">
+        <h2 style="text-align: center; font-size: 36px; margin-bottom: 20px;">What You'll Get in Your Portfolio Review</h2>
+        <p style="text-align: center; color: var(--text-light); max-width: 700px; margin: 0 auto 50px;">
+            Our comprehensive analysis will identify opportunities to optimize your portfolio, save on taxes, and better achieve your financial goals.
+        </p>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">📊</div>
+                <h3>Portfolio Analysis Report</h3>
+                <p>Detailed analysis of your current holdings, identifying duplicate funds, over-diversification, and optimization opportunities. See exactly how your portfolio can be improved.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">💰</div>
+                <h3>Tax Savings Opportunities</h3>
+                <p>Identify potential tax savings through strategic tax-loss harvesting. Calculate how much you could save annually by transitioning to an optimized regular plan structure.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🎯</div>
+                <h3>Goal Alignment Assessment</h3>
+                <p>Evaluate how well your current portfolio aligns with your life goals (retirement, education, home). Get recommendations for better goal-based allocation.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📉</div>
+                <h3>Portfolio Simplification Plan</h3>
+                <p>Recommendations to reduce overlapping funds and consolidate your portfolio. See how you can maintain diversification with fewer, better-chosen funds.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🔄</div>
+                <h3>Direct to Regular Transition Roadmap</h3>
+                <p>Step-by-step plan to transition from direct plans to optimized regular plans, maximizing tax benefits while maintaining investment performance.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📈</div>
+                <h3>Performance Optimization</h3>
+                <p>Identify underperforming funds and opportunities for better risk-adjusted returns. Get data-driven recommendations for portfolio improvement.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section" id="form">
+        <div class="cta-box">
+            <h2 style="font-size: 32px; margin-bottom: 15px;">Ready to Transform Your Portfolio?</h2>
+            <p style="color: var(--text-light); margin-bottom: 30px;">
+                Fill out the form below and our team will prepare a personalized portfolio review report within 24 hours.
+            </p>
+            <a href="index.html#quiz" class="btn btn-primary" style="width: 100%; text-align: center; display: block; max-width: 400px; margin: 0 auto;">Start Portfolio Health Check</a>
+            <p style="font-size: 14px; color: var(--text-light); margin-top: 30px;">
+                Or contact us directly:
+            </p>
+            <a href="https://wa.me/919491227272?text=Hello!%20I'm%20interested%20in%20a%20free%20portfolio%20review." class="btn btn-whatsapp" style="width: 100%; text-align: center; display: block; max-width: 400px; margin: 15px auto 0;">Chat on WhatsApp</a>
+        </div>
+    </div>
+
+    <footer style="padding: 40px 20px; text-align: center; background: white; border-top: 1px solid #e2e8f0;">
+        <p style="font-weight: 700; margin-bottom: 10px;">Nanda Investment and Financial Services</p>
+        <p style="font-size: 14px; color: var(--text-light);">AMFI Registered Mutual Fund Distributor | ARN-332725</p>
+        <p style="font-size: 12px; color: var(--text-light); margin-top: 20px;">© 2026 Nanda Investment and Financial Services. All rights reserved.</p>
+        <p style="margin-top: 15px;"><a href="index.html" style="color: var(--primary); text-decoration: none;">← Back to Home</a></p>
+    </footer>
+</body>
+</html>
