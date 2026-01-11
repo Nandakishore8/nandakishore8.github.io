@@ -3,56 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Portfolio Review & Analysis | Direct Plan to Regular Plan Transition | Nanda Investment</title>
-    <meta name="description" content="Get a free professional portfolio review and analysis. Transition from direct plans to optimized regular plans. Save on taxes, simplify holdings, align with goals. AMFI Registered (ARN-332725).">
-    <meta name="keywords" content="portfolio review, mutual fund review, direct plan review, portfolio analysis, tax harvesting, direct plan vs regular plan, portfolio optimization, mutual fund advisor, AMFI registered, portfolio x-ray">
-    <meta property="og:title" content="Free Portfolio Review | Transform Your Direct Plan Portfolio">
-    <meta property="og:description" content="Professional portfolio review and analysis. Save on taxes, simplify holdings, align with life goals. AMFI Registered Mutual Fund Distributor ARN-332725.">
+    <title>Free Portfolio Review & Analysis | Nanda Investment</title>
+    
+    <meta name="description" content="Nanda Investment and Financial Services - AMFI Registered Mutual Fund Distributor (ARN-332725). Get expert reviews, portfolio tracking, and personalized financial planning in India.">
+    <meta name="keywords" content="Mutual Funds India, SIP Investment, Financial Advisor, Nanda Investment, ARN-332725, Wealth Management, Portfolio Review, Tax Harvesting">
+    <meta name="author" content="Nanda Investment">
+    <link rel="canonical" href="https://www.mutualfundreview.in/">
+
+    <meta property="og:title" content="Nanda Investment | Expert Mutual Fund Reviews">
+    <meta property="og:description" content="Secure your future with data-driven mutual fund advice. AMFI Registered Distributor ARN-332725.">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="https://nandakishore8.github.io/">
+    <meta property="og:url" content="https://www.mutualfundreview.in">
+    <meta property="og:image" content="https://www.mutualfundreview.in/assets/og-image.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KWLKH6NM');</script>
     <style>
         :root {
             --primary: #00a8cc;
             --secondary: #ff6b35;
-            --accent: #004e89;
+            --accent: #004e89; /* Financial Blue */
             --success: #06a77d;
             --text-dark: #0f172a;
             --text-light: #64748b;
             --bg-light: #f8fafc;
             --white: #ffffff;
-            --glass: rgba(255, 255, 255, 0.8);
+            --glass: rgba(255, 255, 255, 0.9);
+            --navy: #0d1e3d; /* Compliance Footer Background */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body { 
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
             line-height: 1.6; 
             color: var(--text-dark); 
             background-color: var(--bg-light); 
             overflow-x: hidden;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            font-feature-settings: "kern" 1, "liga" 1;
-            word-spacing: normal !important;
-            letter-spacing: normal !important;
-            white-space: normal !important;
-        }
-        
-        /* Ensure proper text rendering for all elements */
-        p, h1, h2, h3, h4, h5, h6, span, div, button, a {
-            word-spacing: normal !important;
-            letter-spacing: normal !important;
-            white-space: normal !important;
-            word-break: normal !important;
-            overflow-wrap: normal !important;
-            text-transform: none !important;
         }
 
-        /* Premium Navigation */
+        /* --- Header & Navigation --- */
         header { 
             background: var(--glass); 
             backdrop-filter: blur(12px); 
@@ -70,11 +67,13 @@
         .header-nav { display: flex; gap: 30px; align-items: center; flex-wrap: wrap; }
         .header-nav a { color: var(--text-dark); text-decoration: none; font-size: 14px; font-weight: 600; transition: 0.2s; }
         .header-nav a:hover { color: var(--primary); }
+        .arn-badge { background: var(--accent); color: white; font-size: 12px; padding: 6px 15px; border-radius: 20px; font-weight: 700; }
+
         @media (max-width: 768px) {
             .header-nav { display: none; }
+            .header-content { flex-direction: column; align-items: flex-start; gap: 10px; }
         }
 
-        /* Dynamic Google-Style Doodle Bar */
         .doodle-bar { 
             background: linear-gradient(90deg, #fff5f0 0%, #fffbe6 100%); 
             padding: 10px; 
@@ -85,7 +84,7 @@
             border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
-        /* Hero Section - Matching Dezerv/Scripbox Aesthetic */
+        /* --- Hero Section --- */
         .hero { 
             padding: 100px 20px; 
             text-align: center; 
@@ -93,244 +92,180 @@
             position: relative;
         }
         .hero-content { max-width: 900px; margin: 0 auto; position: relative; z-index: 2; }
-        .hero h1 { font-size: 48px; font-weight: 800; color: var(--text-dark); line-height: 1.1; margin-bottom: 20px; letter-spacing: -0.5px; word-spacing: normal; }
-        .hero h1 span { color: var(--primary); }
-        .hero-subtitle { font-size: 20px; color: var(--text-light); margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .hero h1 { font-size: 48px; font-weight: 800; color: var(--text-dark); line-height: 1.1; margin-bottom: 20px; }
+        .hero-subtitle { font-size: 20px; color: var(--text-light); margin-bottom: 40px; }
         .hero-stats { display: flex; justify-content: center; gap: 50px; margin: 40px 0; flex-wrap: wrap; }
-        .stat-item { text-align: center; }
         .stat-number { font-size: 36px; font-weight: 800; color: var(--primary); line-height: 1; margin-bottom: 8px; }
-        .stat-label { font-size: 14px; color: var(--text-light); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-        .hero-cta { display: flex; gap: 15px; justify-content: center; margin: 35px 0; flex-wrap: wrap; }
-        .hero-urgency { font-size: 14px; color: var(--secondary); font-weight: 600; margin-top: 20px; }
-        .hero-cta a { text-decoration: none; }
+        .stat-label { font-size: 14px; color: var(--text-light); font-weight: 600; text-transform: uppercase; }
 
-        /* Modern CTA Buttons */
+        /* --- Buttons --- */
         .btn { padding: 16px 32px; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; transition: 0.3s; text-decoration: none; display: inline-block; border: none; }
         .btn-primary { background: var(--text-dark); color: white; box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2); }
         .btn-primary:hover { transform: translateY(-3px); background: var(--accent); }
         .btn-whatsapp { background: #25D366; color: white; margin-left: 15px; }
         .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2); }
 
-        /* Goal-Based Grid - Suggestion: Education, Home, Retirement */
+        /* --- Layout & Cards --- */
         .container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
         .section-title { text-align: center; margin-bottom: 50px; }
         .section-title h2 { font-size: 32px; font-weight: 800; color: var(--text-dark); }
-        .section-title p { color: var(--text-light); margin-top: 10px; }
+        
+        /* Quiz */
+        .quiz-section { margin-top: -60px; position: relative; z-index: 10; }
+        .quiz-card { background: white; max-width: 800px; margin: 0 auto; padding: 50px; border-radius: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); text-align: center; }
+        .quiz-step { display: none; }
+        .quiz-step.active { display: block; }
+        .option-btn { display: block; width: 100%; padding: 18px; margin: 12px 0; border: 2px solid #f1f5f9; border-radius: 15px; text-align: left; cursor: pointer; background: #f8fafc; font-size: 16px; font-weight: 600; color: var(--text-dark); transition: 0.2s; }
+        .option-btn:hover { border-color: var(--primary); background: #f0f9ff; color: var(--primary); }
+        .quiz-input { width: 100%; padding: 16px; margin: 12px 0; border: 2px solid #f1f5f9; border-radius: 15px; font-size: 16px; background: #f8fafc; }
+        .progress-bar { width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; margin-bottom: 30px; overflow: hidden; }
+        .progress-fill { height: 100%; background: var(--primary); transition: width 0.3s; }
 
-        .goal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        /* Grid Layouts */
+        .goal-grid, .case-study-grid, .testimonials-grid, .direct-regular-grid, .portfolio-xray-grid { display: grid; gap: 30px; }
+        .goal-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
         .goal-card { background: white; padding: 40px; border-radius: 24px; border: 1px solid rgba(0,0,0,0.05); transition: 0.3s; }
         .goal-card:hover { border-color: var(--primary); transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .goal-icon { font-size: 40px; margin-bottom: 20px; display: block; }
-        .goal-card h3 { font-size: 20px; margin-bottom: 15px; color: var(--accent); }
-        .goal-card p { font-size: 15px; color: var(--text-light); }
 
-        /* Testimonials Section */
-        .testimonials-section { background: white; padding: 80px 20px; margin-top: 60px; }
-        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 50px; }
-        .testimonial-card { background: var(--bg-light); padding: 30px; border-radius: 20px; border-left: 4px solid var(--primary); }
-        .testimonial-content { font-size: 16px; color: var(--text-dark); margin-bottom: 20px; line-height: 1.7; font-style: italic; }
-        .testimonial-metrics { background: white; padding: 15px; border-radius: 12px; margin: 20px 0; }
-        .testimonial-metric { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #e2e8f0; }
-        .testimonial-metric:last-child { border-bottom: none; }
-        .testimonial-metric-label { font-size: 14px; color: var(--text-light); }
-        .testimonial-metric-value { font-size: 14px; font-weight: 700; color: var(--success); }
-        .testimonial-author { display: flex; align-items: center; gap: 15px; }
-        .testimonial-author-info h4 { font-size: 16px; font-weight: 700; color: var(--text-dark); margin: 0; }
-        .testimonial-author-info p { font-size: 14px; color: var(--text-light); margin: 4px 0 0 0; }
-
-        /* Trust Badges Section */
-        .trust-badges { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; padding: 40px 20px; background: var(--bg-light); }
-        .trust-badge-item { text-align: center; }
-        .trust-badge-icon { font-size: 48px; margin-bottom: 10px; }
-        .trust-badge-text { font-size: 14px; font-weight: 600; color: var(--text-dark); }
-
-        /* Tax Calculator Widget */
-        .calculator-section { background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); padding: 80px 20px; margin-top: 60px; }
+        /* Calculator */
+        .calculator-section { background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); padding: 80px 20px; }
         .calculator-card { background: white; max-width: 700px; margin: 0 auto; padding: 50px; border-radius: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.2); }
-        .calculator-input-group { margin-bottom: 25px; }
-        .calculator-label { display: block; font-size: 16px; font-weight: 600; color: var(--text-dark); margin-bottom: 10px; }
-        .calculator-input { width: 100%; padding: 16px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 16px; font-weight: 600; transition: 0.2s; }
-        .calculator-input:focus { outline: none; border-color: var(--primary); }
+        .calculator-input { width: 100%; padding: 16px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 16px; margin-bottom: 20px; }
         .calculator-result { background: linear-gradient(135deg, var(--success) 0%, #059669 100%); color: white; padding: 30px; border-radius: 20px; margin-top: 30px; text-align: center; display: none; }
         .calculator-result.show { display: block; }
-        .calculator-result h3 { font-size: 24px; margin-bottom: 15px; }
-        .calculator-savings { font-size: 48px; font-weight: 800; margin: 15px 0; }
-        .calculator-explanation { font-size: 14px; opacity: 0.9; margin-top: 15px; }
 
-        /* Before/After Case Studies */
-        .case-study-section { background: white; padding: 80px 20px; }
-        .case-study-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px; }
+        /* Case Studies */
+        .case-study-grid { grid-template-columns: 1fr 1fr; }
         .case-study-card { padding: 30px; border-radius: 20px; border: 2px solid #e2e8f0; }
         .case-study-card.before { background: #fef2f2; border-color: #fecaca; }
         .case-study-card.after { background: #f0fdf4; border-color: #86efac; }
-        .case-study-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
-        .case-study-icon { font-size: 32px; }
-        .case-study-title { font-size: 20px; font-weight: 800; color: var(--text-dark); }
-        .case-study-metric { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.1); }
-        .case-study-metric:last-child { border-bottom: none; }
-        .case-study-metric-label { font-size: 14px; color: var(--text-light); }
-        .case-study-metric-value { font-size: 16px; font-weight: 700; color: var(--text-dark); }
-        .case-study-arrow { text-align: center; font-size: 48px; color: var(--primary); margin: 20px 0; }
-        @media (max-width: 768px) {
-            .case-study-grid { grid-template-columns: 1fr; }
-            .case-study-arrow { transform: rotate(90deg); }
-        }
 
-        /* Interactive Quiz Card */
-        .quiz-section { margin-top: -60px; position: relative; z-index: 10; }
-        .quiz-card { 
-            background: white; 
-            max-width: 800px; 
-            margin: 0 auto; 
-            padding: 50px; 
-            border-radius: 30px; 
-            box-shadow: 0 30px 60px rgba(0,0,0,0.1); 
-            text-align: center;
-            border: 1px solid rgba(0,0,0,0.03);
-        }
-        .quiz-step { display: none; }
-        .quiz-step.active { display: block; }
-        .option-btn { 
-            display: block; width: 100%; padding: 18px; margin: 12px 0; 
-            border: 2px solid #f1f5f9; border-radius: 15px; 
-            text-align: left; cursor: pointer; background: #f8fafc; 
-            font-size: 16px; font-weight: 600; color: var(--text-dark); transition: 0.2s;
-        }
-        .option-btn:hover { border-color: var(--primary); background: #f0f9ff; color: var(--primary); }
-        .quiz-input { 
-            width: 100%; padding: 16px; margin: 12px 0; 
-            border: 2px solid #f1f5f9; border-radius: 15px; 
-            font-size: 16px; font-weight: 600; color: var(--text-dark);
-            background: #f8fafc; transition: 0.2s;
-        }
-        .quiz-input:focus { outline: none; border-color: var(--primary); background: white; }
-        .quiz-input::placeholder { color: var(--text-light); font-weight: 400; }
-        .quiz-label { display: block; font-size: 14px; font-weight: 600; color: var(--text-dark); margin-bottom: 8px; margin-top: 20px; }
-        .quiz-label:first-child { margin-top: 0; }
-        .progress-bar { width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; margin-bottom: 30px; overflow: hidden; }
-        .progress-fill { height: 100%; background: var(--primary); transition: width 0.3s; border-radius: 3px; }
-
-        /* About Section - No Abbreviations */
-        .about-wrap { 
-            background: var(--text-dark); color: white; 
-            padding: 80px 40px; border-radius: 40px; 
-            display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: center; 
-        }
+        /* About & FAQ */
+        .about-wrap { background: var(--text-dark); color: white; padding: 80px 40px; border-radius: 40px; display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: center; }
         .about-image img { width: 160px; height: 160px; background: white; padding: 20px; border-radius: 30px; }
-        .about-text h2 { font-size: 32px; margin-bottom: 20px; }
-        .about-text p { font-size: 17px; opacity: 0.8; margin-bottom: 20px; }
-
-        /* FAQ Section */
-        .faq-section { background: white; padding: 80px 20px; }
-        .faq-container { max-width: 900px; margin: 0 auto; }
         .faq-item { background: var(--bg-light); margin-bottom: 20px; border-radius: 15px; overflow: hidden; border: 1px solid #e2e8f0; }
-        .faq-question { padding: 25px; font-size: 18px; font-weight: 700; color: var(--text-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: 0.2s; }
-        .faq-question:hover { background: #f0f9ff; }
-        .faq-icon { font-size: 24px; color: var(--primary); transition: 0.3s; }
-        .faq-item.active .faq-icon { transform: rotate(180deg); }
+        .faq-question { padding: 25px; font-size: 18px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
         .faq-answer { padding: 0 25px; max-height: 0; overflow: hidden; transition: max-height 0.3s, padding 0.3s; }
         .faq-item.active .faq-answer { padding: 0 25px 25px 25px; max-height: 500px; }
-        .faq-answer p { color: var(--text-light); line-height: 1.8; }
 
-        /* Footer & Compliance */
-        footer { padding: 60px 20px; text-align: center; border-top: 1px solid #e2e8f0; background: var(--bg-light); }
-        .compliance-box { font-size: 12px; color: var(--text-light); max-width: 900px; margin: 40px auto; columns: 2; text-align: left; gap: 40px; }
-        .arn-badge { background: #f1f5f9; padding: 6px 15px; border-radius: 20px; font-weight: 700; color: var(--accent); font-size: 12px; }
-        .footer-links { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 30px; }
-        .footer-links a { color: var(--primary); text-decoration: none; font-weight: 600; font-size: 14px; }
-        .footer-links a:hover { text-decoration: underline; }
+        /* --- CONTACT FORM STYLING (Financial Brand) --- */
+        #contact-section {
+            background-color: #f9fbfc;
+            padding: 80px 20px;
+        }
+        #contact-form-container {
+            background: #ffffff;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 86, 179, 0.1);
+            border-top: 5px solid var(--accent);
+        }
+        #contact-form-container h2 {
+            color: var(--navy);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dde2e5;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--accent);
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 86, 179, 0.2);
+        }
+        .form-submit-btn {
+            width: 100%;
+            background-color: var(--accent);
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-submit-btn:hover { background-color: #003666; }
 
-        /* Mobile Responsive Styles */
+        /* --- COMPLIANCE FOOTER STYLING --- */
+        #compliance-footer {
+            background-color: var(--navy);
+            color: #b0c4de;
+            padding: 50px 20px;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 13px;
+            line-height: 1.6;
+            border-top: 4px solid var(--primary);
+        }
+        .footer-content { max-width: 1000px; margin: 0 auto; text-align: center; }
+        .footer-identity h3 { color: white; font-size: 18px; margin-bottom: 10px; text-transform: uppercase; }
+        .risk-warning {
+            color: white;
+            font-size: 14px;
+            text-transform: uppercase;
+            border: 1px solid #4a5d7e;
+            padding: 15px;
+            margin: 30px 0;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .footer-links { margin-top: 30px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .footer-links a { color: #4da6ff; text-decoration: none; font-weight: 600; }
+        .footer-links a:hover { color: white; text-decoration: underline; }
+        .copyright { margin-top: 30px; font-size: 11px; opacity: 0.6; }
+
+        /* Mobile Adjustments */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 32px; letter-spacing: -0.3px; }
-            .hero-subtitle { font-size: 18px !important; }
-            .hero-stats { gap: 30px; }
-            .stat-number { font-size: 28px; }
+            .hero h1 { font-size: 32px; }
+            .case-study-grid, .direct-regular-grid, .portfolio-xray-grid { grid-template-columns: 1fr; }
             .about-wrap { grid-template-columns: 1fr; text-align: center; }
             .about-image { margin: 0 auto; }
-            .btn-whatsapp { margin-left: 0; margin-top: 15px; width: 100%; }
-            .btn-primary { width: 100%; }
-            .compliance-box { columns: 1; }
-            .header-content { flex-wrap: wrap; gap: 15px; }
-            .header-nav { display: none; }
-            .arn-badge { font-size: 11px; padding: 5px 12px; }
-            .calculator-card { padding: 30px 20px; }
-            .case-study-grid { grid-template-columns: 1fr !important; }
-            .testimonials-grid { grid-template-columns: 1fr !important; }
-            .goal-grid { grid-template-columns: 1fr !important; }
-            .footer-links { flex-direction: column; gap: 15px; }
-            .quiz-card { padding: 30px 20px; }
-            /* Direct vs Regular comparison mobile */
-            .direct-regular-grid { grid-template-columns: 1fr !important; }
-            /* Portfolio X-Ray mobile */
-            .portfolio-xray-grid { grid-template-columns: 1fr !important; }
+            .btn { width: 100%; margin-bottom: 10px; margin-left: 0; }
         }
-        @media (max-width: 480px) {
-            .hero h1 { font-size: 26px; }
-            .hero-subtitle { font-size: 16px !important; }
-            .container { padding: 60px 15px !important; }
-            .section-title h2 { font-size: 26px; }
-        }
-<meta name="description" content="Nanda Investment and Financial Services - AMFI Registered Mutual Fund Distributor (ARN-332725). Get expert reviews, portfolio tracking, and personalized financial planning in India.">
-<meta name="keywords" content="Mutual Funds India, SIP Investment, Financial Advisor, Nanda Investment, ARN-332725, Wealth Management">
-<meta name="author" content="Nanda Investment">
-
-<meta property="og:title" content="Nanda Investment | Expert Mutual Fund Reviews">
-<meta property="og:description" content="Secure your future with data-driven mutual fund advice. AMFI Registered Distributor.">
-<meta property="og:image" content="https://www.mutualfundreview.in/assets/your-logo-image.jpg"> <meta property="og:url" content="https://www.mutualfundreview.in">
-        
     </style>
-    <head>
-    <meta charset="utf-8">
-    <title>Nanda Investment</title>
-    
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KWLKH6NM');</script>
-    </head>
 </head>
 <body>
-    <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWLKH6NM"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <header> ... </header>
-
     <div id="doodle-bar" class="doodle-bar">✨ Get Your Free Portfolio X-Ray Report - Identify Tax Savings & Optimization Opportunities</div>
 
     <header>
         <div class="header-content">
             <div class="logo-section">
-                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/1af75f63-8170-45d7-bd01-d0ac49b743dd" alt="Logo">
+                <img src="https://ui-avatars.com/api/?name=NI&background=004e89&color=fff" alt="Nanda Investment Logo">
                 <div class="logo-text">
                     <h1>Nanda Investment and Financial Services</h1>
                     <p>AMFI Registered Mutual Fund Distributor | ARN-332725</p>
                 </div>
             </div>
             <nav class="header-nav">
-                <a href="index.html#quiz">Portfolio Review</a>
-                <a href="index.html#portfolio-xray">Portfolio X-Ray</a>
-                <a href="tax-harvesting.html">Tax Guide</a>
-                <a href="5-signs-direct-plan-review.html">Free Guide</a>
-                <a href="https://wa.me/919491227272">Contact</a>
+                <a href="#quiz">Portfolio Review</a>
+                <a href="#portfolio-xray">Portfolio X-Ray</a>
+                <a href="#calculator">Tax Calculator</a>
+                <a href="#contact-section">Contact</a>
             </nav>
             <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 5px;">
-                <span class="arn-badge" style="background: var(--accent); color: white; font-size: 13px; padding: 8px 16px;">ARN-332725</span>
-                <span style="font-size: 10px; color: var(--text-light); font-weight: 600;">AMFI Registered</span>
+                <span class="arn-badge">ARN-332725</span>
             </div>
         </div>
     </header>
 
-    <!-- Clear Positioning Statement (First 5 Seconds) -->
     <section class="hero">
         <div class="hero-content">
             <div style="background: rgba(6, 167, 125, 0.1); padding: 12px 20px; border-radius: 25px; display: inline-block; margin-bottom: 20px; border: 2px solid var(--success);">
-                <span style="font-size: 14px; font-weight: 700; color: var(--success);">✅ AMFI Registered (ARN-332725) | ✅ Free Portfolio Review | ✅ Direct Plan Specialist</span>
+                <span style="font-size: 14px; font-weight: 700; color: var(--success);">✅ AMFI Registered | ✅ Free Portfolio Review | ✅ Direct Plan Specialist</span>
             </div>
-            <h1>Get Your <span style="color: var(--primary);">Free Portfolio Review</span> & Transform Your Direct Plan Investments</h1>
-            <p class="hero-subtitle" style="font-size: 22px; line-height: 1.6;"><strong>What We Do:</strong> We provide professional portfolio review and analysis to help direct plan investors transition to optimized regular plans. Save on taxes through strategic harvesting, simplify your portfolio from 15+ funds to 6-8 optimal holdings, and align investments with your life goals - all while maintaining full transparency on costs.</p>
-            <p style="font-size: 18px; color: var(--accent); font-weight: 600; margin: 20px 0; max-width: 700px; margin-left: auto; margin-right: auto;">🎯 Clear Value: Tax Savings Often Exceed Expense Ratio Difference + You Save 4-6 Hours Monthly on Portfolio Management</p>
+            <h1>Get Your <span style="color: var(--primary);">Free Portfolio Review</span> & Transform Your Investments</h1>
+            <p class="hero-subtitle">Professional analysis to help direct plan investors transition to optimized regular plans. Save on taxes, simplify holdings, and align with life goals.</p>
+            
             <div class="hero-stats">
                 <div class="stat-item">
                     <div class="stat-number">500+</div>
@@ -345,12 +280,10 @@
                     <div class="stat-label">Tax Savings Generated</div>
                 </div>
             </div>
-        <div class="hero-cta">
-            <button class="btn btn-primary" onclick="scrollToSection('quiz')">Get Free Portfolio Review</button>
-            <button class="btn btn-whatsapp" onclick="openWhatsAppWithBooking()">Book Consultation</button>
-        </div>
-        <p class="hero-urgency">📅 Tax-saving season ending soon - Get your free portfolio review today!</p>
-        <p style="margin-top: 20px;"><a href="5-signs-direct-plan-review.html" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 16px;">📖 Download Free Guide: 5 Signs Your Direct Plan Needs Review →</a></p>
+            <div class="hero-cta">
+                <button class="btn btn-primary" onclick="scrollToSection('quiz')">Get Free Portfolio Review</button>
+                <button class="btn btn-whatsapp" onclick="openWhatsAppWithBooking()">Book Consultation</button>
+            </div>
         </div>
     </section>
 
@@ -359,85 +292,55 @@
             <div class="progress-bar">
                 <div id="progress-fill" class="progress-fill" style="width: 20%;"></div>
             </div>
+            
             <div id="step-1" class="quiz-step active">
-                <h2 style="margin-bottom: 10px;">Portfolio Health Check</h2>
-                <p style="margin-bottom: 30px;">How many mutual fund schemes do you currently hold?</p>
+                <h2>Portfolio Health Check</h2>
+                <p>How many mutual fund schemes do you currently hold?</p>
                 <button class="option-btn" onclick="saveAnswer('schemes', '1-6'); nextStep(2);">1 - 6 Schemes (Lean Portfolio)</button>
                 <button class="option-btn" onclick="saveAnswer('schemes', '7-15'); nextStep(2);">7 - 15 Schemes (Moderately Diversified)</button>
                 <button class="option-btn" onclick="saveAnswer('schemes', '15+'); nextStep(2);">15+ Schemes (Needs Optimization)</button>
             </div>
+
             <div id="step-2" class="quiz-step">
-                <h2 style="margin-bottom: 10px;">One More Detail</h2>
-                <p style="margin-bottom: 30px;">Are your investments currently mapped to specific life milestones?</p>
+                <h2>One More Detail</h2>
+                <p>Are your investments currently mapped to specific life milestones?</p>
                 <button class="option-btn" onclick="saveAnswer('goals', 'clear'); nextStep(3);">Yes, I have clear goals for every SIP</button>
                 <button class="option-btn" onclick="saveAnswer('goals', 'partial'); nextStep(3);">Partially, but needs better structure</button>
                 <button class="option-btn" onclick="saveAnswer('goals', 'none'); nextStep(3);">No, I'm just investing for returns</button>
             </div>
+
             <div id="step-3" class="quiz-step">
-                <h2 style="margin-bottom: 10px;">Tell Us More</h2>
-                <p style="margin-bottom: 30px;">Help us personalize your portfolio analysis:</p>
-                <label class="quiz-label">Current Portfolio Value (₹)</label>
-                <input type="text" class="quiz-input" id="portfolio-value" placeholder="e.g., 50,00,000" pattern="[0-9,]+">
+                <h2>Tell Us More</h2>
+                <label class="quiz-label" style="display:block; text-align:left; font-weight:600;">Current Portfolio Value (₹)</label>
+                <input type="text" class="quiz-input" id="portfolio-value" placeholder="e.g., 50,00,000">
                 
-                <label class="quiz-label">Primary Investment Goal</label>
-                <select class="quiz-input" id="primary-goal" style="cursor: pointer;">
+                <label class="quiz-label" style="display:block; text-align:left; font-weight:600;">Primary Investment Goal</label>
+                <select class="quiz-input" id="primary-goal">
                     <option value="">Select your primary goal</option>
                     <option value="retirement">Retirement Planning</option>
-                    <option value="education">Children's Education</option>
-                    <option value="home">Dream Home</option>
                     <option value="wealth">Wealth Creation</option>
                     <option value="tax">Tax Saving</option>
-                    <option value="other">Other</option>
-                </select>
-                
-                <label class="quiz-label">Are you currently on Direct Plans?</label>
-                <select class="quiz-input" id="plan-type" style="cursor: pointer;">
-                    <option value="">Select</option>
-                    <option value="direct">Yes, mostly Direct Plans</option>
-                    <option value="regular">Mostly Regular Plans</option>
-                    <option value="mix">Mix of Both</option>
-                    <option value="not-sure">Not Sure</option>
                 </select>
                 
                 <button class="btn btn-primary" style="width: 100%; margin-top: 20px;" onclick="nextStep(4);">Continue</button>
             </div>
+
             <div id="step-4" class="quiz-step">
-                <h2 style="margin-bottom: 10px;">Get Your Free Portfolio Analysis</h2>
-                <p style="margin-bottom: 30px;">Enter your details to receive a personalized portfolio review report:</p>
-                <label class="quiz-label">Full Name *</label>
-                <input type="text" class="quiz-input" id="user-name" placeholder="Your Name" required>
+                <h2>Get Your Free Portfolio Analysis</h2>
+                <input type="text" class="quiz-input" id="user-name" placeholder="Full Name" required>
+                <input type="email" class="quiz-input" id="user-email" placeholder="Email Address" required>
+                <input type="tel" class="quiz-input" id="user-phone" placeholder="Phone Number" required>
                 
-                <label class="quiz-label">Email Address *</label>
-                <input type="email" class="quiz-input" id="user-email" placeholder="your.email@example.com" required>
-                
-                <label class="quiz-label">Phone Number *</label>
-                <input type="tel" class="quiz-input" id="user-phone" placeholder="+91 98765 43210" required>
-                
-                <label class="quiz-label">
-                    <input type="checkbox" id="consent" style="margin-right: 8px; cursor: pointer;">
-                    I agree to receive portfolio analysis and updates via email/WhatsApp
-                </label>
-                
-                <button class="btn btn-primary" style="width: 100%; margin-top: 20px;" onclick="submitQuiz();">Get My Free Portfolio Analysis</button>
-                <p style="font-size: 12px; color: var(--text-light); margin-top: 15px; text-align: center;">We respect your privacy. Your information is secure and will never be shared.</p>
+                <button class="btn btn-primary" style="width: 100%; margin-top: 20px;" onclick="submitQuiz();">Get My Free Analysis</button>
             </div>
+
             <div id="result" class="quiz-step">
-                <h2 style="color: var(--success); margin-bottom: 15px;">Analysis Ready!</h2>
-                <p style="margin-bottom: 20px;">Thank you <span id="result-name"></span>! We've received your information and identified opportunities to optimize your portfolio.</p>
-                <div style="background: #f0f9ff; padding: 20px; border-radius: 15px; margin: 25px 0; border-left: 4px solid var(--primary);">
-                    <p style="margin: 0; font-weight: 600; color: var(--text-dark);">Based on your responses:</p>
-                    <ul style="margin: 10px 0 0 20px; color: var(--text-dark);">
-                        <li id="result-schemes"></li>
-                        <li id="result-goals"></li>
-                        <li id="result-plan"></li>
-                    </ul>
+                <h2 style="color: var(--success);">Analysis Ready!</h2>
+                <p>Thank you <span id="result-name"></span>! We've identified opportunities to optimize your portfolio.</p>
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 15px; margin: 25px 0; text-align:left;">
+                    <ul id="result-list" style="margin-left: 20px;"></ul>
                 </div>
-                <p style="margin-bottom: 30px;">Our team will prepare a custom portfolio analysis report and send it to <strong id="result-email"></strong> within 24 hours. Meanwhile, let's discuss your roadmap!</p>
-                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <button class="btn btn-primary" onclick="openWhatsApp();">View My Roadmap on WhatsApp</button>
-                    <button class="btn btn-whatsapp" onclick="bookConsultation();">Book Free Consultation Call</button>
-                    <button class="btn" style="background: var(--secondary); color: white; margin-top: 10px;" onclick="window.open('5-signs-direct-plan-review.html', '_blank');">Download Free Guide: 5 Signs Your Direct Plan Needs Review</button>
-                </div>
+                <button class="btn btn-whatsapp" onclick="openWhatsApp();">Chat on WhatsApp</button>
             </div>
         </div>
     </section>
@@ -449,911 +352,163 @@
         </div>
         <div class="goal-grid">
             <div class="goal-card">
-                <span class="goal-icon">🎓</span>
-                <h3>Children's Future</h3>
-                <p>Ensure your child has the financial backing for top-tier higher education, regardless of inflation or market cycles.</p>
+                <h3>🎓 Children's Future</h3>
+                <p>Ensure your child has the financial backing for top-tier higher education.</p>
             </div>
             <div class="goal-card">
-                <span class="goal-icon">🏠</span>
-                <h3>Dream Home</h3>
-                <p>Strategically accumulate the corpus needed for your dream property without compromising your other financial needs.</p>
+                <h3>🏠 Dream Home</h3>
+                <p>Strategically accumulate the corpus needed for your dream property.</p>
             </div>
             <div class="goal-card">
-                <span class="goal-icon">🏖️</span>
-                <h3>Retirement Comfort</h3>
-                <p>Build a sustainable "Passive Income" engine that allows you to maintain your lifestyle long after you stop working.</p>
+                <h3>🏖️ Retirement Comfort</h3>
+                <p>Build a sustainable "Passive Income" engine for life after work.</p>
             </div>
         </div>
     </section>
 
-    <!-- Proof of Tax Savings: Real Examples -->
-    <section class="container" style="background: white; padding: 80px 20px; margin-top: 60px; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
-        <div class="section-title">
-            <h2>Real Tax Savings: Proof from Client Portfolios</h2>
-            <p>Concrete examples of actual tax savings achieved through strategic harvesting</p>
-        </div>
-        <div style="max-width: 1000px; margin: 50px auto 0;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
-                <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 30px; border-radius: 20px; border: 2px solid var(--success);">
-                    <div style="font-size: 14px; color: var(--success); font-weight: 700; margin-bottom: 15px;">CASE STUDY 1</div>
-                    <h4 style="font-size: 20px; font-weight: 800; color: var(--text-dark); margin-bottom: 20px;">Portfolio Size: ₹50L</h4>
-                    <div style="background: white; padding: 20px; border-radius: 12px; margin-bottom: 20px;">
-                        <p style="font-size: 14px; color: var(--text-light); margin-bottom: 10px;"><strong>Annual Capital Gains:</strong></p>
-                        <p style="font-size: 24px; font-weight: 800; color: var(--text-dark); margin-bottom: 15px;">₹5,00,000</p>
-                        <p style="font-size: 13px; color: var(--text-light); margin-bottom: 8px;">Tax Without Harvesting: ₹80,000</p>
-                        <p style="font-size: 13px; color: var(--text-light); margin-bottom: 15px;">Tax With Harvesting: ₹50,000</p>
-                        <div style="border-top: 2px solid var(--success); padding-top: 15px;">
-                            <p style="font-size: 16px; font-weight: 700; color: var(--success); margin: 0;">✅ Annual Tax Saved: ₹30,000</p>
-                        </div>
-                    </div>
-                    <p style="font-size: 13px; color: var(--text-light);">Regular plan expense (₹50L × 0.7%) = ₹35,000/year. Tax savings (₹30K) offset 86% of the expense difference.</p>
-                </div>
-
-                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #dbeafe 100%); padding: 30px; border-radius: 20px; border: 2px solid var(--primary);">
-                    <div style="font-size: 14px; color: var(--primary); font-weight: 700; margin-bottom: 15px;">CASE STUDY 2</div>
-                    <h4 style="font-size: 20px; font-weight: 800; color: var(--text-dark); margin-bottom: 20px;">Portfolio Size: ₹1.2 Cr</h4>
-                    <div style="background: white; padding: 20px; border-radius: 12px; margin-bottom: 20px;">
-                        <p style="font-size: 14px; color: var(--text-light); margin-bottom: 10px;"><strong>Annual Capital Gains:</strong></p>
-                        <p style="font-size: 24px; font-weight: 800; color: var(--text-dark); margin-bottom: 15px;">₹12,00,000</p>
-                        <p style="font-size: 13px; color: var(--text-light); margin-bottom: 8px;">Tax Without Harvesting: ₹2,20,000</p>
-                        <p style="font-size: 13px; color: var(--text-light); margin-bottom: 15px;">Tax With Harvesting: ₹1,35,000</p>
-                        <div style="border-top: 2px solid var(--primary); padding-top: 15px;">
-                            <p style="font-size: 16px; font-weight: 700; color: var(--primary); margin: 0;">✅ Annual Tax Saved: ₹85,000</p>
-                        </div>
-                    </div>
-                    <p style="font-size: 13px; color: var(--text-light);">Regular plan expense (₹1.2Cr × 0.7%) = ₹84,000/year. Tax savings (₹85K) exceed the entire expense difference.</p>
-                </div>
-
-                <div style="background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%); padding: 30px; border-radius: 20px; border: 2px solid var(--secondary);">
-                    <div style="font-size: 14px; color: var(--secondary); font-weight: 700; margin-bottom: 15px;">CASE STUDY 3</div>
-                    <h4 style="font-size: 20px; font-weight: 800; color: var(--text-dark); margin-bottom: 20px;">Portfolio Size: ₹75L</h4>
-                    <div style="background: white; padding: 20px; border-radius: 12px; margin-bottom: 20px;">
-                        <p style="font-size: 14px; color: var(--text-light); margin-bottom: 10px;"><strong>2-Year Period:</strong></p>
-                        <p style="font-size: 20px; font-weight: 800; color: var(--text-dark); margin-bottom: 15px;">Cumulative Gains: ₹15L</p>
-                        <p style="font-size: 13px; color: var(--text-light); margin-bottom: 8px;">Tax Without Harvesting: ₹2,50,000</p>
-                        <p style="font-size: 13px; color: var(--text-light); margin-bottom: 15px;">Tax With Harvesting: ₹1,80,000</p>
-                        <div style="border-top: 2px solid var(--secondary); padding-top: 15px;">
-                            <p style="font-size: 16px; font-weight: 700; color: var(--secondary); margin: 0;">✅ 2-Year Tax Saved: ₹1,65,000</p>
-                        </div>
-                    </div>
-                    <p style="font-size: 13px; color: var(--text-light);">2-year regular plan expense: ₹1,05,000. Tax savings (₹1.65L) exceed expenses by ₹60,000 over 2 years.</p>
-                </div>
-            </div>
-
-            <div style="background: #f0f9ff; padding: 35px; border-radius: 20px; border-left: 5px solid var(--primary); margin-top: 40px;">
-                <h4 style="font-size: 22px; font-weight: 700; color: var(--text-dark); margin-bottom: 20px;">📊 Tax Savings Calculation Methodology:</h4>
-                <p style="font-size: 16px; line-height: 1.8; color: var(--text-dark); margin-bottom: 15px;">These calculations are based on:</p>
-                <ul style="margin-left: 25px; color: var(--text-dark); line-height: 1.8; margin-bottom: 20px;">
-                    <li><strong>LTCG Tax Structure:</strong> 20% on gains above ₹1L exemption (with indexation benefit)</li>
-                    <li><strong>Harvesting Efficiency:</strong> 20-40% average tax reduction through strategic loss realization</li>
-                    <li><strong>Portfolio Composition:</strong> Mix of equity and debt funds requiring different tax strategies</li>
-                    <li><strong>Market Conditions:</strong> Tax harvesting opportunities vary based on market volatility</li>
-                </ul>
-                <p style="font-size: 15px; line-height: 1.7; color: var(--text-dark); margin: 0;"><strong>Important Note:</strong> Actual tax savings depend on portfolio composition, market conditions, and timing. These examples are based on anonymized client data and represent achievable outcomes. Individual results may vary. Consult a tax advisor for specific tax implications.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tax Savings Calculator Section -->
-    <section class="calculator-section">
+    <section class="calculator-section" id="calculator">
         <div class="calculator-card">
-            <div class="section-title" style="margin-bottom: 40px;">
-                <h2 style="color: var(--text-dark);">Tax Savings Calculator</h2>
+            <div class="section-title">
+                <h2>Tax Savings Calculator</h2>
                 <p>See how much you could save with tax-loss harvesting</p>
             </div>
-            <div class="calculator-input-group">
-                <label class="calculator-label">Current Portfolio Value (₹)</label>
-                <input type="number" id="calc-portfolio-value" class="calculator-input" placeholder="e.g., 5000000" min="0">
-            </div>
-            <div class="calculator-input-group">
-                <label class="calculator-label">Annual Capital Gains (₹)</label>
-                <input type="number" id="calc-capital-gains" class="calculator-input" placeholder="e.g., 500000" min="0">
-            </div>
-            <div class="calculator-input-group">
-                <label class="calculator-label">Tax Bracket</label>
-                <select id="calc-tax-bracket" class="calculator-input" style="cursor: pointer;">
-                    <option value="20">20% (LTCG over ₹1L)</option>
-                    <option value="15">15% (STCG Equity)</option>
-                    <option value="30">30% (Other Short-term)</option>
-                </select>
-            </div>
-            <button class="btn btn-primary" style="width: 100%; margin-top: 20px;" onclick="calculateTaxSavings();">Calculate Potential Tax Savings</button>
-            
+            <input type="number" id="calc-capital-gains" class="calculator-input" placeholder="Annual Capital Gains (₹)">
+            <button class="btn btn-primary" style="width: 100%;" onclick="calculateTaxSavings();">Calculate Potential Savings</button>
             <div id="calc-result" class="calculator-result">
                 <h3>Potential Annual Tax Savings</h3>
-                <div class="calculator-savings" id="calc-savings-amount">₹0</div>
-                <div class="calculator-explanation" id="calc-explanation"></div>
+                <div style="font-size: 48px; font-weight: 800;" id="calc-savings-amount">₹0</div>
+                <div id="calc-explanation"></div>
             </div>
-            <p style="font-size: 12px; color: var(--text-light); margin-top: 20px; text-align: center;">*This is an estimate. Actual savings depend on portfolio composition and market conditions. Consult a tax advisor for precise calculations.</p>
         </div>
     </section>
 
-    <!-- Before/After Case Study -->
-    <section class="case-study-section">
-        <div class="container" style="padding: 0;">
-            <div class="section-title">
-                <h2>Real Portfolio Transformation</h2>
-                <p>See how we transformed a complex direct plan portfolio into an optimized regular plan</p>
-            </div>
-            <div class="case-study-grid">
-                <div class="case-study-card before">
-                    <div class="case-study-header">
-                        <span class="case-study-icon">❌</span>
-                        <h3 class="case-study-title">Before Optimization</h3>
-                    </div>
-                    <div class="case-study-metric">
-                        <span class="case-study-metric-label">Number of Funds:</span>
-                        <span class="case-study-metric-value">22 Funds</span>
-                    </div>
-                    <div class="case-study-metric">
-                        <span class="case-study-metric-label">Plan Type:</span>
-                        <span class="case-study-metric-value">Direct Plans</span>
-                    </div>
-                    <div class="case-study-metric">
-                        <span class="case-study-metric-label">Portfolio Value:</span>
-                        <span class="case-study-metric-value">₹75L</span>
-                    </div>
-                    <div class="case-study-metric">
-                        <span class="case-study-metric-label">Overlapping Funds:</span>
-                        <span class="case-study-metric-value">12 Funds</span>
-                    </div>
-                    <div class="case-study-metric">
-                        <span class="case-study-metric-label">Goal Alignment:</span>
-                        <span class="case-study-metric-value">40%</span>
-                    </div>
-                    <div class="case-study-metric">
-                        <span class="case-study-metric-label">Annual Tax on Gains:</span>
-                        <span class="case-study-metric-value">₹1.8L</span>
-                    </div>
-                    <div class="case-study-metric">
-                        <span class="case-study-metric-label">Time to Review:</span>
-                        <span class="case-study-metric-value">6+ hours/month</span>
-                    </div>
-                    <div class="case-study-metric">
-                        <span class="case-study-metric-label">CAGR Return:</span>
-                        <span class="case-study-metric-value">11.2%</span>
-                    </div>
-                </div>
-
-                <div class="case-study-arrow">→</div>
-
-                <div class="case-study-card after">
-                    <div class="case-study-header">
-                        <span class="case-study-icon">✅</span>
-                        <h3 class="case-study-title">After Optimization</h3>
-                    </div>
-                    <div class="case-study-metric">
-                        <span class="case-study-metric-label">Number of Funds:</span>
-                        <span class="case-study-metric-value">7 Funds</span>
-                    </div>
-                    <div class="case-study-metric">
-                        <span class="case-study-metric-label">Plan Type:</span>
-                        <span class="case-study-metric-value">Regular Plans</span>
-                    </div>
-                    <div class="case-study-metric">
-                        <span class="case-study-metric-label">Portfolio Value:</span>
-                        <span class="case-study-metric-value">₹75L</span>
-                    </div>
-                    <div class="case-study-metric">
-                        <span class="case-study-metric-label">Overlapping Funds:</span>
-                        <span class="case-study-metric-value">0 Funds</span>
-                    </div>
-                    <div class="case-study-metric">
-                        <span class="case-study-metric-label">Goal Alignment:</span>
-                        <span class="case-study-metric-value">95%</span>
-                    </div>
-                    <div class="case-study-metric">
-                        <span class="case-study-metric-label">Annual Tax on Gains:</span>
-                        <span class="case-study-metric-value">₹95K (Saved ₹85K)</span>
-                    </div>
-                    <div class="case-study-metric">
-                        <span class="case-study-metric-label">Time to Review:</span>
-                        <span class="case-study-metric-value">1 hour/month</span>
-                    </div>
-                    <div class="case-study-metric">
-                        <span class="case-study-metric-label">CAGR Return:</span>
-                        <span class="case-study-metric-value">13.5% (+2.3%)</span>
-                    </div>
-                </div>
-            </div>
-            <div style="background: var(--bg-light); padding: 30px; border-radius: 20px; margin-top: 40px; text-align: center;">
-                <h3 style="font-size: 20px; margin-bottom: 15px; color: var(--text-dark);">Key Results:</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
-                    <div>
-                        <div style="font-size: 32px; font-weight: 800; color: var(--success);">68%</div>
-                        <div style="font-size: 14px; color: var(--text-light);">Funds Reduced</div>
-                    </div>
-                    <div>
-                        <div style="font-size: 32px; font-weight: 800; color: var(--success);">₹85K</div>
-                        <div style="font-size: 14px; color: var(--text-light);">Annual Tax Savings</div>
-                    </div>
-                    <div>
-                        <div style="font-size: 32px; font-weight: 800; color: var(--success);">+2.3%</div>
-                        <div style="font-size: 14px; color: var(--text-light);">CAGR Improvement</div>
-                    </div>
-                    <div>
-                        <div style="font-size: 32px; font-weight: 800; color: var(--success);">83%</div>
-                        <div style="font-size: 14px; color: var(--text-light);">Time Saved</div>
-                    </div>
-                </div>
-            </div>
-            <p style="text-align: center; margin-top: 30px; font-size: 12px; color: var(--text-light);">Based on anonymized client data. Individual results may vary.</p>
-        </div>
-    </section>
-
-    <!-- Portfolio X-Ray Lead Magnet Section -->
-    <section class="container" id="portfolio-xray" style="background: white; padding: 80px 20px; margin-top: 60px; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
+    <section class="container">
         <div class="section-title">
-            <h2>Get Your Free Portfolio X-Ray Report</h2>
-            <p>Comprehensive analysis revealing hidden opportunities in your direct plan portfolio</p>
+            <h2>Direct vs Regular: The Real Cost</h2>
         </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 50px;" class="portfolio-xray-grid">
+        <div class="direct-regular-grid">
+            <div style="background: white; padding: 40px; border-radius: 20px; border: 2px solid #e2e8f0;">
+                <h3 style="text-align: center; margin-bottom: 20px;">Direct Plan (DIY)</h3>
+                <p><strong>Expense Ratio:</strong> Lower</p>
+                <p><strong>Tax Harvesting:</strong> DIY (Hard)</p>
+                <p><strong>Review Time:</strong> 6+ Hours/Month</p>
+            </div>
+            <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: white; padding: 40px; border-radius: 20px;">
+                <h3 style="text-align: center; margin-bottom: 20px;">Regular Plan (Optimized)</h3>
+                <p><strong>Expense Ratio:</strong> Slightly Higher</p>
+                <p><strong>Tax Harvesting:</strong> ✅ Professional (Saves 20-40%)</p>
+                <p><strong>Review Time:</strong> ✅ Zero (We do it)</p>
+                <p style="margin-top: 20px; font-weight: 700;">Net Result: Tax savings often cover the cost difference.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-badges" style="text-align: center; padding: 50px 20px; background: white;">
+        <div class="container" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
             <div>
-                <h3 style="font-size: 28px; font-weight: 800; color: var(--text-dark); margin-bottom: 25px;">What's Included in Your Portfolio X-Ray:</h3>
-                <div style="margin-bottom: 20px;">
-                    <div style="display: flex; align-items: start; gap: 15px; margin-bottom: 20px;">
-                        <span style="font-size: 24px;">🔍</span>
-                        <div>
-                            <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-dark);">Overlap Analysis</h4>
-                            <p style="color: var(--text-light);">Identify duplicate and overlapping funds. See how many funds you actually need vs. how many you have.</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; align-items: start; gap: 15px; margin-bottom: 20px;">
-                        <span style="font-size: 24px;">💰</span>
-                        <div>
-                            <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-dark);">Tax Harvesting Opportunities</h4>
-                            <p style="color: var(--text-light);">Calculate potential tax savings through strategic loss harvesting. See exact ₹ amount you could save.</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; align-items: start; gap: 15px; margin-bottom: 20px;">
-                        <span style="font-size: 24px;">🎯</span>
-                        <div>
-                            <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-dark);">Goal Alignment Score</h4>
-                            <p style="color: var(--text-light);">Measure how well your portfolio aligns with specific life goals (retirement, education, home).</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; align-items: start; gap: 15px; margin-bottom: 20px;">
-                        <span style="font-size: 24px;">📊</span>
-                        <div>
-                            <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-dark);">Performance vs Benchmark</h4>
-                            <p style="color: var(--text-light);">Compare your portfolio returns against relevant benchmarks. Identify underperforming funds.</p>
-                        </div>
-                    </div>
-                    <div style="display: flex; align-items: start; gap: 15px;">
-                        <span style="font-size: 24px;">🔄</span>
-                        <div>
-                            <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-dark);">Transition Roadmap</h4>
-                            <p style="color: var(--text-light);">Step-by-step plan to optimize from direct to regular plans with timeline and expected outcomes.</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="btn btn-primary" style="width: 100%; margin-top: 30px; padding: 18px; font-size: 18px;" onclick="scrollToSection('quiz')">Get My Free Portfolio X-Ray Report</button>
+                <div style="font-size: 40px;">✅</div>
+                <div>AMFI Registered<br>ARN-332725</div>
             </div>
-            <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); padding: 40px; border-radius: 25px; color: white;">
-                <h3 style="font-size: 24px; margin-bottom: 25px; color: white;">Real X-Ray Results:</h3>
-                <div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 15px; margin-bottom: 20px;">
-                    <div style="font-size: 14px; opacity: 0.9; margin-bottom: 10px;">Before X-Ray:</div>
-                    <div style="font-size: 32px; font-weight: 800; margin-bottom: 5px;">22 Funds</div>
-                    <div style="font-size: 14px; opacity: 0.9;">12 Overlapping Holdings</div>
-                </div>
-                <div style="text-align: center; font-size: 48px; margin: 20px 0;">↓</div>
-                <div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 15px; margin-bottom: 20px;">
-                    <div style="font-size: 14px; opacity: 0.9; margin-bottom: 10px;">After Optimization:</div>
-                    <div style="font-size: 32px; font-weight: 800; margin-bottom: 5px;">7 Funds</div>
-                    <div style="font-size: 14px; opacity: 0.9;">0 Overlaps | ₹85K Tax Saved</div>
-                </div>
-                <p style="font-size: 14px; opacity: 0.9; margin-top: 25px; text-align: center;">Based on anonymized client portfolio analysis</p>
+            <div>
+                <div style="font-size: 40px;">📊</div>
+                <div>500+ Portfolios<br>Reviewed</div>
+            </div>
+            <div>
+                <div style="font-size: 40px;">💰</div>
+                <div>₹2.5L+ Tax<br>Savings Generated</div>
             </div>
         </div>
     </section>
 
-    <!-- Direct vs Regular Plan Comparison -->
-    <section class="container" style="background: var(--bg-light); padding: 80px 20px; margin-top: 60px; border-radius: 30px;">
-        <div class="section-title">
-            <h2>Direct Plan vs Regular Plan: Honest Comparison</h2>
-            <p>Transparent analysis to help you make an informed decision</p>
-        </div>
-        <div style="max-width: 1000px; margin: 50px auto 0;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px;" class="direct-regular-grid">
-                <div style="background: white; padding: 40px; border-radius: 20px; border: 2px solid #e2e8f0;">
-                    <h3 style="font-size: 24px; font-weight: 800; color: var(--text-dark); margin-bottom: 25px; text-align: center;">Direct Plan</h3>
-                    <div style="margin-bottom: 20px;">
-                        <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
-                            <span style="font-weight: 600;">Expense Ratio:</span>
-                            <span style="color: var(--success); font-weight: 700;">0.5-0.7% Lower</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
-                            <span style="font-weight: 600;">Tax Harvesting:</span>
-                            <span style="color: var(--secondary);">Self-Managed</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
-                            <span style="font-weight: 600;">Portfolio Review:</span>
-                            <span style="color: var(--secondary);">DIY (4-6 hrs/month)</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
-                            <span style="font-weight: 600;">Rebalancing:</span>
-                            <span style="color: var(--secondary);">Manual</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #e2e8f0;">
-                            <span style="font-weight: 600;">Goal Alignment:</span>
-                            <span style="color: var(--secondary);">Self-Planned</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; padding: 12px 0;">
-                            <span style="font-weight: 600;">Professional Support:</span>
-                            <span style="color: var(--secondary);">None</span>
-                        </div>
-                    </div>
-                </div>
-                <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: white; padding: 40px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
-                    <h3 style="font-size: 24px; font-weight: 800; margin-bottom: 25px; text-align: center; color: white;">Regular Plan (Optimized)</h3>
-                    <div style="margin-bottom: 20px;">
-                        <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                            <span style="font-weight: 600;">Expense Ratio:</span>
-                            <span style="font-weight: 700;">+0.5-0.7% Higher</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                            <span style="font-weight: 600;">Tax Harvesting:</span>
-                            <span style="font-weight: 700;">✅ Professional (Saves 20-40%)</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                            <span style="font-weight: 600;">Portfolio Review:</span>
-                            <span style="font-weight: 700;">✅ Automated (1 hr/month)</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                            <span style="font-weight: 600;">Rebalancing:</span>
-                            <span style="font-weight: 700;">✅ Automatic</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                            <span style="font-weight: 600;">Goal Alignment:</span>
-                            <span style="font-weight: 700;">✅ Expert-Planned</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; padding: 12px 0;">
-                            <span style="font-weight: 600;">Professional Support:</span>
-                            <span style="font-weight: 700;">✅ Full Support</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div style="background: white; padding: 30px; border-radius: 20px; border-left: 5px solid var(--success); margin-top: 30px;">
-                <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: var(--text-dark);">💰 Total Cost of Ownership Comparison (Example: ₹50L Portfolio)</h4>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
-                    <div>
-                        <p style="font-weight: 600; margin-bottom: 10px;">Direct Plan Annual Cost:</p>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;">• Expense Ratio: ₹25,000</li>
-                            <li style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;">• Tax on Gains (no harvesting): ₹80,000</li>
-                            <li style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;">• Time Cost (6 hrs/month @ ₹2K/hr): ₹1,44,000</li>
-                            <li style="padding: 8px 0; font-weight: 700; font-size: 18px; color: var(--text-dark);">Total: ₹2,49,000</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p style="font-weight: 600; margin-bottom: 10px;">Regular Plan Annual Cost:</p>
-                        <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;">• Expense Ratio: ₹60,000</li>
-                            <li style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;">• Tax on Gains (with harvesting): ₹50,000</li>
-                            <li style="padding: 8px 0; border-bottom: 1px solid #e2e8f0;">• Time Cost (1 hr/month @ ₹2K/hr): ₹24,000</li>
-                            <li style="padding: 8px 0; font-weight: 700; font-size: 18px; color: var(--success);">Total: ₹1,34,000</li>
-                        </ul>
-                    </div>
-                </div>
-                <div style="background: #f0fdf4; padding: 20px; border-radius: 12px; margin-top: 20px; text-align: center;">
-                    <p style="font-size: 24px; font-weight: 800; color: var(--success); margin: 0;">Net Annual Savings: ₹1,15,000 (46% lower total cost)</p>
-                    <p style="font-size: 14px; color: var(--text-light); margin-top: 10px;">Plus better portfolio performance through professional management</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials-section">
-        <div class="container" style="padding: 0;">
-            <div class="section-title">
-                <h2>Success Stories from Direct Plan Transitions</h2>
-                <p>Real results from investors who optimized their portfolios with us</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        "Switched from 18 direct plans to 6 regular plans. The portfolio is now much simpler to track, and I've saved significantly on taxes through strategic harvesting."
-                    </div>
-                    <div class="testimonial-metrics">
-                        <div class="testimonial-metric">
-                            <span class="testimonial-metric-label">Before:</span>
-                            <span class="testimonial-metric-value">18 Funds</span>
-                        </div>
-                        <div class="testimonial-metric">
-                            <span class="testimonial-metric-label">After:</span>
-                            <span class="testimonial-metric-value">6 Funds</span>
-                        </div>
-                        <div class="testimonial-metric">
-                            <span class="testimonial-metric-label">Tax Saved (2 years):</span>
-                            <span class="testimonial-metric-value">₹2.5L</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-author-info">
-                            <h4>R. Sharma*</h4>
-                            <p>Portfolio Size: ₹50L | IT Professional</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        "The goal-based rebalancing helped me align my investments with my daughter's education goals. Moved from 15+ overlapping funds to a focused 8-fund portfolio."
-                    </div>
-                    <div class="testimonial-metrics">
-                        <div class="testimonial-metric">
-                            <span class="testimonial-metric-label">Portfolio Simplification:</span>
-                            <span class="testimonial-metric-value">15 → 8 Funds</span>
-                        </div>
-                        <div class="testimonial-metric">
-                            <span class="testimonial-metric-label">Goal Alignment:</span>
-                            <span class="testimonial-metric-value">100% Matched</span>
-                        </div>
-                        <div class="testimonial-metric">
-                            <span class="testimonial-metric-label">Time Saved:</span>
-                            <span class="testimonial-metric-value">4 hrs/month</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-author-info">
-                            <h4>P. Patel*</h4>
-                            <p>Portfolio Size: ₹35L | Business Owner</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        "Tax harvesting strategies alone saved me ₹1.8L in capital gains tax. The regular plan expense ratio is far outweighed by the tax benefits and professional management."
-                    </div>
-                    <div class="testimonial-metrics">
-                        <div class="testimonial-metric">
-                            <span class="testimonial-metric-label">Tax Savings:</span>
-                            <span class="testimonial-metric-value">₹1.8L</span>
-                        </div>
-                        <div class="testimonial-metric">
-                            <span class="testimonial-metric-label">Return Improvement:</span>
-                            <span class="testimonial-metric-value">+2.3% CAGR</span>
-                        </div>
-                        <div class="testimonial-metric">
-                            <span class="testimonial-metric-label">Portfolio Value:</span>
-                            <span class="testimonial-metric-value">₹1.2 Cr</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-author-info">
-                            <h4>S. Kumar*</h4>
-                            <p>Portfolio Size: ₹1.2 Cr | Retired Professional</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p style="text-align: center; margin-top: 30px; font-size: 12px; color: var(--text-light);">*Names changed for privacy. Results are based on actual client experiences.</p>
-        </div>
-    </section>
-
-    <!-- Trust Badges -->
-    <section class="trust-badges">
-        <div class="trust-badge-item">
-            <div class="trust-badge-icon">✅</div>
-            <div class="trust-badge-text">AMFI Registered<br>ARN-332725</div>
-        </div>
-        <div class="trust-badge-item">
-            <div class="trust-badge-icon">📊</div>
-            <div class="trust-badge-text">500+ Portfolios<br>Reviewed</div>
-        </div>
-        <div class="trust-badge-item">
-            <div class="trust-badge-icon">💰</div>
-            <div class="trust-badge-text">₹2.5L+ Tax<br>Savings Generated</div>
-        </div>
-        <div class="trust-badge-item">
-            <div class="trust-badge-icon">🎯</div>
-            <div class="trust-badge-text">100% Goal<br>Alignment Focus</div>
-        </div>
-    </section>
-
-    <!-- Clear Role Definition: What We Actually Do -->
-    <section class="container" style="padding-top: 0;">
-        <div style="background: white; padding: 60px 40px; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); margin-bottom: 60px;">
-            <div class="section-title" style="margin-bottom: 50px;">
-                <h2>What We Actually Do: Our Role & Services</h2>
-                <p>Clear transparency about our services and how we help you</p>
-            </div>
-            <div style="max-width: 900px; margin: 0 auto;">
-                <div style="background: #f0f9ff; padding: 30px; border-radius: 20px; border-left: 5px solid var(--primary); margin-bottom: 30px;">
-                    <h3 style="font-size: 22px; font-weight: 700; color: var(--accent); margin-bottom: 15px;">Who We Are:</h3>
-                    <p style="font-size: 17px; line-height: 1.8; color: var(--text-dark); margin-bottom: 15px;"><strong>Nanda Investment and Financial Services</strong> is an AMFI-registered Mutual Fund Distributor (ARN-332725). We are <strong>not</strong> a SEBI-registered Investment Adviser. We do <strong>not</strong> provide fee-based investment advisory or financial planning services.</p>
-                    <p style="font-size: 17px; line-height: 1.8; color: var(--text-dark);"><strong>What This Means:</strong> We earn trail commissions from Mutual Fund Companies (AMCs) as per industry standards. All our services focus on investor education, portfolio distribution support, and helping investors transition from direct plans to regular plans.</p>
-                </div>
-
-                <h3 style="font-size: 24px; font-weight: 700; color: var(--text-dark); margin: 40px 0 25px;">What We Do For You:</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-                    <div style="background: var(--bg-light); padding: 25px; border-radius: 15px;">
-                        <div style="font-size: 32px; margin-bottom: 15px;">📋</div>
-                        <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 10px; color: var(--text-dark);">Portfolio Review & Analysis</h4>
-                        <p style="color: var(--text-light); font-size: 15px; line-height: 1.6;">Comprehensive analysis of your existing portfolio, identifying overlaps, tax opportunities, and optimization areas.</p>
-                    </div>
-                    <div style="background: var(--bg-light); padding: 25px; border-radius: 15px;">
-                        <div style="font-size: 32px; margin-bottom: 15px;">💼</div>
-                        <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 10px; color: var(--text-dark);">Regular Plan Distribution</h4>
-                        <p style="color: var(--text-light); font-size: 15px; line-height: 1.6;">Facilitate investments in regular plan mutual funds through AMFI-registered distribution channels.</p>
-                    </div>
-                    <div style="background: var(--bg-light); padding: 25px; border-radius: 15px;">
-                        <div style="font-size: 32px; margin-bottom: 15px;">🎓</div>
-                        <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 10px; color: var(--text-dark);">Investor Education</h4>
-                        <p style="color: var(--text-light); font-size: 15px; line-height: 1.6;">Educational resources, guides, and consultations to help you understand portfolio optimization and tax strategies.</p>
-                    </div>
-                    <div style="background: var(--bg-light); padding: 25px; border-radius: 15px;">
-                        <div style="font-size: 32px; margin-bottom: 15px;">🔄</div>
-                        <h4 style="font-size: 18px; font-weight: 700; margin-bottom: 10px; color: var(--text-dark);">Transition Support</h4>
-                        <p style="color: var(--text-light); font-size: 15px; line-height: 1.6;">Guidance and support for transitioning from direct plans to optimized regular plan structures.</p>
-                    </div>
-                </div>
-
-                <div style="background: #fff7ed; padding: 25px; border-radius: 15px; border-left: 5px solid var(--secondary); margin-top: 40px;">
-                    <h4 style="font-size: 18px; font-weight: 700; color: var(--text-dark); margin-bottom: 12px;">⚠️ What We DON'T Do:</h4>
-                    <ul style="margin-left: 25px; color: var(--text-dark); line-height: 1.8;">
-                        <li>We do <strong>not</strong> provide fee-based investment advisory services</li>
-                        <li>We do <strong>not</strong> provide comprehensive financial planning</li>
-                        <li>We do <strong>not</strong> manage your portfolio directly (AMCs manage the funds)</li>
-                        <li>We do <strong>not</strong> guarantee returns or investment performance</li>
-                        <li><strong>All final investment decisions rest with you, the investor</strong></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Transparent Pricing & Fee Structure -->
-        <div style="background: white; padding: 60px 40px; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
-            <div class="section-title" style="margin-bottom: 50px;">
-                <h2>Transparent Pricing & Fee Structure</h2>
-                <p>Full disclosure of costs and commissions - No hidden fees</p>
-            </div>
-            <div style="max-width: 900px; margin: 0 auto;">
-                <div style="background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%); color: white; padding: 35px; border-radius: 20px; margin-bottom: 30px;">
-                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 25px; color: white;">How We Earn:</h3>
-                    <div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 15px;">
-                        <p style="font-size: 17px; line-height: 1.8; margin-bottom: 15px;"><strong>Trail Commission:</strong> We earn trail commissions from Mutual Fund Companies (AMCs) as per industry standards. This commission is already included in the expense ratio of regular plans - <strong>you do not pay us directly.</strong></p>
-                        <p style="font-size: 17px; line-height: 1.8; margin-bottom: 15px;"><strong>Commission Structure:</strong> Trail commissions typically range from 0.25% to 0.75% per annum of your investment value, depending on the fund category and AMC. This commission is paid by the AMC, not deducted from your investment or returns.</p>
-                        <p style="font-size: 17px; line-height: 1.8;"><strong>No Direct Fees:</strong> We do not charge any consultation fees, advisory fees, or one-time charges for portfolio reviews or analysis.</p>
-                    </div>
-                </div>
-
-                <div style="background: #f0f9ff; padding: 30px; border-radius: 20px; border: 2px solid var(--primary);">
-                    <h4 style="font-size: 20px; font-weight: 700; color: var(--text-dark); margin-bottom: 20px;">Regular Plan Expense Ratio Breakdown:</h4>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
-                        <div>
-                            <p style="font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Direct Plan (For Comparison):</p>
-                            <div style="background: white; padding: 15px; border-radius: 10px; margin-bottom: 10px;">
-                                <div style="display: flex; justify-content: space-between;">
-                                    <span>Fund Management:</span>
-                                    <span style="font-weight: 700;">0.8-1.0%</span>
-                                </div>
-                            </div>
-                            <div style="background: white; padding: 15px; border-radius: 10px;">
-                                <div style="display: flex; justify-content: space-between;">
-                                    <span><strong>Total Expense Ratio:</strong></span>
-                                    <span style="font-weight: 700;">0.8-1.0%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p style="font-weight: 600; margin-bottom: 15px; color: var(--text-dark);">Regular Plan:</p>
-                            <div style="background: white; padding: 15px; border-radius: 10px; margin-bottom: 10px;">
-                                <div style="display: flex; justify-content: space-between;">
-                                    <span>Fund Management:</span>
-                                    <span style="font-weight: 700;">0.8-1.0%</span>
-                                </div>
-                            </div>
-                            <div style="background: white; padding: 15px; border-radius: 10px; margin-bottom: 10px;">
-                                <div style="display: flex; justify-content: space-between;">
-                                    <span>Distribution Commission:</span>
-                                    <span style="font-weight: 700;">0.5-0.7%</span>
-                                </div>
-                            </div>
-                            <div style="background: var(--primary); color: white; padding: 15px; border-radius: 10px;">
-                                <div style="display: flex; justify-content: space-between;">
-                                    <span><strong>Total Expense Ratio:</strong></span>
-                                    <span style="font-weight: 700;">1.3-1.7%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="background: #fff7ed; padding: 20px; border-radius: 12px; margin-top: 25px; border-left: 4px solid var(--secondary);">
-                        <p style="font-size: 15px; line-height: 1.7; color: var(--text-dark); margin: 0;"><strong>Important Note:</strong> The additional 0.5-0.7% expense ratio in regular plans is the distribution commission. However, as shown in our comparison above, when you factor in tax savings through professional harvesting, time saved, and potentially better returns through expert management, the total cost of ownership often favors regular plans for portfolios above ₹20L-₹30L.</p>
-                    </div>
-                </div>
-
-                <div style="background: var(--bg-light); padding: 25px; border-radius: 15px; margin-top: 30px; text-align: center;">
-                    <p style="font-size: 16px; color: var(--text-dark); margin: 0;"><strong>All commissions and fees are disclosed upfront.</strong> You have full transparency on what you pay and what we earn. No surprises. No hidden costs.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Portfolio Overlap Analysis Section -->
-        <div style="background: white; padding: 60px 40px; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); margin-top: 60px;">
-            <div class="section-title" style="margin-bottom: 50px;">
-                <h2>Portfolio Overlap Analysis</h2>
-                <p>Identify duplicate holdings and optimize your fund selection</p>
-            </div>
-            <div style="max-width: 900px; margin: 0 auto;">
-                <p style="font-size: 17px; line-height: 1.8; color: var(--text-dark); margin-bottom: 30px;">Many investors hold multiple funds thinking they're diversified, but often these funds have significant overlap - investing in the same stocks. This creates <strong>pseudo-diversification</strong> and increases costs without additional benefits.</p>
-
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px;">
-                    <div style="background: #fef2f2; padding: 30px; border-radius: 20px; border: 2px solid #fecaca;">
-                        <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: var(--text-dark);">Problem: Overlapping Funds</h4>
-                        <div style="background: white; padding: 20px; border-radius: 12px; margin-bottom: 15px;">
-                            <p style="font-weight: 600; margin-bottom: 10px; font-size: 14px;">Example Portfolio:</p>
-                            <ul style="font-size: 14px; line-height: 1.8; margin-left: 20px; color: var(--text-dark);">
-                                <li>HDFC Equity Fund</li>
-                                <li>HDFC Top 100 Fund</li>
-                                <li>SBI Bluechip Fund</li>
-                                <li>ICICI Prudential Bluechip</li>
-                                <li>Axis Bluechip Fund</li>
-                            </ul>
-                        </div>
-                        <div style="background: white; padding: 15px; border-radius: 12px;">
-                            <p style="font-size: 13px; color: var(--secondary); font-weight: 600; margin: 0;">⚠️ Overlap: 60-70% of holdings are the same stocks</p>
-                        </div>
-                    </div>
-                    <div style="background: #f0fdf4; padding: 30px; border-radius: 20px; border: 2px solid #86efac;">
-                        <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: var(--text-dark);">Solution: Optimized Portfolio</h4>
-                        <div style="background: white; padding: 20px; border-radius: 12px; margin-bottom: 15px;">
-                            <p style="font-weight: 600; margin-bottom: 10px; font-size: 14px;">After Overlap Analysis:</p>
-                            <ul style="font-size: 14px; line-height: 1.8; margin-left: 20px; color: var(--text-dark);">
-                                <li>1 Large Cap Fund (instead of 5)</li>
-                                <li>1 Mid Cap Fund</li>
-                                <li>1 Small Cap Fund</li>
-                                <li>2 Sectoral/Thematic Funds</li>
-                            </ul>
-                        </div>
-                        <div style="background: white; padding: 15px; border-radius: 12px;">
-                            <p style="font-size: 13px; color: var(--success); font-weight: 600; margin: 0;">✅ Result: True Diversification with <5% Overlap</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: white; padding: 35px; border-radius: 20px; margin-top: 40px;">
-                    <h4 style="font-size: 22px; font-weight: 700; margin-bottom: 20px; color: white;">Benefits of Overlap Analysis:</h4>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                        <div>
-                            <div style="font-size: 28px; margin-bottom: 10px;">📉</div>
-                            <p style="font-size: 15px; line-height: 1.6;">Reduce Funds: 15-20 funds → 6-8 optimal funds</p>
-                        </div>
-                        <div>
-                            <div style="font-size: 28px; margin-bottom: 10px;">💰</div>
-                            <p style="font-size: 15px; line-height: 1.6;">Lower Costs: Fewer funds = lower total expense ratio</p>
-                        </div>
-                        <div>
-                            <div style="font-size: 28px; margin-bottom: 10px;">🎯</div>
-                            <p style="font-size: 15px; line-height: 1.6;">Better Diversification: True asset allocation across market caps</p>
-                        </div>
-                        <div>
-                            <div style="font-size: 28px; margin-bottom: 10px;">⏱️</div>
-                            <p style="font-size: 15px; line-height: 1.6;">Easier Management: Simpler portfolio to track and rebalance</p>
-                        </div>
-                    </div>
-                    <button class="btn" style="background: white; color: var(--primary); width: 100%; margin-top: 30px; padding: 18px; font-size: 18px; font-weight: 700;" onclick="scrollToSection('quiz')">Get My Overlap Analysis</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="about-wrap" style="margin-top: 60px;">
+    <section class="container">
+        <div class="about-wrap">
             <div class="about-image">
-                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/1af75f63-8170-45d7-bd01-d0ac49b743dd" alt="Official Logo">
+                <img src="https://ui-avatars.com/api/?name=NI&background=fff&color=004e89" alt="Logo">
             </div>
             <div class="about-text">
                 <h2>Excellence in Financial Guidance</h2>
-                <p><strong>About Nanda Investment and Financial Services</strong></p>
-                <p>At Nanda Investment and Financial Services, we don't believe in "one-size-fits-all." We treat your wealth as a unique blueprint that requires precision and care.</p>
-                <p><strong>Our Expertise:</strong></p>
-                <ul style="margin-left: 20px; opacity: 0.9;">
-                    <li>Tax-Loss Harvesting & Tax Optimization Strategies</li>
-                    <li>Portfolio Simplification & Consolidation</li>
-                    <li>Goal-Based Portfolio Rebalancing</li>
-                    <li>Direct to Regular Plan Transition</li>
-                    <li>Portfolio Overlap Analysis & Optimization</li>
-                </ul>
-                <p>Our role as an AMFI-registered distributor (ARN-332725) is to bring institutional-grade portfolio insights to individual investors like you, ensuring full transparency every step of the way.</p>
+                <p>At Nanda Investment and Financial Services, we don't believe in "one-size-fits-all." We treat your wealth as a unique blueprint.</p>
+                <p style="margin-top: 20px;"><strong>Our Expertise:</strong> Tax-Loss Harvesting, Portfolio Simplification, and Goal-Based Rebalancing.</p>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="faq-container">
-            <div class="section-title">
-                <h2>Frequently Asked Questions</h2>
-                <p>Common questions about transitioning from direct plans to regular plans</p>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>Will switching from direct to regular plan affect my returns negatively?</span>
-                    <span class="faq-icon">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <p>While regular plans have a higher expense ratio (typically 0.5-0.7% more), this difference is often offset by:</p>
-                    <ul style="margin: 15px 0 15px 25px; color: var(--text-light);">
-                        <li>Tax savings through strategic tax-loss harvesting (often ₹50K-₹2L+ annually)</li>
-                        <li>Better portfolio performance through professional management and timely rebalancing</li>
-                        <li>Time saved (4-6 hours monthly = significant value)</li>
-                        <li>Reduced portfolio complexity and better goal alignment</li>
-                    </ul>
-                    <p>Many investors find that after accounting for tax savings and improved returns, regular plans provide better net returns with less effort.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>Can I do tax-loss harvesting myself with direct plans?</span>
-                    <span class="faq-icon">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, technically you can, but it requires:</p>
-                    <ul style="margin: 15px 0 15px 25px; color: var(--text-light);">
-                        <li>Continuous portfolio monitoring and market awareness</li>
-                        <li>Understanding of tax regulations (30-day rule, wash sale rules)</li>
-                        <li>Time to execute trades strategically and quickly</li>
-                        <li>Knowledge of portfolio rebalancing while harvesting losses</li>
-                    </ul>
-                    <p>Professional portfolio managers have dedicated systems and expertise to optimize tax harvesting continuously, which is why regular plans excel at this strategy.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>How much can I realistically save through tax-loss harvesting?</span>
-                    <span class="faq-icon">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Tax savings vary based on:</p>
-                    <ul style="margin: 15px 0 15px 25px; color: var(--text-light);">
-                        <li>Portfolio size (larger portfolios = larger potential savings)</li>
-                        <li>Capital gains realized during the year</li>
-                        <li>Market conditions (more volatility = more harvesting opportunities)</li>
-                        <li>Portfolio composition and holdings</li>
-                    </ul>
-                    <p>On average, strategic tax-loss harvesting can save 20-40% on capital gains tax. For a portfolio generating ₹5L in gains, this could mean ₹40K-₹80K in annual tax savings. Use our tax calculator above to estimate your potential savings.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>Will I lose control over my investments with regular plans?</span>
-                    <span class="faq-icon">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Not at all. With regular plans through a transparent distributor:</p>
-                    <ul style="margin: 15px 0 15px 25px; color: var(--text-light);">
-                        <li>You maintain full control and ownership of your investments</li>
-                        <li>You receive regular portfolio reports and updates</li>
-                        <li>You can review and approve changes before implementation</li>
-                        <li>You have direct access to your AMC accounts and holdings</li>
-                        <li>Transparency is maintained - all commissions are disclosed</li>
-                    </ul>
-                    <p>Think of it as having a professional advisor optimizing your portfolio while you retain full control and visibility.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>How long does it take to transition from direct to regular plans?</span>
-                    <span class="faq-icon">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <p>The transition can be done gradually and systematically:</p>
-                    <ul style="margin: 15px 0 15px 25px; color: var(--text-light);">
-                        <li><strong>Portfolio Review:</strong> 1-2 days for comprehensive analysis</li>
-                        <li><strong>Strategy Development:</strong> 3-5 days for customized transition plan</li>
-                        <li><strong>Execution:</strong> 2-4 weeks for systematic transition (depending on portfolio size)</li>
-                        <li><strong>Optimization:</strong> Ongoing for tax harvesting and rebalancing</li>
-                    </ul>
-                    <p>The process is designed to minimize disruption and can be timed to optimize tax benefits. We'll create a custom timeline based on your portfolio structure.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>Is tax-loss harvesting legal and compliant?</span>
-                    <span class="faq-icon">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, tax-loss harvesting is a completely legal and legitimate tax strategy. However, it must be done correctly:</p>
-                    <ul style="margin: 15px 0 15px 25px; color: var(--text-light);">
-                        <li>Compliance with 30-day wash sale rules</li>
-                        <li>Proper documentation and reporting</li>
-                        <li>Adherence to tax regulations</li>
-                        <li>No round-tripping or artificial transactions</li>
-                    </ul>
-                    <p>Professional portfolio managers ensure full compliance with all tax regulations, which is why professional management is recommended for effective tax harvesting.</p>
-                </div>
-            </div>
+    <section class="container">
+        <div class="section-title"><h2>Frequently Asked Questions</h2></div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">Will switching affect my returns? <span>▼</span></div>
+            <div class="faq-answer"><p>While regular plans have a higher expense ratio, the tax savings from harvesting and professional rebalancing often result in higher net returns.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">Is tax harvesting legal? <span>▼</span></div>
+            <div class="faq-answer"><p>Yes, it is a completely legal method recognized by the Income Tax department to offset gains with losses.</p></div>
         </div>
     </section>
 
-    <footer>
-        <div class="container" style="padding: 0;">
-            <p style="font-weight: 700; margin-bottom: 10px;">Nanda Investment and Financial Services</p>
-            <div class="arn-badge">ARN-332725</div>
-            
+    <section id="contact-section">
+        <div id="contact-form-container">
+            <h2>Contact Nanda Investment</h2>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="80a8b079-550c-430a-a8b6-09060ebd6534">
+                <input type="hidden" name="subject" value="New Inquiry from MutualFundReview.in">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email or Phone</label>
+                    <input type="text" name="email" id="email" required placeholder="Your contact details">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" required placeholder="How can we help you?" rows="5"></textarea>
+                </div>
+
+                <button type="submit" class="form-submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="compliance-footer">
+        <div class="footer-content">
+            <div class="footer-identity">
+                <h3>Nanda Investment and Financial Services</h3>
+                <p>AMFI Registered Mutual Fund Distributor | <strong>ARN-332725</strong></p>
+                <p>Date of Initial Registration: [Insert Date] | Current Validity: [Insert Date]</p>
+            </div>
+
+            <div class="footer-legal">
+                <p class="risk-warning">
+                    <strong>MUTUAL FUND INVESTMENTS ARE SUBJECT TO MARKET RISKS, READ ALL SCHEME RELATED DOCUMENTS CAREFULLY.</strong>
+                </p>
+                
+                <p class="small-text" style="color: #8a9bbd; margin-bottom: 20px;">
+                    <strong>Disclaimer:</strong> The information provided on this website is for educational and informational purposes only. 
+                    As an AMFI-registered distributor, we provide incidental advice related to the mutual fund products we distribute. 
+                    This does not constitute comprehensive financial planning or investment advisory services as defined by SEBI.
+                    Past performance is not an indicator of future returns. Please consult your tax advisor for specific tax implications.
+                </p>
+            </div>
+
             <div class="footer-links">
-                <a href="portfolio-review.html">Portfolio Review</a>
-                <a href="tax-harvesting.html">Tax Harvesting Guide</a>
-                <a href="5-signs-direct-plan-review.html">Free Guide: 5 Signs</a>
-                <a href="https://wa.me/919491227272">Contact via WhatsApp</a>
+                <a href="#quiz">Portfolio Review</a>
+                <a href="#calculator">Tax Guide</a>
+                <a href="https://www.amfiindia.com/investor-corner/knowledge-center/know-your-distributor.html" target="_blank">AMFI Know Your Distributor</a>
+                <a href="#">Commission Disclosure</a>
             </div>
-            
-            <div class="compliance-box">
-                <p><strong>Regulatory Status:</strong> AMFI-registered Mutual Fund Distributor. We do not provide fee-based investment advisory or financial planning. Not a SEBI-registered Investment Adviser.</p>
-                <p><strong>Market Risk:</strong> Mutual fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. Past performance is not indicative of future results.</p>
-                <p><strong>Commission Disclosure:</strong> We earn trail commissions from Mutual Fund Companies (AMCs) as per industry standards. All services are focused on investor education and distribution support.</p>
-                <p><strong>Investor Responsibility:</strong> All final investment decisions rest with the investor. Please consult your tax advisor for specific tax-related implications of your investments.</p>
+
+            <div class="copyright">
+                &copy; 2026 Nanda Investment. All Rights Reserved.
             </div>
-            
-            <p style="margin-top: 40px; font-size: 13px; color: var(--text-light);">© 2026 Nanda Investment and Financial Services. All rights reserved.</p>
         </div>
     </footer>
 
-    <section id="contact" style="padding: 20px; max-width: 600px; margin: 0 auto;">
-  <h2>Contact Nanda Investment</h2>
-  
-  <form action="https://api.web3forms.com/submit" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
-
-    <input type="hidden" name="access_key" value="80a8b079-550c-430a-a8b6-09060ebd6534">
-
-    <input type="hidden" name="subject" value="New Inquiry from MutualFundReview.in">
-
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name" required placeholder="Enter your name" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
-
-    <label for="email">Email or Phone</label>
-    <input type="text" name="email" id="email" required placeholder="Your contact details" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
-
-    <label for="message">Message</label>
-    <textarea name="message" id="message" required placeholder="How can we help you?" rows="5" style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
-
-    <button type="submit" style="background-color: #0056b3; color: white; padding: 12px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
-      Send Message
-    </button>
-
-  </form>
-</section>
-
     <script>
-        // Quiz data storage
-        let quizData = {
-            schemes: '',
-            goals: '',
-            portfolioValue: '',
-            primaryGoal: '',
-            planType: '',
-            name: '',
-            email: '',
-            phone: ''
-        };
-
-        // Professional Dynamic Doodle
-        function updateDoodle() {
-            const bar = document.getElementById('doodle-bar');
-            const hour = new Date().getHours();
-            const month = new Date().getMonth();
-            
-            let msg = "✨ Building India's Wealth, One Portfolio at a Time.";
-            if (month === 0) msg = "✨ 2026: The Year of Financial Clarity. Start your Review today.";
-            else if (hour < 12) msg = "🌅 A fresh morning to align your investments with your goals.";
-            else if (hour > 18) msg = "🌙 Planning for tomorrow starts tonight. Get your X-Ray report.";
-            
-            bar.innerText = msg;
-        }
-        updateDoodle();
-
-        function updateProgress(step) {
-            const progressPercent = (step / 4) * 100;
-            document.getElementById('progress-fill').style.width = progressPercent + '%';
-        }
+        // --- QUIZ LOGIC ---
+        let quizData = { schemes: '', goals: '', name: '', email: '' };
 
         function saveAnswer(key, value) {
             quizData[key] = value;
@@ -1361,255 +516,78 @@
 
         function nextStep(step) {
             document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
-            if (step <= 4) {
-                document.getElementById('step-' + step).classList.add('active');
-                updateProgress(step);
-            }
+            document.getElementById('step-' + step).classList.add('active');
+            document.getElementById('progress-fill').style.width = (step / 4) * 100 + '%';
         }
 
         function submitQuiz() {
-            // Collect form data
-            quizData.name = document.getElementById('user-name').value.trim();
-            quizData.email = document.getElementById('user-email').value.trim();
-            quizData.phone = document.getElementById('user-phone').value.trim();
-            quizData.portfolioValue = document.getElementById('portfolio-value').value.trim();
-            quizData.primaryGoal = document.getElementById('primary-goal').value;
-            quizData.planType = document.getElementById('plan-type').value;
-            const consent = document.getElementById('consent').checked;
-
-            // Validation
-            if (!quizData.name || !quizData.email || !quizData.phone) {
-                alert('Please fill in all required fields (Name, Email, Phone)');
-                return;
-            }
-
-            if (!quizData.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-                alert('Please enter a valid email address');
-                return;
-            }
-
-            if (!consent) {
-                alert('Please agree to receive portfolio analysis and updates');
-                return;
-            }
-
-            // Save to localStorage (for demo - in production, send to backend)
-            localStorage.setItem('quizData', JSON.stringify(quizData));
+            quizData.name = document.getElementById('user-name').value;
+            quizData.email = document.getElementById('user-email').value;
             
-            // Send to WhatsApp or email (you can integrate with your backend here)
-            showResult();
-            
-            // Optional: Send email notification (requires backend)
-            // fetch('/api/submit-quiz', { method: 'POST', body: JSON.stringify(quizData) });
-        }
+            if(!quizData.name || !quizData.email) {
+                alert("Please fill in your details.");
+                return;
+            }
 
-        function showResult() {
+            // Show Results
             document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
             document.getElementById('result').classList.add('active');
-            updateProgress(4);
-
-            // Populate result summary
-            document.getElementById('result-name').textContent = quizData.name.split(' ')[0];
-            document.getElementById('result-email').textContent = quizData.email;
-
-            // Schemes analysis
-            let schemesText = '';
-            if (quizData.schemes === '1-6') {
-                schemesText = 'Your portfolio is lean. We can help optimize allocation and add tax efficiency.';
-            } else if (quizData.schemes === '7-15') {
-                schemesText = 'Moderate diversification detected. We can help consolidate overlapping funds and improve tax efficiency.';
+            document.getElementById('result-name').innerText = quizData.name;
+            
+            // Generate Custom Advice
+            let list = document.getElementById('result-list');
+            list.innerHTML = "";
+            
+            if(quizData.schemes === '15+') {
+                list.innerHTML += "<li><strong>Consolidation Needed:</strong> You have too many funds. We can reduce this to 6-8 optimal schemes.</li>";
             } else {
-                schemesText = 'Significant over-diversification identified. We can reduce from 15+ to 6-8 optimal funds with better returns.';
+                 list.innerHTML += "<li><strong>Optimization Check:</strong> Your fund count is okay, but we should check for overlaps.</li>";
             }
-
-            // Goals analysis
-            let goalsText = '';
-            if (quizData.goals === 'clear') {
-                goalsText = 'You have clear goals - we\'ll help optimize allocation to better achieve them.';
-            } else if (quizData.goals === 'partial') {
-                goalsText = 'Goals need structure - we\'ll create a goal-based portfolio alignment.';
-            } else {
-                goalsText = 'No goal mapping detected - we\'ll create a structured goal-based portfolio for you.';
+            
+            if(quizData.goals === 'none') {
+                 list.innerHTML += "<li><strong>Goal Alignment:</strong> We need to map your SIPs to specific goals immediately.</li>";
             }
-
-            // Plan type analysis
-            let planText = '';
-            if (quizData.planType === 'direct') {
-                planText = 'Direct plan detected - transition to regular plan can save taxes through harvesting.';
-            } else if (quizData.planType === 'regular') {
-                planText = 'Regular plan investor - we\'ll optimize your existing portfolio for better returns.';
-            } else if (quizData.planType === 'mix') {
-                planText = 'Mixed plans detected - we\'ll consolidate and optimize for tax efficiency.';
-            } else {
-                planText = 'Portfolio analysis will help identify current plan types and optimization opportunities.';
-            }
-
-            document.getElementById('result-schemes').textContent = schemesText;
-            document.getElementById('result-goals').textContent = goalsText;
-            document.getElementById('result-plan').textContent = planText;
         }
 
+        // --- CALCULATOR LOGIC ---
+        function calculateTaxSavings() {
+            let gains = document.getElementById('calc-capital-gains').value;
+            if(!gains) return;
+            
+            // Simple logic: 10% LTCG, assuming 30% harvesting efficiency
+            let tax = (gains - 100000) * 0.10; // Basic LTCG calculation
+            if (tax < 0) tax = 0;
+            let savings = tax * 0.30; // 30% savings via harvesting
+            
+            document.getElementById('calc-result').classList.add('show');
+            document.getElementById('calc-savings-amount').innerText = "₹" + Math.round(savings).toLocaleString();
+            document.getElementById('calc-explanation').innerText = "By strategically harvesting losses, you could save approx 30% on your capital gains tax liability compared to a passive approach.";
+        }
+
+        // --- UTILS ---
         function scrollToSection(id) {
             document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
         }
 
         function openWhatsApp() {
-            let msg = "Hello Nanda Investment and Financial Services! I am interested in a professional review of my mutual fund portfolio.";
-            
-            if (quizData.name) {
-                msg += ` My name is ${quizData.name}.`;
-            }
-            if (quizData.portfolioValue) {
-                msg += ` Portfolio size: ₹${quizData.portfolioValue}.`;
-            }
-            if (quizData.schemes) {
-                msg += ` I hold ${quizData.schemes} schemes.`;
-            }
-            
-            msg += " Please help me transition to an optimized regular plan with tax harvesting.";
-            
+            let msg = `Hi, I am ${quizData.name}. I finished the portfolio quiz. I have ${quizData.schemes} schemes. Can you help me optimize?`;
             window.open(`https://wa.me/919491227272?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
-        function downloadLeadMagnet() {
-            // In production, this would trigger a download or redirect to a PDF
-            // For now, we'll show an alert and can integrate with actual PDF hosting
-            alert('Thank you! Your free guide "5 Signs Your Direct Plan Needs Review" will be sent to your email: ' + quizData.email);
-            
-            // Optional: Trigger actual PDF download or email delivery
-            // window.location.href = '/downloads/5-signs-direct-plan-review.pdf';
-            
-            // Or open WhatsApp to request the guide
-            const msg = encodeURIComponent("Hi! I've completed the portfolio health check. Please send me the free guide: '5 Signs Your Direct Plan Needs Review'");
-            window.open(`https://wa.me/919491227272?text=${msg}`, '_blank');
-        }
-
-        function calculateTaxSavings() {
-            const portfolioValue = parseFloat(document.getElementById('calc-portfolio-value').value) || 0;
-            const capitalGains = parseFloat(document.getElementById('calc-capital-gains').value) || 0;
-            const taxBracket = parseFloat(document.getElementById('calc-tax-bracket').value) || 20;
-
-            if (portfolioValue === 0 && capitalGains === 0) {
-                alert('Please enter portfolio value and/or capital gains to calculate tax savings');
-                return;
-            }
-
-            // Calculate tax without harvesting
-            let taxWithoutHarvesting = 0;
-            let estimatedHarvestingSavings = 0;
-
-            if (capitalGains > 0) {
-                // Standard tax calculation
-                if (taxBracket === 20) {
-                    // LTCG: First 1L is tax-free
-                    const taxableGains = Math.max(0, capitalGains - 100000);
-                    taxWithoutHarvesting = taxableGains * 0.20;
-                } else if (taxBracket === 15) {
-                    // STCG Equity: 15% flat
-                    taxWithoutHarvesting = capitalGains * 0.15;
-                } else {
-                    // STCG Others: 30% + cess
-                    taxWithoutHarvesting = capitalGains * 0.30 * 1.04; // Including 4% cess
-                }
-
-                // Estimate harvesting savings (typically 20-40% of tax through strategic loss harvesting)
-                const harvestingEfficiency = 0.30; // 30% average savings through harvesting
-                estimatedHarvestingSavings = taxWithoutHarvesting * harvestingEfficiency;
-            } else if (portfolioValue > 0) {
-                // Estimate based on portfolio value (assuming 10% annual gains, 30% are realized)
-                const estimatedGains = portfolioValue * 0.10 * 0.30;
-                
-                if (taxBracket === 20) {
-                    const taxableGains = Math.max(0, estimatedGains - 100000);
-                    taxWithoutHarvesting = taxableGains * 0.20;
-                } else if (taxBracket === 15) {
-                    taxWithoutHarvesting = estimatedGains * 0.15;
-                } else {
-                    taxWithoutHarvesting = estimatedGains * 0.30 * 1.04;
-                }
-
-                estimatedHarvestingSavings = taxWithoutHarvesting * 0.30;
-            }
-
-            // Display results
-            const resultDiv = document.getElementById('calc-result');
-            const savingsAmount = document.getElementById('calc-savings-amount');
-            const explanation = document.getElementById('calc-explanation');
-
-            savingsAmount.textContent = '₹' + Math.round(estimatedHarvestingSavings).toLocaleString('en-IN');
-
-            let explanationText = '';
-            if (capitalGains > 0) {
-                explanationText = `Based on your capital gains of ₹${Math.round(capitalGains).toLocaleString('en-IN')}, `;
-            } else {
-                explanationText = `Based on your portfolio value of ₹${Math.round(portfolioValue).toLocaleString('en-IN')}, `;
-            }
-            explanationText += `you could potentially save approximately ₹${Math.round(estimatedHarvestingSavings).toLocaleString('en-IN')} annually through strategic tax-loss harvesting. `;
-            explanationText += `This is achieved by strategically realizing losses to offset gains, a benefit typically available through regular plan management.`;
-            explanationText += ` The expense ratio difference is often outweighed by these tax savings.`;
-
-            explanation.textContent = explanationText;
-            resultDiv.classList.add('show');
-
-            // Scroll to result
-            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-
-        // Load saved quiz data if exists
-        window.addEventListener('DOMContentLoaded', function() {
-            const saved = localStorage.getItem('quizData');
-            if (saved) {
-                try {
-                    quizData = JSON.parse(saved);
-                } catch (e) {
-                    console.error('Error loading quiz data:', e);
-                }
-            }
-        });
-
-        // FAQ Toggle Function
-        function toggleFaq(element) {
-            const faqItem = element.closest('.faq-item');
-            const isActive = faqItem.classList.contains('active');
-            
-            // Close all FAQ items
-            document.querySelectorAll('.faq-item').forEach(item => {
-                item.classList.remove('active');
-            });
-            
-            // Open clicked item if it wasn't active
-            if (!isActive) {
-                faqItem.classList.add('active');
-            }
-        }
-
-        // Consultation Booking Function
-        function bookConsultation() {
-            let msg = "Hello! I'd like to book a consultation call for portfolio review. ";
-            
-            if (quizData.name) {
-                msg += `My name is ${quizData.name}. `;
-            }
-            if (quizData.email) {
-                msg += `Email: ${quizData.email}. `;
-            }
-            if (quizData.phone) {
-                msg += `Phone: ${quizData.phone}. `;
-            }
-            if (quizData.portfolioValue) {
-                msg += `Portfolio size: ₹${quizData.portfolioValue}. `;
-            }
-            
-            msg += "Please suggest available time slots for the call.";
-            
-            window.open(`https://wa.me/919491227272?text=${encodeURIComponent(msg)}`, '_blank');
-        }
-
-        // Enhanced WhatsApp function with consultation booking
         function openWhatsAppWithBooking() {
-            const msg = encodeURIComponent("Hello! I'd like to schedule a portfolio review consultation. Please share available time slots.");
-            window.open(`https://wa.me/919491227272?text=${msg}`, '_blank');
+            window.open(`https://wa.me/919491227272?text=Hi%2C%20I%20want%20to%20book%20a%20consultation`, '_blank');
         }
+
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            item.classList.toggle('active');
+        }
+
+        // Doodle Time Logic
+        const hour = new Date().getHours();
+        const doodle = document.getElementById('doodle-bar');
+        if(hour < 12) doodle.innerText = "🌅 Good Morning! Start your day with a free portfolio review.";
+        else if(hour > 18) doodle.innerText = "🌙 Good Evening! Plan your tomorrow, today.";
     </script>
 </body>
 </html>
