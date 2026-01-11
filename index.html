@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Portfolio Review & Analysis | Nanda Investment</title>
+    <title>Free Portfolio Review & Analysis | Direct Plan to Regular Plan Transition | Nanda Investment</title>
     
     <meta name="description" content="Nanda Investment and Financial Services - AMFI Registered Mutual Fund Distributor (ARN-332725). Get expert reviews, portfolio tracking, and personalized financial planning in India.">
     <meta name="keywords" content="Mutual Funds India, SIP Investment, Financial Advisor, Nanda Investment, ARN-332725, Wealth Management, Portfolio Review, Tax Harvesting">
@@ -29,18 +29,17 @@
         :root {
             --primary: #00a8cc;
             --secondary: #ff6b35;
-            --accent: #004e89; /* Financial Blue */
+            --accent: #004e89;
             --success: #06a77d;
             --text-dark: #0f172a;
             --text-light: #64748b;
             --bg-light: #f8fafc;
             --white: #ffffff;
-            --glass: rgba(255, 255, 255, 0.9);
-            --navy: #0d1e3d; /* Compliance Footer Background */
+            --glass: rgba(255, 255, 255, 0.8);
+            --navy: #0d1e3d;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         body { 
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
             line-height: 1.6; 
@@ -49,7 +48,7 @@
             overflow-x: hidden;
         }
 
-        /* --- Header & Navigation --- */
+        /* Header & Nav */
         header { 
             background: var(--glass); 
             backdrop-filter: blur(12px); 
@@ -67,13 +66,6 @@
         .header-nav { display: flex; gap: 30px; align-items: center; flex-wrap: wrap; }
         .header-nav a { color: var(--text-dark); text-decoration: none; font-size: 14px; font-weight: 600; transition: 0.2s; }
         .header-nav a:hover { color: var(--primary); }
-        .arn-badge { background: var(--accent); color: white; font-size: 12px; padding: 6px 15px; border-radius: 20px; font-weight: 700; }
-
-        @media (max-width: 768px) {
-            .header-nav { display: none; }
-            .header-content { flex-direction: column; align-items: flex-start; gap: 10px; }
-        }
-
         .doodle-bar { 
             background: linear-gradient(90deg, #fff5f0 0%, #fffbe6 100%); 
             padding: 10px; 
@@ -84,7 +76,7 @@
             border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
-        /* --- Hero Section --- */
+        /* Hero */
         .hero { 
             padding: 100px 20px; 
             text-align: center; 
@@ -97,19 +89,14 @@
         .hero-stats { display: flex; justify-content: center; gap: 50px; margin: 40px 0; flex-wrap: wrap; }
         .stat-number { font-size: 36px; font-weight: 800; color: var(--primary); line-height: 1; margin-bottom: 8px; }
         .stat-label { font-size: 14px; color: var(--text-light); font-weight: 600; text-transform: uppercase; }
-
-        /* --- Buttons --- */
+        
+        /* Buttons */
         .btn { padding: 16px 32px; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; transition: 0.3s; text-decoration: none; display: inline-block; border: none; }
         .btn-primary { background: var(--text-dark); color: white; box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2); }
         .btn-primary:hover { transform: translateY(-3px); background: var(--accent); }
         .btn-whatsapp { background: #25D366; color: white; margin-left: 15px; }
         .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2); }
 
-        /* --- Layout & Cards --- */
-        .container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
-        .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { font-size: 32px; font-weight: 800; color: var(--text-dark); }
-        
         /* Quiz */
         .quiz-section { margin-top: -60px; position: relative; z-index: 10; }
         .quiz-card { background: white; max-width: 800px; margin: 0 auto; padding: 50px; border-radius: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); text-align: center; }
@@ -121,9 +108,12 @@
         .progress-bar { width: 100%; height: 6px; background: #e2e8f0; border-radius: 3px; margin-bottom: 30px; overflow: hidden; }
         .progress-fill { height: 100%; background: var(--primary); transition: width 0.3s; }
 
-        /* Grid Layouts */
-        .goal-grid, .case-study-grid, .testimonials-grid, .direct-regular-grid, .portfolio-xray-grid { display: grid; gap: 30px; }
-        .goal-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        /* Sections & Grids */
+        .container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 32px; font-weight: 800; color: var(--text-dark); }
+        
+        .goal-grid, .testimonials-grid, .direct-regular-grid, .portfolio-xray-grid { display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
         .goal-card { background: white; padding: 40px; border-radius: 24px; border: 1px solid rgba(0,0,0,0.05); transition: 0.3s; }
         .goal-card:hover { border-color: var(--primary); transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
 
@@ -135,12 +125,17 @@
         .calculator-result.show { display: block; }
 
         /* Case Studies */
-        .case-study-grid { grid-template-columns: 1fr 1fr; }
+        .case-study-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
         .case-study-card { padding: 30px; border-radius: 20px; border: 2px solid #e2e8f0; }
         .case-study-card.before { background: #fef2f2; border-color: #fecaca; }
         .case-study-card.after { background: #f0fdf4; border-color: #86efac; }
-
-        /* About & FAQ */
+        .case-study-metric { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.1); }
+        
+        /* Testimonials */
+        .testimonial-card { background: var(--bg-light); padding: 30px; border-radius: 20px; border-left: 4px solid var(--primary); }
+        .testimonial-content { font-size: 16px; font-style: italic; margin-bottom: 20px; }
+        
+        /* FAQ & About */
         .about-wrap { background: var(--text-dark); color: white; padding: 80px 40px; border-radius: 40px; display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: center; }
         .about-image img { width: 160px; height: 160px; background: white; padding: 20px; border-radius: 30px; }
         .faq-item { background: var(--bg-light); margin-bottom: 20px; border-radius: 15px; overflow: hidden; border: 1px solid #e2e8f0; }
@@ -148,99 +143,41 @@
         .faq-answer { padding: 0 25px; max-height: 0; overflow: hidden; transition: max-height 0.3s, padding 0.3s; }
         .faq-item.active .faq-answer { padding: 0 25px 25px 25px; max-height: 500px; }
 
-        /* --- CONTACT FORM STYLING (Financial Brand) --- */
-        #contact-section {
-            background-color: #f9fbfc;
-            padding: 80px 20px;
-        }
-        #contact-form-container {
-            background: #ffffff;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 86, 179, 0.1);
-            border-top: 5px solid var(--accent);
-        }
-        #contact-form-container h2 {
-            color: var(--navy);
-            text-align: center;
-            margin-bottom: 30px;
-        }
+        /* Contact Form */
+        #contact-section { background-color: #f9fbfc; padding: 80px 20px; }
+        #contact-form-container { background: #ffffff; max-width: 600px; margin: 0 auto; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 86, 179, 0.1); border-top: 5px solid var(--accent); }
         .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #dde2e5;
-            border-radius: 6px;
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
-        .form-group input:focus, .form-group textarea:focus {
-            border-color: var(--accent);
-            outline: none;
-            box-shadow: 0 0 8px rgba(0, 86, 179, 0.2);
-        }
-        .form-submit-btn {
-            width: 100%;
-            background-color: var(--accent);
-            color: white;
-            padding: 14px;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .form-submit-btn:hover { background-color: #003666; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #dde2e5; border-radius: 6px; }
+        .form-submit-btn { width: 100%; background-color: var(--accent); color: white; padding: 14px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
 
-        /* --- COMPLIANCE FOOTER STYLING --- */
-        #compliance-footer {
-            background-color: var(--navy);
-            color: #b0c4de;
-            padding: 50px 20px;
-            font-family: 'Segoe UI', sans-serif;
-            font-size: 13px;
-            line-height: 1.6;
-            border-top: 4px solid var(--primary);
-        }
+        /* Footer */
+        #compliance-footer { background-color: var(--navy); color: #b0c4de; padding: 50px 20px; font-size: 13px; border-top: 4px solid var(--primary); }
         .footer-content { max-width: 1000px; margin: 0 auto; text-align: center; }
-        .footer-identity h3 { color: white; font-size: 18px; margin-bottom: 10px; text-transform: uppercase; }
-        .risk-warning {
-            color: white;
-            font-size: 14px;
-            text-transform: uppercase;
-            border: 1px solid #4a5d7e;
-            padding: 15px;
-            margin: 30px 0;
-            background: rgba(255, 255, 255, 0.05);
-        }
-        .footer-links { margin-top: 30px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .footer-links a { color: #4da6ff; text-decoration: none; font-weight: 600; }
-        .footer-links a:hover { color: white; text-decoration: underline; }
-        .copyright { margin-top: 30px; font-size: 11px; opacity: 0.6; }
-
-        /* Mobile Adjustments */
+        .footer-identity h3 { color: white; font-size: 18px; text-transform: uppercase; }
+        .risk-warning { color: white; border: 1px solid #4a5d7e; padding: 15px; margin: 30px 0; background: rgba(255, 255, 255, 0.05); }
+        .footer-links a { color: #4da6ff; text-decoration: none; margin: 0 10px; }
+        
+        /* Mobile */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 32px; }
-            .case-study-grid, .direct-regular-grid, .portfolio-xray-grid { grid-template-columns: 1fr; }
+            .header-nav { display: none; }
+            .header-content { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .case-study-grid, .direct-regular-grid { grid-template-columns: 1fr; }
             .about-wrap { grid-template-columns: 1fr; text-align: center; }
-            .about-image { margin: 0 auto; }
-            .btn { width: 100%; margin-bottom: 10px; margin-left: 0; }
+            .hero h1 { font-size: 32px; }
         }
     </style>
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWLKH6NM"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
     <div id="doodle-bar" class="doodle-bar">✨ Get Your Free Portfolio X-Ray Report - Identify Tax Savings & Optimization Opportunities</div>
 
     <header>
         <div class="header-content">
             <div class="logo-section">
-                <img src="https://ui-avatars.com/api/?name=NI&background=004e89&color=fff" alt="Nanda Investment Logo">
+                <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/1af75f63-8170-45d7-bd01-d0ac49b743dd" alt="Nanda Investment Logo">
                 <div class="logo-text">
                     <h1>Nanda Investment and Financial Services</h1>
                     <p>AMFI Registered Mutual Fund Distributor | ARN-332725</p>
@@ -253,7 +190,7 @@
                 <a href="#contact-section">Contact</a>
             </nav>
             <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 5px;">
-                <span class="arn-badge">ARN-332725</span>
+                <span class="arn-badge" style="background: var(--accent); color: white; padding: 6px 15px; border-radius: 20px; font-size:12px;">ARN-332725</span>
             </div>
         </div>
     </header>
@@ -263,22 +200,12 @@
             <div style="background: rgba(6, 167, 125, 0.1); padding: 12px 20px; border-radius: 25px; display: inline-block; margin-bottom: 20px; border: 2px solid var(--success);">
                 <span style="font-size: 14px; font-weight: 700; color: var(--success);">✅ AMFI Registered | ✅ Free Portfolio Review | ✅ Direct Plan Specialist</span>
             </div>
-            <h1>Get Your <span style="color: var(--primary);">Free Portfolio Review</span> & Transform Your Investments</h1>
-            <p class="hero-subtitle">Professional analysis to help direct plan investors transition to optimized regular plans. Save on taxes, simplify holdings, and align with life goals.</p>
-            
+            <h1>Get Your <span style="color: var(--primary);">Free Portfolio Review</span> & Transform Your Direct Plan Investments</h1>
+            <p class="hero-subtitle">We provide professional portfolio review and analysis to help direct plan investors transition to optimized regular plans. Save on taxes through strategic harvesting and simplify your portfolio.</p>
             <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Investors Optimized</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">₹50+ Cr</div>
-                    <div class="stat-label">Portfolio Value</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">₹2.5L+</div>
-                    <div class="stat-label">Tax Savings Generated</div>
-                </div>
+                <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">Investors Optimized</div></div>
+                <div class="stat-item"><div class="stat-number">₹50+ Cr</div><div class="stat-label">Portfolio Value</div></div>
+                <div class="stat-item"><div class="stat-number">₹2.5L+</div><div class="stat-label">Tax Savings</div></div>
             </div>
             <div class="hero-cta">
                 <button class="btn btn-primary" onclick="scrollToSection('quiz')">Get Free Portfolio Review</button>
@@ -289,9 +216,7 @@
 
     <section class="container quiz-section" id="quiz">
         <div class="quiz-card">
-            <div class="progress-bar">
-                <div id="progress-fill" class="progress-fill" style="width: 20%;"></div>
-            </div>
+            <div class="progress-bar"><div id="progress-fill" class="progress-fill" style="width: 20%;"></div></div>
             
             <div id="step-1" class="quiz-step active">
                 <h2>Portfolio Health Check</h2>
@@ -304,132 +229,183 @@
             <div id="step-2" class="quiz-step">
                 <h2>One More Detail</h2>
                 <p>Are your investments currently mapped to specific life milestones?</p>
-                <button class="option-btn" onclick="saveAnswer('goals', 'clear'); nextStep(3);">Yes, I have clear goals for every SIP</button>
-                <button class="option-btn" onclick="saveAnswer('goals', 'partial'); nextStep(3);">Partially, but needs better structure</button>
-                <button class="option-btn" onclick="saveAnswer('goals', 'none'); nextStep(3);">No, I'm just investing for returns</button>
+                <button class="option-btn" onclick="saveAnswer('goals', 'clear'); nextStep(3);">Yes, I have clear goals</button>
+                <button class="option-btn" onclick="saveAnswer('goals', 'partial'); nextStep(3);">Partially, but needs structure</button>
+                <button class="option-btn" onclick="saveAnswer('goals', 'none'); nextStep(3);">No, just investing for returns</button>
             </div>
 
             <div id="step-3" class="quiz-step">
                 <h2>Tell Us More</h2>
-                <label class="quiz-label" style="display:block; text-align:left; font-weight:600;">Current Portfolio Value (₹)</label>
-                <input type="text" class="quiz-input" id="portfolio-value" placeholder="e.g., 50,00,000">
-                
-                <label class="quiz-label" style="display:block; text-align:left; font-weight:600;">Primary Investment Goal</label>
+                <input type="text" class="quiz-input" id="portfolio-value" placeholder="Current Portfolio Value (₹)">
                 <select class="quiz-input" id="primary-goal">
-                    <option value="">Select your primary goal</option>
-                    <option value="retirement">Retirement Planning</option>
+                    <option value="">Select Primary Goal</option>
+                    <option value="retirement">Retirement</option>
                     <option value="wealth">Wealth Creation</option>
                     <option value="tax">Tax Saving</option>
                 </select>
-                
                 <button class="btn btn-primary" style="width: 100%; margin-top: 20px;" onclick="nextStep(4);">Continue</button>
             </div>
 
             <div id="step-4" class="quiz-step">
-                <h2>Get Your Free Portfolio Analysis</h2>
-                <input type="text" class="quiz-input" id="user-name" placeholder="Full Name" required>
-                <input type="email" class="quiz-input" id="user-email" placeholder="Email Address" required>
-                <input type="tel" class="quiz-input" id="user-phone" placeholder="Phone Number" required>
-                
+                <h2>Get Your Analysis</h2>
+                <input type="text" class="quiz-input" id="user-name" placeholder="Full Name">
+                <input type="email" class="quiz-input" id="user-email" placeholder="Email Address">
+                <input type="tel" class="quiz-input" id="user-phone" placeholder="Phone Number">
                 <button class="btn btn-primary" style="width: 100%; margin-top: 20px;" onclick="submitQuiz();">Get My Free Analysis</button>
             </div>
 
             <div id="result" class="quiz-step">
                 <h2 style="color: var(--success);">Analysis Ready!</h2>
-                <p>Thank you <span id="result-name"></span>! We've identified opportunities to optimize your portfolio.</p>
-                <div style="background: #f0f9ff; padding: 20px; border-radius: 15px; margin: 25px 0; text-align:left;">
-                    <ul id="result-list" style="margin-left: 20px;"></ul>
-                </div>
+                <p>Thank you <span id="result-name"></span>. We have identified optimization opportunities.</p>
                 <button class="btn btn-whatsapp" onclick="openWhatsApp();">Chat on WhatsApp</button>
             </div>
         </div>
     </section>
 
     <section class="container">
-        <div class="section-title">
-            <h2>Wealth Architecture for Every Milestone</h2>
-            <p>We help you build a portfolio that is mathematically aligned with your dreams.</p>
-        </div>
+        <div class="section-title"><h2>Wealth Architecture for Every Milestone</h2></div>
         <div class="goal-grid">
-            <div class="goal-card">
-                <h3>🎓 Children's Future</h3>
-                <p>Ensure your child has the financial backing for top-tier higher education.</p>
+            <div class="goal-card"><h3>🎓 Children's Future</h3><p>Ensure financial backing for higher education.</p></div>
+            <div class="goal-card"><h3>🏠 Dream Home</h3><p>Accumulate corpus for your dream property.</p></div>
+            <div class="goal-card"><h3>🏖️ Retirement Comfort</h3><p>Build a sustainable passive income engine.</p></div>
+        </div>
+    </section>
+
+    <section class="container" style="background: white; padding: 60px 20px; margin-top: 40px; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
+        <div class="section-title">
+            <h2>Real Tax Savings: Proof from Client Portfolios</h2>
+            <p>Concrete examples of actual tax savings achieved through strategic harvesting</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div style="background: #f0fdf4; padding: 30px; border-radius: 20px; border: 2px solid var(--success);">
+                <h4>CASE STUDY 1: ₹50L Portfolio</h4>
+                <p>Annual Gains: ₹5,00,000</p>
+                <p style="color: var(--success); font-weight: 700;">✅ Annual Tax Saved: ₹30,000</p>
+                <p style="font-size: 13px;">Savings offset 86% of expense difference.</p>
             </div>
-            <div class="goal-card">
-                <h3>🏠 Dream Home</h3>
-                <p>Strategically accumulate the corpus needed for your dream property.</p>
+            <div style="background: #f0f9ff; padding: 30px; border-radius: 20px; border: 2px solid var(--primary);">
+                <h4>CASE STUDY 2: ₹1.2 Cr Portfolio</h4>
+                <p>Annual Gains: ₹12,00,000</p>
+                <p style="color: var(--primary); font-weight: 700;">✅ Annual Tax Saved: ₹85,000</p>
+                <p style="font-size: 13px;">Savings exceed the entire expense difference.</p>
             </div>
-            <div class="goal-card">
-                <h3>🏖️ Retirement Comfort</h3>
-                <p>Build a sustainable "Passive Income" engine for life after work.</p>
+            <div style="background: #fff7ed; padding: 30px; border-radius: 20px; border: 2px solid var(--secondary);">
+                <h4>CASE STUDY 3: ₹75L Portfolio</h4>
+                <p>Cumulative Gains: ₹15L</p>
+                <p style="color: var(--secondary); font-weight: 700;">✅ 2-Year Tax Saved: ₹1,65,000</p>
             </div>
         </div>
     </section>
 
     <section class="calculator-section" id="calculator">
         <div class="calculator-card">
-            <div class="section-title">
-                <h2>Tax Savings Calculator</h2>
-                <p>See how much you could save with tax-loss harvesting</p>
-            </div>
+            <div class="section-title"><h2>Tax Savings Calculator</h2></div>
             <input type="number" id="calc-capital-gains" class="calculator-input" placeholder="Annual Capital Gains (₹)">
             <button class="btn btn-primary" style="width: 100%;" onclick="calculateTaxSavings();">Calculate Potential Savings</button>
             <div id="calc-result" class="calculator-result">
                 <h3>Potential Annual Tax Savings</h3>
                 <div style="font-size: 48px; font-weight: 800;" id="calc-savings-amount">₹0</div>
-                <div id="calc-explanation"></div>
+                <p id="calc-explanation"></p>
             </div>
         </div>
     </section>
 
-    <section class="container">
-        <div class="section-title">
-            <h2>Direct vs Regular: The Real Cost</h2>
+    <section class="case-study-section">
+        <div class="container">
+            <div class="section-title"><h2>Real Portfolio Transformation</h2></div>
+            <div class="case-study-grid">
+                <div class="case-study-card before">
+                    <h3>❌ Before Optimization</h3>
+                    <div class="case-study-metric"><span>Funds:</span><span>22 Funds</span></div>
+                    <div class="case-study-metric"><span>Plan:</span><span>Direct Plans</span></div>
+                    <div class="case-study-metric"><span>Overlapping:</span><span>12 Funds</span></div>
+                    <div class="case-study-metric"><span>Time Spent:</span><span>6+ hrs/month</span></div>
+                </div>
+                <div class="case-study-card after">
+                    <h3>✅ After Optimization</h3>
+                    <div class="case-study-metric"><span>Funds:</span><span>7 Funds</span></div>
+                    <div class="case-study-metric"><span>Plan:</span><span>Regular Plans</span></div>
+                    <div class="case-study-metric"><span>Overlapping:</span><span>0 Funds</span></div>
+                    <div class="case-study-metric"><span>Time Spent:</span><span>1 hr/month</span></div>
+                </div>
+            </div>
         </div>
-        <div class="direct-regular-grid">
+    </section>
+
+    <section class="container" id="portfolio-xray" style="background: white; padding: 80px 20px; margin-top: 60px; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
+        <div class="section-title"><h2>Get Your Free Portfolio X-Ray Report</h2></div>
+        <div class="portfolio-xray-grid" style="grid-template-columns: 1fr 1fr;">
+            <div>
+                <h3>What's Included:</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 15px;">🔍 <strong>Overlap Analysis:</strong> Identify duplicate funds.</li>
+                    <li style="margin-bottom: 15px;">💰 <strong>Tax Opportunities:</strong> Calculate exact savings.</li>
+                    <li style="margin-bottom: 15px;">🎯 <strong>Goal Alignment:</strong> Map investments to life goals.</li>
+                    <li style="margin-bottom: 15px;">🔄 <strong>Transition Roadmap:</strong> Step-by-step plan.</li>
+                </ul>
+                <button class="btn btn-primary" style="margin-top: 20px;" onclick="scrollToSection('quiz')">Get X-Ray Report</button>
+            </div>
+            <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); padding: 40px; border-radius: 25px; color: white;">
+                <h3>Real X-Ray Results:</h3>
+                <div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 15px; margin-bottom: 20px;">
+                    <div>Before: 22 Funds | 12 Overlaps</div>
+                </div>
+                <div style="text-align: center; font-size: 30px;">↓</div>
+                <div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 15px; margin-top: 20px;">
+                    <div>After: 7 Funds | ₹85K Tax Saved</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="background: var(--bg-light); border-radius: 30px;">
+        <div class="section-title"><h2>Direct Plan vs Regular Plan: Honest Comparison</h2></div>
+        <div class="direct-regular-grid" style="grid-template-columns: 1fr 1fr;">
             <div style="background: white; padding: 40px; border-radius: 20px; border: 2px solid #e2e8f0;">
-                <h3 style="text-align: center; margin-bottom: 20px;">Direct Plan (DIY)</h3>
-                <p><strong>Expense Ratio:</strong> Lower</p>
-                <p><strong>Tax Harvesting:</strong> DIY (Hard)</p>
-                <p><strong>Review Time:</strong> 6+ Hours/Month</p>
+                <h3>Direct Plan (DIY)</h3>
+                <p>Expense Ratio: 0.5-0.7% Lower</p>
+                <p>Tax Harvesting: Self-Managed (Hard)</p>
+                <p>Portfolio Review: DIY (4-6 hrs/month)</p>
+                <p>Goal Alignment: Self-Planned</p>
             </div>
             <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: white; padding: 40px; border-radius: 20px;">
-                <h3 style="text-align: center; margin-bottom: 20px;">Regular Plan (Optimized)</h3>
-                <p><strong>Expense Ratio:</strong> Slightly Higher</p>
-                <p><strong>Tax Harvesting:</strong> ✅ Professional (Saves 20-40%)</p>
-                <p><strong>Review Time:</strong> ✅ Zero (We do it)</p>
-                <p style="margin-top: 20px; font-weight: 700;">Net Result: Tax savings often cover the cost difference.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="trust-badges" style="text-align: center; padding: 50px 20px; background: white;">
-        <div class="container" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
-            <div>
-                <div style="font-size: 40px;">✅</div>
-                <div>AMFI Registered<br>ARN-332725</div>
-            </div>
-            <div>
-                <div style="font-size: 40px;">📊</div>
-                <div>500+ Portfolios<br>Reviewed</div>
-            </div>
-            <div>
-                <div style="font-size: 40px;">💰</div>
-                <div>₹2.5L+ Tax<br>Savings Generated</div>
+                <h3>Regular Plan (Optimized)</h3>
+                <p>Expense Ratio: +0.5-0.7% Higher</p>
+                <p>Tax Harvesting: ✅ Professional (Saves 20-40%)</p>
+                <p>Portfolio Review: ✅ Automated (1 hr/month)</p>
+                <p>Goal Alignment: ✅ Expert-Planned</p>
             </div>
         </div>
     </section>
 
     <section class="container">
-        <div class="about-wrap">
-            <div class="about-image">
-                <img src="https://ui-avatars.com/api/?name=NI&background=fff&color=004e89" alt="Logo">
+        <div class="section-title"><h2>Success Stories</h2></div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-content">"Switched from 18 direct plans to 6 regular plans. The portfolio is much simpler."</p>
+                <strong>- R. Sharma (IT Professional)</strong>
             </div>
-            <div class="about-text">
-                <h2>Excellence in Financial Guidance</h2>
-                <p>At Nanda Investment and Financial Services, we don't believe in "one-size-fits-all." We treat your wealth as a unique blueprint.</p>
-                <p style="margin-top: 20px;"><strong>Our Expertise:</strong> Tax-Loss Harvesting, Portfolio Simplification, and Goal-Based Rebalancing.</p>
+            <div class="testimonial-card">
+                <p class="testimonial-content">"Tax harvesting strategies alone saved me ₹1.8L. The professional management pays for itself."</p>
+                <strong>- S. Kumar (Retired)</strong>
             </div>
+        </div>
+    </section>
+
+    <section class="container" style="background: white; padding: 60px 40px; border-radius: 30px; margin-top: 60px;">
+        <div class="section-title"><h2>What We Actually Do: Our Role</h2></div>
+        <div style="background: #f0f9ff; padding: 30px; border-radius: 20px; border-left: 5px solid var(--primary);">
+            <h3>Who We Are:</h3>
+            <p>Nanda Investment and Financial Services is an AMFI-registered Mutual Fund Distributor (ARN-332725). We are <strong>not</strong> a SEBI-registered Investment Adviser. We provide incidental advice related to mutual fund distribution.</p>
+        </div>
+        <div class="testimonials-grid" style="margin-top: 30px;">
+            <div><h4>📋 Portfolio Review</h4><p>Comprehensive analysis of existing portfolios.</p></div>
+            <div><h4>💼 Distribution</h4><p>Facilitate investments in regular plans.</p></div>
+            <div><h4>🔄 Transition Support</h4><p>Guidance from direct to regular plans.</p></div>
+        </div>
+        <div style="background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%); color: white; padding: 35px; border-radius: 20px; margin-top: 30px;">
+            <h3>Transparent Pricing</h3>
+            <p>We earn trail commissions (0.25% - 0.75%) from AMCs. You do not pay us directly. No hidden fees.</p>
         </div>
     </section>
 
@@ -437,11 +413,15 @@
         <div class="section-title"><h2>Frequently Asked Questions</h2></div>
         <div class="faq-item">
             <div class="faq-question" onclick="toggleFaq(this)">Will switching affect my returns? <span>▼</span></div>
-            <div class="faq-answer"><p>While regular plans have a higher expense ratio, the tax savings from harvesting and professional rebalancing often result in higher net returns.</p></div>
+            <div class="faq-answer"><p>Regular plans have higher expenses, but tax savings and professional management often lead to better net returns.</p></div>
         </div>
         <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">Is tax harvesting legal? <span>▼</span></div>
-            <div class="faq-answer"><p>Yes, it is a completely legal method recognized by the Income Tax department to offset gains with losses.</p></div>
+            <div class="faq-question" onclick="toggleFaq(this)">Is tax-loss harvesting legal? <span>▼</span></div>
+            <div class="faq-answer"><p>Yes, it is a legitimate tax strategy to offset gains with losses.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">Do I lose control of my money? <span>▼</span></div>
+            <div class="faq-answer"><p>No, you retain full ownership and control. We provide guidance and execution support.</p></div>
         </div>
     </section>
 
@@ -451,22 +431,19 @@
             <form action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="80a8b079-550c-430a-a8b6-09060ebd6534">
                 <input type="hidden" name="subject" value="New Inquiry from MutualFundReview.in">
-
+                
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" name="name" id="name" required placeholder="Enter your full name">
+                    <input type="text" name="name" id="name" required placeholder="Enter your name">
                 </div>
-
                 <div class="form-group">
                     <label for="email">Email or Phone</label>
                     <input type="text" name="email" id="email" required placeholder="Your contact details">
                 </div>
-
                 <div class="form-group">
                     <label for="message">Message</label>
                     <textarea name="message" id="message" required placeholder="How can we help you?" rows="5"></textarea>
                 </div>
-
                 <button type="submit" class="form-submit-btn">Send Message</button>
             </form>
         </div>
@@ -479,98 +456,52 @@
                 <p>AMFI Registered Mutual Fund Distributor | <strong>ARN-332725</strong></p>
                 <p>Date of Initial Registration: [Insert Date] | Current Validity: [Insert Date]</p>
             </div>
-
             <div class="footer-legal">
-                <p class="risk-warning">
-                    <strong>MUTUAL FUND INVESTMENTS ARE SUBJECT TO MARKET RISKS, READ ALL SCHEME RELATED DOCUMENTS CAREFULLY.</strong>
-                </p>
-                
-                <p class="small-text" style="color: #8a9bbd; margin-bottom: 20px;">
-                    <strong>Disclaimer:</strong> The information provided on this website is for educational and informational purposes only. 
-                    As an AMFI-registered distributor, we provide incidental advice related to the mutual fund products we distribute. 
-                    This does not constitute comprehensive financial planning or investment advisory services as defined by SEBI.
-                    Past performance is not an indicator of future returns. Please consult your tax advisor for specific tax implications.
-                </p>
+                <p class="risk-warning"><strong>MUTUAL FUND INVESTMENTS ARE SUBJECT TO MARKET RISKS, READ ALL SCHEME RELATED DOCUMENTS CAREFULLY.</strong></p>
+                <p class="small-text" style="color: #8a9bbd;"><strong>Disclaimer:</strong> The information provided is for educational purposes. As an AMFI-registered distributor, we provide incidental advice. This does not constitute SEBI-registered investment advisory.</p>
             </div>
-
             <div class="footer-links">
-                <a href="#quiz">Portfolio Review</a>
-                <a href="#calculator">Tax Guide</a>
                 <a href="https://www.amfiindia.com/investor-corner/knowledge-center/know-your-distributor.html" target="_blank">AMFI Know Your Distributor</a>
                 <a href="#">Commission Disclosure</a>
+                <a href="#">Privacy Policy</a>
             </div>
-
-            <div class="copyright">
-                &copy; 2026 Nanda Investment. All Rights Reserved.
-            </div>
+            <div class="copyright">&copy; 2026 Nanda Investment. All Rights Reserved.</div>
         </div>
     </footer>
 
     <script>
-        // --- QUIZ LOGIC ---
+        // Quiz Logic
         let quizData = { schemes: '', goals: '', name: '', email: '' };
-
-        function saveAnswer(key, value) {
-            quizData[key] = value;
-        }
-
+        function saveAnswer(key, value) { quizData[key] = value; }
         function nextStep(step) {
             document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
             document.getElementById('step-' + step).classList.add('active');
             document.getElementById('progress-fill').style.width = (step / 4) * 100 + '%';
         }
-
         function submitQuiz() {
             quizData.name = document.getElementById('user-name').value;
             quizData.email = document.getElementById('user-email').value;
-            
-            if(!quizData.name || !quizData.email) {
-                alert("Please fill in your details.");
-                return;
-            }
-
-            // Show Results
+            if(!quizData.name || !quizData.email) { alert("Please fill in details"); return; }
             document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
             document.getElementById('result').classList.add('active');
             document.getElementById('result-name').innerText = quizData.name;
-            
-            // Generate Custom Advice
-            let list = document.getElementById('result-list');
-            list.innerHTML = "";
-            
-            if(quizData.schemes === '15+') {
-                list.innerHTML += "<li><strong>Consolidation Needed:</strong> You have too many funds. We can reduce this to 6-8 optimal schemes.</li>";
-            } else {
-                 list.innerHTML += "<li><strong>Optimization Check:</strong> Your fund count is okay, but we should check for overlaps.</li>";
-            }
-            
-            if(quizData.goals === 'none') {
-                 list.innerHTML += "<li><strong>Goal Alignment:</strong> We need to map your SIPs to specific goals immediately.</li>";
-            }
         }
 
-        // --- CALCULATOR LOGIC ---
+        // Calculator Logic
         function calculateTaxSavings() {
             let gains = document.getElementById('calc-capital-gains').value;
             if(!gains) return;
-            
-            // Simple logic: 10% LTCG, assuming 30% harvesting efficiency
-            let tax = (gains - 100000) * 0.10; // Basic LTCG calculation
-            if (tax < 0) tax = 0;
-            let savings = tax * 0.30; // 30% savings via harvesting
-            
+            let tax = Math.max(0, gains - 100000) * 0.10; 
+            let savings = tax * 0.30;
             document.getElementById('calc-result').classList.add('show');
             document.getElementById('calc-savings-amount').innerText = "₹" + Math.round(savings).toLocaleString();
-            document.getElementById('calc-explanation').innerText = "By strategically harvesting losses, you could save approx 30% on your capital gains tax liability compared to a passive approach.";
+            document.getElementById('calc-explanation').innerText = "Estimated savings via tax harvesting.";
         }
 
-        // --- UTILS ---
-        function scrollToSection(id) {
-            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-        }
-
+        function scrollToSection(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }); }
+        
         function openWhatsApp() {
-            let msg = `Hi, I am ${quizData.name}. I finished the portfolio quiz. I have ${quizData.schemes} schemes. Can you help me optimize?`;
+            let msg = `Hi, I am ${quizData.name}. I finished the portfolio quiz. Help me optimize.`;
             window.open(`https://wa.me/919491227272?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
@@ -579,14 +510,12 @@
         }
 
         function toggleFaq(element) {
-            const item = element.parentElement;
-            item.classList.toggle('active');
+            element.parentElement.classList.toggle('active');
         }
 
-        // Doodle Time Logic
         const hour = new Date().getHours();
         const doodle = document.getElementById('doodle-bar');
-        if(hour < 12) doodle.innerText = "🌅 Good Morning! Start your day with a free portfolio review.";
+        if(hour < 12) doodle.innerText = "🌅 Good Morning! Start with a free portfolio review.";
         else if(hour > 18) doodle.innerText = "🌙 Good Evening! Plan your tomorrow, today.";
     </script>
 </body>
