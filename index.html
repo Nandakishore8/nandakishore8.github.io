@@ -194,19 +194,20 @@
             .hero h1 { font-size: 32px; }
         }
     </style>
+
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "FinancialService",
   "name": "Nanda Financial Services",
-        "address": {
+  "address": {
     "@type": "PostalAddress",
     "streetAddress": "SNC- 206, Road No 7, Santhoshimaa Colony",
     "addressLocality": "Secunderabad",
     "addressRegion": "Telangana",
     "postalCode": "500056",
     "addressCountry": "IN"
-  
+  },
   "url": "https://www.mutualfundreview.in",
   "logo": "https://www.mutualfundreview.in/logo.jpg",
   "sameAs": [
@@ -222,6 +223,7 @@
   }
 }
 </script>
+    
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWLKH6NM"
@@ -501,6 +503,7 @@
             <h2>Contact Nanda Investment</h2>
             <form action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="80a8b079-550c-430a-a8b6-09060ebd6534">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                 <input type="hidden" name="subject" value="New Inquiry from MutualFundReview.in">
                 
                 <div class="form-group">
@@ -608,6 +611,19 @@
         const doodle = document.getElementById('doodle-bar');
         if(hour < 12) doodle.innerText = "🌅 Good Morning! Start with a free portfolio review.";
         else if(hour > 18) doodle.innerText = "🌙 Good Evening! Plan your tomorrow, today.";
-    </script>
+        document.getElementById('contact-form').addEventListener('submit', function() {
+    const btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.innerText = 'Sending...';
+    
+    // Re-enable after 3 seconds if no redirect
+    setTimeout(() => {
+        btn.disabled = false;
+        btn.innerText = 'Send Message';
+    }, 3000);
+});
+</script>
+});
+</script>
 </body>
 </html>
