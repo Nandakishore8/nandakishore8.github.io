@@ -91,6 +91,29 @@
             border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
+        /* Header Social Icons - Dark colors for visibility */
+        .header-social-icon { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            width: 35px; 
+            height: 35px; 
+            border-radius: 50%; 
+            text-decoration: none; 
+            font-size: 16px; 
+            transition: all 0.3s ease; 
+            background-color: rgba(0, 86, 210, 0.1); 
+            color: var(--primary); 
+        }
+        .header-social-icon:hover { 
+            background-color: var(--primary); 
+            color: white; 
+            transform: translateY(-3px); 
+        }
+        .header-social-icon svg {
+            fill: currentColor;
+        }
+
         /* Hero */
         .hero { 
             padding: 100px 20px; 
@@ -175,7 +198,7 @@
         .footer-links a { color: #4da6ff; text-decoration: none; margin: 0 10px; transition: 0.2s; }
         .footer-links a:hover { color: var(--secondary); }
         
-        /* Social Icons Styling */
+        /* Footer Social Icons - White for dark footer */
         .social-media-container { padding: 20px 0; display: flex; justify-content: center; gap: 15px; margin-top: 15px;}
         .social-icon { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; text-decoration: none; font-size: 18px; transition: all 0.3s ease; background-color: rgba(255,255,255,0.1); color: #fff; }
         .social-icon:hover { background-color: var(--primary); transform: translateY(-3px); color: white; }
@@ -246,23 +269,22 @@
                 <a href="#calculator">Tax Calculator</a>
                 <a href="#contact-section">Contact</a>
             </nav>
-            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
+            <div style="display: flex; align-items: center;">
                 <div style="display: flex; gap: 10px; align-items: center;">
-                    <a href="https://www.linkedin.com/company/108153426/" target="_blank" class="social-icon linkedin" aria-label="LinkedIn" style="width: 35px; height: 35px; font-size: 16px;"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/company/108153426/" target="_blank" class="header-social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     
-                    <a href="https://www.facebook.com/profile.php?id=61578995745379" target="_blank" class="social-icon facebook" aria-label="Facebook" style="width: 35px; height: 35px; font-size: 16px;"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61578995745379" target="_blank" class="header-social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     
-                    <a href="https://www.instagram.com/nkc_wealth/" target="_blank" class="social-icon instagram" aria-label="Instagram" style="width: 35px; height: 35px; font-size: 16px;"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/nkc_wealth/" target="_blank" class="header-social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
 
-                    <a href="https://x.com/Nk_Wealthserv" target="_blank" class="social-icon twitter" aria-label="X (Twitter)" style="width: 35px; height: 35px; font-size: 16px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="currentColor">
+                    <a href="https://x.com/Nk_Wealthserv" target="_blank" class="header-social-icon" aria-label="X (Twitter)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16">
                             <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
                         </svg>
                     </a>
                     
-                    <a href="https://wa.me/919491227272" target="_blank" class="social-icon whatsapp" aria-label="WhatsApp" style="width: 35px; height: 35px; font-size: 16px;"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://wa.me/919491227272" target="_blank" class="header-social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
-                <span class="arn-badge" style="background: var(--accent); color: white; padding: 6px 15px; border-radius: 20px; font-size:12px;">ARN-332725</span>
             </div>
         </div>
     </header>
