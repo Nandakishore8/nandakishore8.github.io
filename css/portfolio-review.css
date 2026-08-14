@@ -1,0 +1,188 @@
+/* ========================================
+   PORTFOLIO REVIEW SECTION
+   ======================================== */
+
+.portfolio-review-section {
+  background: var(--bg-white);
+  padding: var(--space-3xl) var(--space-md);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.section-title h2 {
+  font-size: var(--text-4xl);
+  font-weight: var(--fw-extrabold);
+  color: var(--accent);
+  margin-bottom: var(--space-md);
+}
+
+.section-title p {
+  font-size: var(--text-lg);
+  color: var(--text-medium);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Review Checks Grid */
+.review-checks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.check-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.check-card:hover {
+  background: var(--bg-white);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.check-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.check-card h3 {
+  font-size: var(--text-xl);
+  color: var(--accent);
+  margin-bottom: var(--space-md);
+}
+
+.check-card p {
+  font-size: var(--text-sm);
+  color: var(--text-medium);
+  line-height: var(--line-relaxed);
+}
+
+/* Portfolio Health Preview */
+.portfolio-health-section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: var(--bg-white);
+  padding: var(--space-3xl) var(--space-md);
+  margin-top: var(--space-3xl);
+  border-radius: var(--radius-lg);
+}
+
+.health-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  gap: var(--space-2xl);
+}
+
+@media (min-width: 768px) {
+  .health-container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.health-content h3 {
+  font-size: var(--text-2xl);
+  color: var(--bg-white);
+  margin-bottom: var(--space-lg);
+}
+
+.health-content p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-md);
+}
+
+/* Health Metrics Display */
+.health-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.metric-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.metric-label {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-sm);
+}
+
+.metric-value {
+  font-size: var(--text-3xl);
+  font-weight: var(--fw-bold);
+  color: var(--secondary);
+}
+
+/* Disclaimer */
+.portfolio-disclaimer {
+  background: rgba(255, 255, 255, 0.15);
+  border-left: 4px solid var(--secondary);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-lg);
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: var(--line-relaxed);
+}
+
+.portfolio-disclaimer strong {
+  color: var(--secondary);
+}
+
+/* CTA Section */
+.portfolio-cta-section {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-md) 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portfolio-cta-section .btn {
+  min-width: 200px;
+  margin: 0 var(--space-md);
+}
+
+@media (max-width: 640px) {
+  .portfolio-cta-section .btn {
+    display: block;
+    width: 100%;
+    margin: var(--space-md) 0;
+  }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .portfolio-review-section {
+    padding: var(--space-4xl) var(--space-xl);
+  }
+  
+  .section-title h2 {
+    font-size: var(--text-5xl);
+  }
+  
+  .review-checks-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-2xl);
+  }
+  
+  .check-card {
+    padding: var(--space-xl);
+  }
+}
