@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Free Portfolio Review Tool | India 2026</title>
-    <meta name="description" content="Get a Free Mutual Fund Portfolio Review by Nanda Investment (ARN-332725). We help investors understand their portfolio, identify overlaps, and explore optimization opportunities.">
-    <meta name="keywords" content="Mutual Fund Portfolio Review India, Portfolio Analysis, Diversification Check, ARN-332725, Nanda Investment Secunderabad">
+
+    <title>Free Portfolio Review | Nanda Financial Services</title>
+    <meta name="description" content="Get a Free Mutual Fund Portfolio Review by Nanda Financial Services (ARN-332725). We help investors understand their portfolio, identify overlaps, and explore optimization opportunities.">
+    <meta name="keywords" content="Mutual Fund Portfolio Review India, Portfolio Analysis, Diversification Check, ARN-332725, Nanda Financial Services Secunderabad">
     <meta name="author" content="Nanda Financial Services">
     <meta name="google-site-verification" content="O4OyS7EqhcG4OS6Cmi6k6mizuxcT8xXVzDdICSqTHeQ" />
-    
+
     <link rel="canonical" href="https://www.mutualfundreview.in/">
     <link rel="icon" href="favicon.png" sizes="96x96" type="image/png">
 
-    <meta property="og:title" content="Get a Free Portfolio X-Ray Report 📊">
+    <meta property="og:title" content="Free Mutual Fund Portfolio Review">
     <meta property="og:description" content="Understand your mutual fund portfolio. Get a free analysis of diversification, overlap, and optimization opportunities.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.mutualfundreview.in">
-    <meta property="og:image" content="og-image.jpg"> 
+    <meta property="og:image" content="og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
@@ -86,35 +86,26 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWLKH6NM"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- Announcement Bar -->
-    <div id="doodle-bar" class="doodle-bar">
-        ✨ Get Your Free Portfolio X-Ray Report - Identify Overlaps & Optimization Opportunities
-    </div>
-
     <!-- Header -->
     <header>
         <div class="header-container">
-            <!-- Logo -->
             <a href="/" class="logo-section">
                 <img src="logo.jpg" alt="Nanda Financial Services Logo">
                 <div class="logo-text">
-                    <h1>Nanda Financial</h1>
-                    <p>Mutual Fund Distribution & Review</p>
+                    <span class="logo-brand">Nanda Financial</span>
+                    <p class="logo-tagline">Mutual Fund Distribution &amp; Review</p>
                 </div>
             </a>
 
-            <!-- Desktop Navigation -->
             <nav class="header-nav" aria-label="Main navigation">
                 <a href="#portfolio-review">Portfolio Review</a>
-                <a href="#why-review">Why Review?</a>
                 <a href="#how-it-works">How It Works</a>
                 <a href="#contact">Contact</a>
             </nav>
 
-            <!-- Header CTA -->
             <div class="header-cta">
                 <span class="arn-badge">ARN-332725</span>
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -122,17 +113,15 @@
             </div>
         </div>
 
-        <!-- Mobile Navigation Menu -->
         <nav id="mobileMenu" class="mobile-menu" aria-label="Mobile navigation">
             <div class="mobile-menu-nav">
                 <a href="#portfolio-review" onclick="closeMobileMenu()">Portfolio Review</a>
-                <a href="#why-review" onclick="closeMobileMenu()">Why Review?</a>
                 <a href="#how-it-works" onclick="closeMobileMenu()">How It Works</a>
+                <a href="#form-section" onclick="closeMobileMenu()">Get a Review</a>
                 <a href="#contact" onclick="closeMobileMenu()">Contact</a>
             </div>
             <div class="mobile-menu-cta">
-                <button class="btn btn-primary btn-block" onclick="scrollToPortfolioReview(); closeMobileMenu();">Get Portfolio Reviewed</button>
-                <button class="btn btn-whatsapp btn-block" onclick="openWhatsAppDefault(); closeMobileMenu();"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</button>
+                <a class="btn btn-ghost-text btn-block" href="https://wa.me/919491227272" onclick="openWhatsAppDefault(); closeMobileMenu(); return false;">or message us on WhatsApp</a>
             </div>
         </nav>
     </header>
@@ -141,262 +130,185 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <!-- Trust Badge -->
                 <div class="hero-badge">
-                    <span>AMFI-registered Mutual Fund Distributor | Free Portfolio Review | Investor Guidance</span>
+                    <span>AMFI-registered Mutual Fund Distributor &middot; ARN 332725</span>
                 </div>
 
-                <!-- Headline -->
-                <h1>Is Your Mutual Fund Portfolio Working Towards Your <span class="highlight">Goals?</span></h1>
+                <h1>Is your mutual fund portfolio working for you?</h1>
 
-                <!-- Subtitle -->
                 <p class="hero-subtitle">
-                    Get a structured review of your mutual fund portfolio to understand diversification, overlap, costs, risk exposure, and alignment with your financial goals.
+                    A structured Portfolio Review of diversification, overlap, costs, risk, and goal alignment &mdash; explained in plain language.
                 </p>
 
-                <!-- Stats -->
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Investors Reviewed</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">₹50+ Cr</div>
-                        <div class="stat-label">Portfolio Value</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Transparent Process</div>
-                    </div>
-                </div>
-
-                <!-- CTA Buttons -->
                 <div class="hero-cta">
-                    <button class="btn btn-primary" onclick="scrollToFormFromHero()">
+                    <button type="button" class="btn btn-primary" onclick="scrollToFormFromHero()">
                         Get My Portfolio Reviewed
                     </button>
-                    <button class="btn btn-whatsapp" onclick="openWhatsAppDefault()">
-                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                    </button>
+                    <a class="btn btn-ghost-text" href="https://wa.me/919491227272" onclick="openWhatsAppDefault(); return false;">
+                        or message us on WhatsApp
+                    </a>
                 </div>
+
+                <aside class="sample-xray sample-block" aria-label="Sample Portfolio X-Ray">
+                    <span class="sample-ribbon">SAMPLE</span>
+                    <p class="xray-kicker">Sample Portfolio X-Ray</p>
+                    <p class="xray-client">Rahul M., Hyderabad</p>
+                    <ul class="xray-dims">
+                        <li>
+                            <span>Diversification</span>
+                            <span class="gauge" aria-hidden="true"><span class="gauge-bar" style="width:58%"></span></span>
+                        </li>
+                        <li>
+                            <span>Overlap</span>
+                            <span class="gauge" aria-hidden="true"><span class="gauge-bar" style="width:42%"></span></span>
+                        </li>
+                        <li>
+                            <span>Risk balance</span>
+                            <span class="gauge" aria-hidden="true"><span class="gauge-bar" style="width:64%"></span></span>
+                        </li>
+                        <li>
+                            <span>Cost efficiency</span>
+                            <span class="gauge" aria-hidden="true"><span class="gauge-bar" style="width:51%"></span></span>
+                        </li>
+                    </ul>
+                    <p class="xray-findings">Several equity funds overlap on the same large-cap names, so the portfolio is less diversified than it looks. Expense ratios sit above category average, which can quietly reduce long-term returns.</p>
+                </aside>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Review Section -->
+    <!-- What we check -->
     <section id="portfolio-review" class="portfolio-review-section">
         <div class="container">
-            <!-- Section Title -->
             <div class="section-title">
-                <h2>What We Review</h2>
-                <p>Comprehensive analysis of your mutual fund portfolio</p>
+                <h2>What we check</h2>
+                <p>Six dimensions of a Mutual Fund Portfolio Review</p>
             </div>
 
-            <!-- Review Checks Grid -->
             <div class="review-checks-grid">
                 <div class="check-card">
-                    <div class="check-icon">🔍</div>
+                    <div class="check-icon" aria-hidden="true"></div>
                     <h3>Fund Overlap</h3>
                     <p>Identify duplicate funds and overlapping categories in your portfolio.</p>
                 </div>
                 <div class="check-card">
-                    <div class="check-icon">📊</div>
+                    <div class="check-icon" aria-hidden="true"></div>
                     <h3>Diversification</h3>
                     <p>Analyze asset allocation across equity, debt, and hybrid funds.</p>
                 </div>
                 <div class="check-card">
-                    <div class="check-icon">⚖️</div>
+                    <div class="check-icon" aria-hidden="true"></div>
                     <h3>Risk Exposure</h3>
                     <p>Understand overall portfolio risk profile and concentration.</p>
                 </div>
                 <div class="check-card">
-                    <div class="check-icon">💰</div>
+                    <div class="check-icon" aria-hidden="true"></div>
                     <h3>Cost Analysis</h3>
                     <p>Calculate effective expense ratios and their impact on returns.</p>
                 </div>
                 <div class="check-card">
-                    <div class="check-icon">🎯</div>
+                    <div class="check-icon" aria-hidden="true"></div>
                     <h3>Goal Alignment</h3>
                     <p>Check if your investments match your financial goals and timeline.</p>
                 </div>
                 <div class="check-card">
-                    <div class="check-icon">✅</div>
+                    <div class="check-icon" aria-hidden="true"></div>
                     <h3>Simplification</h3>
                     <p>Get actionable recommendations to simplify and optimize your portfolio.</p>
                 </div>
             </div>
 
-            <!-- Portfolio Health Preview -->
-            <div class="portfolio-health-section">
+            <div class="portfolio-health-section sample-block">
+                <span class="sample-ribbon sample-ribbon-lg">SAMPLE</span>
                 <div class="health-container">
                     <div class="health-content">
                         <h3>Portfolio Health Check</h3>
-                        <p>Get a visual snapshot of your portfolio's overall health across multiple dimensions.</p>
-                        <p style="font-size: var(--text-sm); color: rgba(255, 255, 255, 0.8);">Illustrative example - Actual results based on your portfolio data</p>
+                        <p>A visual snapshot across four dimensions &mdash; this is a labelled sample, not your scores.</p>
                     </div>
                     <div class="health-metrics">
                         <div class="metric-item">
                             <div class="metric-label">Diversification</div>
-                            <div class="metric-value">72/100</div>
+                            <div class="gauge gauge-empty" aria-hidden="true"><span class="gauge-bar"></span></div>
                         </div>
                         <div class="metric-item">
                             <div class="metric-label">Overlap Check</div>
-                            <div class="metric-value">68/100</div>
+                            <div class="gauge gauge-empty" aria-hidden="true"><span class="gauge-bar"></span></div>
                         </div>
                         <div class="metric-item">
                             <div class="metric-label">Risk Balance</div>
-                            <div class="metric-value">75/100</div>
+                            <div class="gauge gauge-empty" aria-hidden="true"><span class="gauge-bar"></span></div>
                         </div>
                         <div class="metric-item">
                             <div class="metric-label">Cost Efficiency</div>
-                            <div class="metric-value">80/100</div>
+                            <div class="gauge gauge-empty" aria-hidden="true"><span class="gauge-bar"></span></div>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-disclaimer">
-                    <strong>⚠️ Illustrative Example:</strong> This portfolio health check is a sample representation. Your actual portfolio metrics will be calculated based on the specific funds, allocation, and investment amounts you provide during the review process.
+                    <strong>Sample only:</strong> These gauges are empty placeholders. Your actual metrics are calculated from the funds and amounts you share during the Portfolio Review.
                 </div>
-            </div>
-
-            <!-- CTA -->
-            <div class="portfolio-cta-section">
-                <button class="btn btn-primary btn-lg" onclick="scrollToForm()">Get My Portfolio Reviewed</button>
             </div>
         </div>
     </section>
 
-    <!-- Why Portfolio Review Section -->
-    <section id="why-review" class="bg-white py-3xl">
+    <!-- Why review — compressed -->
+    <section id="why-review" class="why-review-compact">
+        <div class="container">
+            <h2>Why review?</h2>
+            <p>Too many overlapping funds, costs that add up, and a mix that no longer matches the goal. A Portfolio Review makes those issues visible &mdash; before you make any changes.</p>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
         <div class="container">
             <div class="section-title">
-                <h2>Why You Should Review Your Portfolio</h2>
-                <p>Common portfolio challenges our investors face</p>
+                <h2>How it works</h2>
+                <p>Four steps. No jargon. No pressure.</p>
             </div>
 
-            <div class="grid grid-auto">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Too Many Funds</h3>
+            <ol class="process-steps">
+                <li>
+                    <span class="step-num">1</span>
+                    <div>
+                        <h3>Share your portfolio</h3>
+                        <p>Tell us about your current mutual fund investments. Takes about 2 minutes.</p>
                     </div>
-                    <div class="card-body">
-                        <p>Managing 15+ funds is complex and increases costs. A concentrated, well-selected portfolio often performs better.</p>
+                </li>
+                <li>
+                    <span class="step-num">2</span>
+                    <div>
+                        <h3>We analyse</h3>
+                        <p>We review overlap, diversification, costs, and goal alignment, then prepare a clear write-up.</p>
                     </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Fund Overlap</h3>
+                </li>
+                <li>
+                    <span class="step-num">3</span>
+                    <div>
+                        <h3>Discuss results</h3>
+                        <p>We explain our observations in simple language so you understand your options.</p>
                     </div>
-                    <div class="card-body">
-                        <p>Multiple funds holding similar stocks create unintended concentration and redundancy in your portfolio.</p>
+                </li>
+                <li>
+                    <span class="step-num">4</span>
+                    <div>
+                        <h3>Decide your next step</h3>
+                        <p>You decide whether to make changes. Informed decision-making, no pressure.</p>
                     </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Misaligned Goals</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>Your funds may not align with your actual financial goals, timelines, and risk tolerance.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Hidden Costs</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>Expense ratios add up. Understanding effective costs helps you optimize for better net returns.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Lack of Strategy</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>Random fund picks without a coherent strategy often underperform a well-planned portfolio.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Tax Inefficiency</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>Understanding tax implications and planning can help optimize after-tax returns.</p>
-                    </div>
-                </div>
-            </div>
+                </li>
+            </ol>
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="bg-light py-3xl">
-        <div class="container">
-            <div class="section-title">
-                <h2>How Our Process Works</h2>
-                <p>Simple, transparent, and straightforward</p>
-            </div>
-
-            <div class="grid grid-cols-1" style="max-width: 900px; margin: 0 auto; gap: var(--space-2xl);">
-                <div style="display: flex; gap: var(--space-lg);">
-                    <div style="min-width: 60px;">
-                        <div style="width: 60px; height: 60px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">1</div>
-                    </div>
-                    <div>
-                        <h3 style="color: var(--accent); margin-top: 0;">Share Your Portfolio</h3>
-                        <p>Tell us about your current mutual fund investments and basic financial information. Takes just 5 minutes.</p>
-                    </div>
-                </div>
-
-                <div style="display: flex; gap: var(--space-lg);">
-                    <div style="min-width: 60px;">
-                        <div style="width: 60px; height: 60px; background: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">2</div>
-                    </div>
-                    <div>
-                        <h3 style="color: var(--accent); margin-top: 0;">We Analyze</h3>
-                        <p>Our team reviews your portfolio for overlap, diversification, costs, and goal alignment. We prepare a detailed analysis.</p>
-                    </div>
-                </div>
-
-                <div style="display: flex; gap: var(--space-lg);">
-                    <div style="min-width: 60px;">
-                        <div style="width: 60px; height: 60px; background: var(--success); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">3</div>
-                    </div>
-                    <div>
-                        <h3 style="color: var(--accent); margin-top: 0;">Discuss Results</h3>
-                        <p>We explain our observations in simple language. You understand your portfolio and options better.</p>
-                    </div>
-                </div>
-
-                <div style="display: flex; gap: var(--space-lg);">
-                    <div style="min-width: 60px;">
-                        <div style="width: 60px; height: 60px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">4</div>
-                    </div>
-                    <div>
-                        <h3 style="color: var(--accent); margin-top: 0;">Decide Your Next Step</h3>
-                        <p>Based on the analysis, you decide whether to make changes. No pressure, informed decision-making.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: var(--space-2xl);">
-                <button class="btn btn-primary btn-lg" onclick="scrollToForm()">Get My Portfolio Reviewed</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Review Form Section -->
-    <section id="form-section" class="py-3xl" style="background: var(--bg-light);">
+    <!-- Portfolio Review Form -->
+    <section id="form-section">
         <div class="container max-w-md">
             <div class="form-container">
                 <div class="form-header">
                     <h2>Get My Portfolio Reviewed</h2>
-                    <p>Free, confidential, no obligation — takes under 2 minutes</p>
+                    <p>Free, confidential, no obligation &mdash; takes under 2 minutes</p>
                 </div>
 
-                <!-- Form Progress -->
                 <div class="form-progress">
                     <div class="progress">
                         <div class="progress-bar" id="progressBar" style="width: 50%;"></div>
@@ -407,10 +319,8 @@
                     </div>
                 </div>
 
-                <!-- Form -->
                 <form id="portfolioForm" onsubmit="submitPortfolioForm(event)">
 
-                    <!-- Step 1: Portfolio Qualification -->
                     <div id="step-1" class="form-step active">
                         <h3>About Your Portfolio</h3>
                         <p>Tell us about your investments so we can prepare your review</p>
@@ -464,12 +374,10 @@
                         </div>
                     </div>
 
-                    <!-- Step 2: Contact Details -->
                     <div id="step-2" class="form-step">
                         <h3>Your Contact Details</h3>
-                        <p>We&rsquo;ll reach out to schedule your portfolio review</p>
+                        <p>We&rsquo;ll reach out to schedule your Portfolio Review</p>
 
-                        <!-- Inline Step 1 summary with edit controls -->
                         <div class="form-summary" id="formSummaryStep2" aria-label="Your selections from step 1">
                             <div class="form-summary-row">
                                 <span class="form-summary-label">Portfolio</span>
@@ -519,15 +427,13 @@
                         </div>
                     </div>
 
-                    <!-- Success State -->
                     <div id="step-success" class="form-step">
                         <div class="form-success">
-                            <div class="form-success-icon">&#x2705;</div>
-                            <h3>Review Requested!</h3>
-                            <p>Thank you, <span id="successName"></span>. We&rsquo;ve noted your request.</p>
-                            <p style="font-size: var(--text-sm); color: var(--text-light);">Your information is saved locally in your browser. Continue on WhatsApp to connect with our team and discuss your portfolio review.</p>
+                            <div class="form-success-icon" aria-hidden="true">&#10003;</div>
+                            <h3>Review requested</h3>
+                            <p>Thank you, <span id="successName"></span>. We will contact you on the number you entered within 1 working day.</p>
+                            <p class="success-note">No spam &mdash; just a call or message to schedule your Portfolio Review.</p>
 
-                            <!-- Final summary with masked phone -->
                             <div class="form-final-summary" id="formFinalSummary" aria-label="Your portfolio review request summary">
                                 <div class="form-summary-row">
                                     <span class="form-summary-label">Portfolio</span>
@@ -547,9 +453,9 @@
                                 </div>
                             </div>
 
-                            <button type="button" class="btn btn-whatsapp" onclick="openWhatsAppPortfolioReview()">
-                                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                            </button>
+                            <a class="btn btn-ghost" href="https://wa.me/919491227272" onclick="openWhatsAppPortfolioReview(); return false;">
+                                or message us on WhatsApp
+                            </a>
                         </div>
                     </div>
                 </form>
@@ -557,144 +463,58 @@
         </div>
     </section>
 
-    <!-- Transparency Section -->
-    <section class="bg-white py-3xl" style="border-top: 1px solid var(--border-light);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Transparent Process</h2>
-                <p>How we operate with integrity</p>
-            </div>
-
-            <div class="grid grid-auto">
-                <div class="card card-primary">
-                    <div class="card-body">
-                        <h3 style="color: var(--primary); margin-top: 0;">AMFI Registered</h3>
-                        <p>We are a registered Mutual Fund Distributor (ARN: 332725) with AMFI, adhering to all regulatory guidelines.</p>
-                    </div>
-                </div>
-
-                <div class="card card-success">
-                    <div class="card-body">
-                        <h3 style="color: var(--success); margin-top: 0;">Transparent Commission Model</h3>
-                        <p>As an AMFI-registered distributor, we operate with transparent commission disclosures. We receive regulated trail commissions directly from fund houses.</p>
-                    </div>
-                </div>
-
-                <div class="card card-primary">
-                    <div class="card-body">
-                        <h3 style="color: var(--primary); margin-top: 0;">Confidential</h3>
-                        <p>Your portfolio data is treated with utmost confidentiality. We do not share personal information without consent.</p>
-                    </div>
-                </div>
-
-                <div class="card card-success">
-                    <div class="card-body">
-                        <h3 style="color: var(--success); margin-top: 0;">Investor Education</h3>
-                        <p>We help you make informed decisions. You retain full control over your investments at all times.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div style="background: var(--bg-light); border-left: 4px solid var(--primary); padding: var(--space-lg); border-radius: var(--radius-md); margin-top: var(--space-2xl); font-size: var(--text-sm); line-height: var(--line-relaxed);">
-                <strong>Risk Disclaimer:</strong> Mutual fund investments are subject to market risks. The value of investments and returns can fluctuate based on market conditions, fund performance, and other factors. Past performance is not a guarantee of future results. Please review all scheme documents carefully before investing. This review is for informational purposes and should not be construed as personalized financial advice. Please consult with a qualified financial advisor for advice specific to your situation.
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-3xl" style="background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: var(--bg-white);">
-        <div class="container">
-            <div class="section-title" style="color: var(--bg-white);">
-                <h2>Get in Touch</h2>
-                <p>We're here to help</p>
-            </div>
-
-            <div class="grid grid-cols-1 gap-2xl" style="max-width: 1000px; margin: 0 auto;">
-                <div style="text-align: center;">
-                    <div style="font-size: 2rem; margin-bottom: var(--space-md);">📞</div>
-                    <h3 style="color: var(--bg-white);">Call Us</h3>
-                    <p><a href="tel:+919491227272" style="color: var(--secondary);">+91-9491227272</a></p>
-                </div>
-
-                <div style="text-align: center;">
-                    <div style="font-size: 2rem; margin-bottom: var(--space-md);">💬</div>
-                    <h3 style="color: var(--bg-white);">WhatsApp</h3>
-                    <p><a href="https://wa.me/919491227272" target="_blank" style="color: var(--secondary);">Start Chat</a></p>
-                </div>
-
-                <div style="text-align: center;">
-                    <div style="font-size: 2rem; margin-bottom: var(--space-md);">📍</div>
-                    <h3 style="color: var(--bg-white);">Office</h3>
-                    <p>Secunderabad, Telangana, India</p>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: var(--space-2xl);">
-                <button class="btn btn-secondary btn-lg" onclick="scrollToForm()">Get My Portfolio Reviewed</button>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer style="background: var(--accent); color: var(--bg-white); padding: var(--space-2xl) var(--space-md); font-size: var(--text-sm);">
+    <footer>
         <div class="container">
-            <div style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-2xl); display: grid; margin-bottom: var(--space-2xl);">
+            <div class="footer-grid">
                 <div>
-                    <h3 style="color: var(--bg-white); margin-top: 0;">Nanda Financial Services</h3>
+                    <p class="footer-brand">Nanda Financial Services</p>
                     <p>AMFI-registered Mutual Fund Distributor</p>
-                    <p style="font-size: var(--text-xs); color: rgba(255, 255, 255, 0.7);">ARN: 332725<br>Registration Date: 30/06/2025<br>Valid Till: 23/06/2028</p>
+                    <p class="footer-arn">ARN: 332725<br>Registration Date: 30/06/2025<br>Valid Till: 23/06/2028</p>
+                </div>
+
+                <div id="contact" class="footer-contact">
+                    <p class="footer-heading">Contact</p>
+                    <p><a href="tel:+919491227272">+91-9491227272</a></p>
+                    <p><a href="https://wa.me/919491227272" onclick="openWhatsAppDefault(); return false;">WhatsApp</a></p>
+                    <address>SNC-206, Road No 7, Santhoshimaa Colony, Secunderabad, Telangana 500056</address>
                 </div>
 
                 <div>
-                    <h4 style="color: var(--bg-white);">Quick Links</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li><a href="#portfolio-review" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Portfolio Review</a></li>
-                        <li><a href="#why-review" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Why Review</a></li>
-                        <li><a href="#how-it-works" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">How It Works</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 style="color: var(--bg-white);">Follow Us</h4>
-                    <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
-                        <a href="https://www.linkedin.com/company/108153426/" target="_blank" style="color: rgba(255, 255, 255, 0.8);" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=61578995745379" target="_blank" style="color: rgba(255, 255, 255, 0.8);" title="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/nkc_wealth/" target="_blank" style="color: rgba(255, 255, 255, 0.8);" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://x.com/Nk_Wealthserv" target="_blank" style="color: rgba(255, 255, 255, 0.8);" title="X/Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <p class="footer-heading">Follow</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/company/108153426/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61578995745379" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/nkc_wealth/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/Nk_Wealthserv" target="_blank" rel="noopener" title="X/Twitter"><i class="fab fa-x-twitter"></i></a>
                     </div>
                 </div>
             </div>
 
-            <div style="border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: var(--space-lg);">
-                <p style="margin: 0; color: rgba(255, 255, 255, 0.8); text-align: center;">
-                    © 2026 Nanda Financial Services. All rights reserved. |
-                    <a href="privacy-policy.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Privacy Policy</a> |
-                    <a href="terms.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Terms</a> |
-                    <a href="disclosure.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Disclosures</a>
-                </p>
-            </div>
+            <p class="footer-disclaimer">
+                <strong>Risk Disclaimer:</strong> Mutual fund investments are subject to market risks. The value of investments and returns can fluctuate based on market conditions, fund performance, and other factors. Past performance is not a guarantee of future results. Please review all scheme documents carefully before investing. This review is for informational purposes and should not be construed as personalized financial advice. Please consult with a qualified financial advisor for advice specific to your situation.
+            </p>
+
+            <p class="footer-legal">
+                &copy; 2026 Nanda Financial Services. All rights reserved.
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms</a>
+                <a href="disclosure.html">Disclosures</a>
+            </p>
         </div>
     </footer>
 
-    <!-- Sticky Mobile CTA Button -->
+    <!-- Sticky Mobile CTA -->
     <div id="stickyCta" class="sticky-cta">
-        <button onclick="scrollToFormFromHero()" class="btn btn-block">Get My Portfolio Reviewed</button>
+        <button type="button" onclick="scrollToFormFromHero()" class="btn btn-block">Get My Portfolio Reviewed</button>
     </div>
 
-    <!-- JavaScript Files -->
     <script src="js/config.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/analytics.js"></script>
     <script src="js/portfolio.js"></script>
 
-    <!-- Application JavaScript -->
     <script>
-        /* ================================================
-           PHASE 8.1 — CONVERSION FUNNEL
-           2-step portfolio review intake form
-           ================================================ */
-
-        // Portfolio value display labels
         const PORTFOLIO_VALUE_LABELS = {
             'below-5l':  'Below ₹5L',
             '5l-10l':   '₹5L–₹10L',
@@ -703,7 +523,6 @@
             '50l-plus': '₹50L+'
         };
 
-        // Goal display labels
         const GOAL_LABELS = {
             'wealth':     'Wealth Creation',
             'retirement': 'Retirement',
@@ -712,42 +531,33 @@
             'other':      'Other'
         };
 
-        // Form State — 2-step flow
         const formState = {
             step: 1,
-            portfolioValue: '',   // Step 1
-            primaryGoal: '',      // Step 1
-            name: '',             // Step 2
-            phone: '',            // Step 2 (normalised 10-digit)
-            email: ''             // Step 2
+            portfolioValue: '',
+            primaryGoal: '',
+            name: '',
+            phone: '',
+            email: ''
         };
 
-        // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
             initializeApp();
         });
 
         function initializeApp() {
-            // Setup mobile menu toggle
             const menuToggle = document.getElementById('menuToggle');
             if (menuToggle) {
                 menuToggle.addEventListener('click', toggleMobileMenu);
             }
 
-            // Setup dynamic doodle bar message
-            updateDoodleBar();
-
-            // Track page view
             ANALYTICS.trackPageView('homepage', '/');
 
-            // Show/hide sticky CTA on scroll
-            window.addEventListener('scroll', handleStickyCtaVisibility);
+            window.addEventListener('scroll', handleStickyCtaVisibility, { passive: true });
+            handleStickyCtaVisibility();
 
-            // Listen for theme preference
             setupThemeToggle();
         }
 
-        /* ===== Mobile Menu ===== */
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             const toggle = document.getElementById('menuToggle');
@@ -767,27 +577,36 @@
             }
         }
 
-        /* ===== Form Navigation ===== */
+        function scrollFormIntoViewAndFocus(stepEl) {
+            const formAnchor = document.getElementById('form-section') || document.querySelector('.form-container');
+            if (formAnchor) {
+                formAnchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            window.setTimeout(function () {
+                if (!stepEl) return;
+                const firstField = stepEl.querySelector('input:not([type="hidden"]):not([type="checkbox"]), select, textarea, .option-btn');
+                if (firstField) firstField.focus();
+            }, 350);
+        }
+
         function goToStep(stepNumber) {
             document.querySelectorAll('.form-step').forEach(step => {
                 step.classList.remove('active');
             });
-            const target = document.getElementById(`step-${stepNumber}`);
+            const target = document.getElementById('step-' + stepNumber);
             if (target) target.classList.add('active');
             formState.step = stepNumber;
             updateProgress();
-            // Populate the inline Step-1 summary when entering Step 2
             if (stepNumber === 2) {
                 updateInlineSummary();
             }
+            scrollFormIntoViewAndFocus(target);
         }
 
-        /* ===== Step Validation ===== */
         function validateStep(stepNumber) {
             let isValid = false;
 
             if (stepNumber === 1) {
-                // Step 1: Portfolio value + Goal (both required option buttons)
                 if (!formState.portfolioValue) {
                     showFieldError('portfolioValue', 'Please select your approximate portfolio value');
                     return;
@@ -799,7 +618,6 @@
                 isValid = true;
 
             } else if (stepNumber === 2) {
-                // Step 2: Name, Phone, Email
                 const name  = document.getElementById('name').value.trim();
                 const phone = document.getElementById('phone').value.trim();
                 const email = document.getElementById('email').value.trim();
@@ -829,9 +647,7 @@
             }
         }
 
-        /* ===== Option Button Selection (aria-pressed) ===== */
         function selectOption(button, fieldName, value) {
-            // Deselect all siblings and reset aria state
             const group = button.closest('.option-group');
             if (group) {
                 group.querySelectorAll('.option-btn').forEach(btn => {
@@ -839,20 +655,16 @@
                     btn.setAttribute('aria-pressed', 'false');
                 });
             }
-            // Apply to clicked button
             button.classList.add('selected');
             button.setAttribute('aria-pressed', 'true');
-            // Persist in state
             formState[fieldName] = value;
-            // Clear error on this field
             clearFieldError(fieldName);
         }
 
-        /* ===== Field Error Helpers ===== */
         function showFieldError(fieldId, message) {
             let field = document.getElementById(fieldId);
             if (!field) {
-                field = document.getElementById(`group-${fieldId}`) || document.querySelector(`[name="${fieldId}"]`);
+                field = document.getElementById('group-' + fieldId) || document.querySelector('[name="' + fieldId + '"]');
             }
             if (field) {
                 const group = field.closest('.form-group') || field;
@@ -867,7 +679,7 @@
         function clearFieldError(fieldId) {
             let field = document.getElementById(fieldId);
             if (!field) {
-                field = document.getElementById(`group-${fieldId}`) || document.querySelector(`[name="${fieldId}"]`);
+                field = document.getElementById('group-' + fieldId) || document.querySelector('[name="' + fieldId + '"]');
             }
             if (field) {
                 const group = field.closest('.form-group') || field;
@@ -879,17 +691,24 @@
             }
         }
 
-        /* ===== Progress Bar (2-step) ===== */
         function updateProgress() {
-            const TOTAL_STEPS = 2;
-            const progress = (formState.step / TOTAL_STEPS) * 100;
             const bar = document.getElementById('progressBar');
-            if (bar) bar.style.width = progress + '%';
             const stepEl = document.getElementById('currentStep');
-            if (stepEl) stepEl.textContent = `Step ${formState.step}`;
+            const totalEl = document.getElementById('totalSteps');
+
+            if (formState.step === 'done') {
+                if (bar) bar.style.width = '100%';
+                if (stepEl) stepEl.textContent = 'Done';
+                if (totalEl) totalEl.textContent = '';
+                return;
+            }
+
+            const width = formState.step === 1 ? 50 : 100;
+            if (bar) bar.style.width = width + '%';
+            if (stepEl) stepEl.textContent = 'Step ' + formState.step;
+            if (totalEl) totalEl.textContent = 'of 2';
         }
 
-        /* ===== Inline Step-2 Summary (shows Step-1 selections with edit) ===== */
         function updateInlineSummary() {
             const portfolioLabel = PORTFOLIO_VALUE_LABELS[formState.portfolioValue] || formState.portfolioValue;
             const goalLabel = GOAL_LABELS[formState.primaryGoal] || formState.primaryGoal;
@@ -899,13 +718,11 @@
             if (inlineGoal) inlineGoal.textContent = goalLabel;
         }
 
-        /* ===== Phone Masking (display only — last 2 digits visible) ===== */
         function maskPhone(phone) {
             if (!phone || phone.length < 3) return phone;
             return '•'.repeat(phone.length - 2) + phone.slice(-2);
         }
 
-        /* ===== Final Success Summary ===== */
         function updateFinalSummary() {
             const portfolioLabel = PORTFOLIO_VALUE_LABELS[formState.portfolioValue] || formState.portfolioValue;
             const goalLabel = GOAL_LABELS[formState.primaryGoal] || formState.primaryGoal;
@@ -916,11 +733,9 @@
             if (el('finalSummaryPhone'))     el('finalSummaryPhone').textContent = maskPhone(formState.phone);
         }
 
-        /* ===== Form Submit ===== */
         function submitPortfolioForm(event) {
             event.preventDefault();
 
-            // Re-validate Step 2 fields on submit
             const name  = document.getElementById('name').value.trim();
             const phone = document.getElementById('phone').value.trim();
             const email = document.getElementById('email').value.trim();
@@ -942,73 +757,68 @@
             formState.phone = UTILS.normalizePhone(phone);
             formState.email = email;
 
-            // Track conversion (portfolio metadata only — contact excluded from analytics)
             ANALYTICS.trackPortfolioReviewCompleted({
                 portfolio_value: formState.portfolioValue,
                 primary_goal:    formState.primaryGoal
             });
 
-            // Persist to localStorage (local state only — no backend in Phase 8.1)
             UTILS.saveToStorage(CONFIG.STORAGE.LEAD_DATA, {
                 portfolioValue: formState.portfolioValue,
                 primaryGoal:    formState.primaryGoal,
                 submittedAt:    new Date().toISOString()
-                // Note: contact details not stored in analytics storage
             });
 
-            // Show success state
             document.querySelectorAll('.form-step').forEach(step => step.classList.remove('active'));
             const successStep = document.getElementById('step-success');
             if (successStep) successStep.classList.add('active');
 
-            // Populate success display
+            formState.step = 'done';
+            updateProgress();
+
             const successNameEl = document.getElementById('successName');
             if (successNameEl) successNameEl.textContent = formState.name;
             updateFinalSummary();
 
-            UTILS.log('Portfolio review form submitted (local state — WhatsApp handoff pending)');
+            const formAnchor = document.getElementById('form-section') || document.querySelector('.form-container');
+            if (formAnchor) {
+                formAnchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            UTILS.log('Portfolio review form submitted (WhatsApp handoff available)');
         }
 
-        /* ===== WhatsApp Contextual Handoff (Change 5) ===== */
-        // Builds a contextual WhatsApp message from portfolio form state.
-        // Includes Name so the business can identify the lead.
-        // Does NOT expose phone or email in the URL or message.
         function buildPortfolioReviewWhatsAppMessage() {
             const portfolioLabel = PORTFOLIO_VALUE_LABELS[formState.portfolioValue] || formState.portfolioValue;
             const goalLabel      = GOAL_LABELS[formState.primaryGoal] || formState.primaryGoal;
             return [
                 'Hi Nanda Financial, I just requested a Mutual Fund Portfolio Review on your website.',
                 '',
-                `Name: ${formState.name}`,
-                `Portfolio: ${portfolioLabel}`,
-                `Goal: ${goalLabel}`,
+                'Name: ' + formState.name,
+                'Phone: ' + formState.phone,
+                'Portfolio: ' + portfolioLabel,
+                'Goal: ' + goalLabel,
                 '',
                 "I'd like to discuss the review."
             ].join('\n');
         }
 
-        // Opens WhatsApp with contextual portfolio review message after form submission
         function openWhatsAppPortfolioReview() {
             ANALYTICS.trackWhatsAppClick('portfolio_review_handoff');
             const message = buildPortfolioReviewWhatsAppMessage();
-            const url = `https://wa.me/${CONFIG.BUSINESS.whatsapp}?text=${encodeURIComponent(message)}`;
+            const url = 'https://wa.me/' + CONFIG.BUSINESS.whatsapp + '?text=' + encodeURIComponent(message);
             window.open(url, '_blank');
         }
 
-        /* ===== Navigation / Scroll Functions ===== */
-        // Scrolls to the educational portfolio review section (nav links)
         function scrollToPortfolioReview() {
             ANALYTICS.trackCtaClicked('scroll_to_portfolio_review', 'navigation');
             UTILS.scrollTo('portfolio-review');
         }
 
-        // Scrolls directly to the intake form (secondary CTAs)
         function scrollToForm() {
             ANALYTICS.trackCtaClicked('scroll_to_form', 'various');
             UTILS.scrollTo('form-section');
         }
 
-        // Hero primary CTA — routes directly to the intake form, not educational cards
         function scrollToFormFromHero() {
             ANALYTICS.trackCtaClicked('hero_primary_cta', 'hero');
             UTILS.scrollTo('form-section');
@@ -1017,39 +827,36 @@
         function handleStickyCtaVisibility() {
             const formSection = document.getElementById('form-section');
             const stickyCta   = document.getElementById('stickyCta');
-            if (formSection && stickyCta) {
-                const formRect = formSection.getBoundingClientRect();
-                if (formRect.top > window.innerHeight) {
-                    stickyCta.classList.add('active');
-                } else {
-                    stickyCta.classList.remove('active');
-                }
+            if (!formSection || !stickyCta) return;
+
+            const formRect = formSection.getBoundingClientRect();
+            const formInView = formRect.top < window.innerHeight && formRect.bottom > 0;
+
+            if (formInView) {
+                stickyCta.classList.remove('active');
+                document.body.classList.remove('sticky-cta-active');
+            } else if (window.scrollY > 160) {
+                stickyCta.classList.add('active');
+                document.body.classList.add('sticky-cta-active');
+            } else {
+                stickyCta.classList.remove('active');
+                document.body.classList.remove('sticky-cta-active');
             }
         }
 
-        /* ===== WhatsApp Helpers ===== */
         function openWhatsAppDefault() {
             ANALYTICS.trackWhatsAppClick('default');
             const message = CONFIG.WHATSAPP_MESSAGES.DEFAULT;
-            const url = `https://wa.me/${CONFIG.BUSINESS.whatsapp}?text=${encodeURIComponent(message)}`;
+            const url = 'https://wa.me/' + CONFIG.BUSINESS.whatsapp + '?text=' + encodeURIComponent(message);
             window.open(url, '_blank');
         }
 
         function openWhatsAppWithMessage(message) {
             ANALYTICS.trackWhatsAppClick('custom');
-            const url = `https://wa.me/${CONFIG.BUSINESS.whatsapp}?text=${encodeURIComponent(message)}`;
+            const url = 'https://wa.me/' + CONFIG.BUSINESS.whatsapp + '?text=' + encodeURIComponent(message);
             window.open(url, '_blank');
         }
 
-        /* ===== Dynamic Doodle Bar ===== */
-        function updateDoodleBar() {
-            const doodle = document.getElementById('doodle-bar');
-            if (doodle) {
-                doodle.textContent = '✨ Get Your Free Portfolio X-Ray Report — Identify Overlaps, Costs & Optimization Opportunities';
-            }
-        }
-
-        /* ===== Theme Toggle ===== */
         function setupThemeToggle() {
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             const savedTheme  = UTILS.getFromStorage(CONFIG.STORAGE.THEME_PREFERENCE);
@@ -1069,14 +876,12 @@
             UTILS.saveToStorage(CONFIG.STORAGE.THEME_PREFERENCE, theme);
         }
 
-        // Clear field errors on user input
         document.addEventListener('input', (e) => {
             if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') {
                 clearFieldError(e.target.id);
             }
         });
 
-        // Track form engagement start
         document.getElementById('portfolioForm')?.addEventListener('focus', () => {
             ANALYTICS.trackFormStarted('portfolio_review');
         }, true);
