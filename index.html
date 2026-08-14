@@ -172,11 +172,11 @@
 
                 <!-- CTA Buttons -->
                 <div class="hero-cta">
-                    <button class="btn btn-primary" onclick="scrollToPortfolioReview()">
+                    <button class="btn btn-primary" onclick="scrollToFormFromHero()">
                         Get My Portfolio Reviewed
                     </button>
                     <button class="btn btn-whatsapp" onclick="openWhatsAppDefault()">
-                        <i class="fab fa-whatsapp"></i> Talk to Specialist
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
                     </button>
                 </div>
             </div>
@@ -260,7 +260,7 @@
 
             <!-- CTA -->
             <div class="portfolio-cta-section">
-                <button class="btn btn-primary btn-lg" onclick="scrollToForm()">Start My Portfolio Review</button>
+                <button class="btn btn-primary btn-lg" onclick="scrollToForm()">Get My Portfolio Reviewed</button>
             </div>
         </div>
     </section>
@@ -382,7 +382,7 @@
             </div>
 
             <div style="text-align: center; margin-top: var(--space-2xl);">
-                <button class="btn btn-primary btn-lg" onclick="scrollToForm()">Start Review Process</button>
+                <button class="btn btn-primary btn-lg" onclick="scrollToForm()">Get My Portfolio Reviewed</button>
             </div>
         </div>
     </section>
@@ -392,167 +392,114 @@
         <div class="container max-w-md">
             <div class="form-container">
                 <div class="form-header">
-                    <h2>Get Your Portfolio Reviewed</h2>
-                    <p>Free, confidential, no obligation</p>
+                    <h2>Get My Portfolio Reviewed</h2>
+                    <p>Free, confidential, no obligation — takes under 2 minutes</p>
                 </div>
 
                 <!-- Form Progress -->
                 <div class="form-progress">
                     <div class="progress">
-                        <div class="progress-bar" id="progressBar" style="width: 20%;"></div>
+                        <div class="progress-bar" id="progressBar" style="width: 50%;"></div>
                     </div>
                     <div class="progress-text">
                         <span id="currentStep">Step 1</span>
-                        <span id="totalSteps">of 5</span>
+                        <span id="totalSteps">of 2</span>
                     </div>
                 </div>
 
                 <!-- Form -->
                 <form id="portfolioForm" onsubmit="submitPortfolioForm(event)">
-                    <!-- Step 1: Personal Details -->
+
+                    <!-- Step 1: Portfolio Qualification -->
                     <div id="step-1" class="form-step active">
-                        <h3>Your Details</h3>
-                        <p>Let's start with your basic information</p>
+                        <h3>About Your Portfolio</h3>
+                        <p>Tell us about your investments so we can prepare your review</p>
+
+                        <div class="form-group" id="group-portfolioValue">
+                            <label>Approximate Mutual Fund Portfolio Value <span class="required">*</span></label>
+                            <div class="option-group" role="group" aria-label="Portfolio value options">
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'portfolioValue', 'below-5l')">
+                                    Below &#x20B9;5L
+                                </button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'portfolioValue', '5l-10l')">
+                                    &#x20B9;5L&ndash;&#x20B9;10L
+                                </button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'portfolioValue', '10l-25l')">
+                                    &#x20B9;10L&ndash;&#x20B9;25L
+                                </button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'portfolioValue', '25l-50l')">
+                                    &#x20B9;25L&ndash;&#x20B9;50L
+                                </button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'portfolioValue', '50l-plus')">
+                                    &#x20B9;50L+
+                                </button>
+                            </div>
+                            <span class="form-error"></span>
+                        </div>
+
+                        <div class="form-group" id="group-primaryGoal">
+                            <label>Primary Financial Goal <span class="required">*</span></label>
+                            <div class="option-group" role="group" aria-label="Primary financial goal options">
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'primaryGoal', 'wealth')">
+                                    Wealth Creation
+                                </button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'primaryGoal', 'retirement')">
+                                    Retirement
+                                </button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'primaryGoal', 'education')">
+                                    Child&rsquo;s Education
+                                </button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'primaryGoal', 'tax')">
+                                    Tax Planning
+                                </button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'primaryGoal', 'other')">
+                                    Other
+                                </button>
+                            </div>
+                            <span class="form-error"></span>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-next btn-block" onclick="validateStep(1)">Next: Your Contact Details &rarr;</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Contact Details -->
+                    <div id="step-2" class="form-step">
+                        <h3>Your Contact Details</h3>
+                        <p>We&rsquo;ll reach out to schedule your portfolio review</p>
+
+                        <!-- Inline Step 1 summary with edit controls -->
+                        <div class="form-summary" id="formSummaryStep2" aria-label="Your selections from step 1">
+                            <div class="form-summary-row">
+                                <span class="form-summary-label">Portfolio</span>
+                                <span class="form-summary-value" id="summaryPortfolioInline">&mdash;</span>
+                                <button type="button" class="form-summary-edit" onclick="goToStep(1)" aria-label="Edit portfolio value selection">Edit</button>
+                            </div>
+                            <div class="form-summary-row">
+                                <span class="form-summary-label">Goal</span>
+                                <span class="form-summary-value" id="summaryGoalInline">&mdash;</span>
+                                <button type="button" class="form-summary-edit" onclick="goToStep(1)" aria-label="Edit primary goal selection">Edit</button>
+                            </div>
+                        </div>
 
                         <div class="form-group">
                             <label for="name">Full Name <span class="required">*</span></label>
-                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
                             <span class="form-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Mobile Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="98765 43210" required>
+                            <span class="form-error"></span>
+                            <span class="form-help">10-digit Indian mobile number</span>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email Address <span class="required">*</span></label>
                             <input type="email" id="email" name="email" placeholder="you@example.com" required>
                             <span class="form-error"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Phone Number <span class="required">*</span></label>
-                            <input type="tel" id="phone" name="phone" placeholder="98765 43210" required>
-                            <span class="form-error"></span>
-                            <span class="form-help">10-digit phone number without country code</span>
-                        </div>
-
-                        <div class="form-buttons">
-                            <button type="button" class="btn btn-next btn-block" onclick="validateStep(1)">Next</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 2: Investment Experience -->
-                    <div id="step-2" class="form-step">
-                        <h3>Investment Experience</h3>
-                        <p>Help us understand your background</p>
-
-                        <div class="form-group" id="group-experience">
-                            <label>How would you describe your investing experience? <span class="required">*</span></label>
-                            <div class="option-group" role="group" aria-label="Investment experience options">
-                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'experience', 'beginner')">
-                                    Beginner - New to investing
-                                </button>
-                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'experience', 'intermediate')">
-                                    Some Experience - 2-5 years
-                                </button>
-                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'experience', 'advanced')">
-                                    Experienced - 5+ years
-                                </button>
-                            </div>
-                            <span class="form-error"></span>
-                        </div>
-
-                        <div class="form-buttons">
-                            <button type="button" class="btn btn-back" onclick="goToStep(1)">Back</button>
-                            <button type="button" class="btn btn-next" onclick="validateStep(2)">Next</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 3: Investment Type -->
-                    <div id="step-3" class="form-step">
-                        <h3>Investment Type</h3>
-                        <p>What type of investments do you have?</p>
-
-                        <div class="form-group" id="group-investmentType">
-                            <label>How do you invest? <span class="required">*</span></label>
-                            <div class="option-group" role="group" aria-label="Investment type options">
-                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'investmentType', 'sip')">
-                                    SIP (Systematic Investment Plan)
-                                </button>
-                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'investmentType', 'lumpsum')">
-                                    Lump Sum (One-time investments)
-                                </button>
-                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'investmentType', 'both')">
-                                    Both SIP and Lump Sum
-                                </button>
-                            </div>
-                            <span class="form-error"></span>
-                        </div>
-
-                        <div class="form-buttons">
-                            <button type="button" class="btn btn-back" onclick="goToStep(2)">Back</button>
-                            <button type="button" class="btn btn-next" onclick="validateStep(3)">Next</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 4: Portfolio Details -->
-                    <div id="step-4" class="form-step">
-                        <h3>Your Portfolio</h3>
-                        <p>Tell us about your investments</p>
-
-                        <div class="form-group">
-                            <label for="portfolioValue">Approximate Portfolio Value <span class="required">*</span></label>
-                            <select id="portfolioValue" name="portfolioValue" required>
-                                <option value="">Select range</option>
-                                <option value="0-5l">₹0 - ₹5 Lakh</option>
-                                <option value="5l-20l">₹5 Lakh - ₹20 Lakh</option>
-                                <option value="20l-50l">₹20 Lakh - ₹50 Lakh</option>
-                                <option value="50l-1cr">₹50 Lakh - ₹1 Crore</option>
-                                <option value="1cr-plus">₹1 Crore +</option>
-                            </select>
-                            <span class="form-error"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="primaryGoal">Primary Financial Goal <span class="required">*</span></label>
-                            <select id="primaryGoal" name="primaryGoal" required>
-                                <option value="">Select goal</option>
-                                <option value="wealth">Wealth Creation</option>
-                                <option value="retirement">Retirement Planning</option>
-                                <option value="education">Child Education</option>
-                                <option value="home">Home Purchase</option>
-                                <option value="emergency">Emergency Fund</option>
-                                <option value="tax">Tax Planning</option>
-                                <option value="other">Other</option>
-                            </select>
-                            <span class="form-error"></span>
-                        </div>
-
-                        <div class="form-buttons">
-                            <button type="button" class="btn btn-back" onclick="goToStep(3)">Back</button>
-                            <button type="button" class="btn btn-next" onclick="validateStep(4)">Next</button>
-                        </div>
-                    </div>
-
-                    <!-- Step 5: Confirmation -->
-                    <div id="step-5" class="form-step">
-                        <h3>Ready to Review?</h3>
-                        <p>Confirm your information to proceed</p>
-
-                        <div style="background: var(--bg-light); padding: var(--space-lg); border-radius: var(--radius-md); margin-bottom: var(--space-lg);">
-                            <div style="display: flex; justify-content: space-between; padding: var(--space-md) 0; border-bottom: 1px solid var(--border-light);">
-                                <span style="font-weight: var(--fw-semibold);">Name:</span>
-                                <span id="summaryName">-</span>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; padding: var(--space-md) 0; border-bottom: 1px solid var(--border-light);">
-                                <span style="font-weight: var(--fw-semibold);">Email:</span>
-                                <span id="summaryEmail">-</span>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; padding: var(--space-md) 0; border-bottom: 1px solid var(--border-light);">
-                                <span style="font-weight: var(--fw-semibold);">Portfolio Value:</span>
-                                <span id="summaryPortfolio">-</span>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; padding: var(--space-md) 0;">
-                                <span style="font-weight: var(--fw-semibold);">Goal:</span>
-                                <span id="summaryGoal">-</span>
-                            </div>
                         </div>
 
                         <div class="checkbox-group">
@@ -567,19 +514,40 @@
                         </div>
 
                         <div class="form-buttons">
-                            <button type="button" class="btn btn-back" onclick="goToStep(4)">Back</button>
-                            <button type="submit" class="btn btn-submit">Submit & Get Reviewed</button>
+                            <button type="button" class="btn btn-back" onclick="goToStep(1)">Back</button>
+                            <button type="submit" class="btn btn-primary">Get My Portfolio Reviewed</button>
                         </div>
                     </div>
 
                     <!-- Success State -->
                     <div id="step-success" class="form-step">
                         <div class="form-success">
-                            <div class="form-success-icon">✅</div>
-                            <h3>Review Requested Successfully!</h3>
-                            <p>Thank you <span id="successName">!</span></p>
-                            <p>We've received your portfolio information. Our team will analyze your portfolio and contact you within 24 hours to discuss the findings.</p>
-                            <button class="btn btn-whatsapp" onclick="openWhatsAppWithMessage('Hi, I submitted my portfolio for review. Please confirm receipt.')">
+                            <div class="form-success-icon">&#x2705;</div>
+                            <h3>Review Requested!</h3>
+                            <p>Thank you, <span id="successName"></span>. We&rsquo;ve noted your request.</p>
+                            <p style="font-size: var(--text-sm); color: var(--text-light);">Your information is saved locally in your browser. Continue on WhatsApp to connect with our team and discuss your portfolio review.</p>
+
+                            <!-- Final summary with masked phone -->
+                            <div class="form-final-summary" id="formFinalSummary" aria-label="Your portfolio review request summary">
+                                <div class="form-summary-row">
+                                    <span class="form-summary-label">Portfolio</span>
+                                    <span class="form-summary-value" id="finalSummaryPortfolio">&mdash;</span>
+                                </div>
+                                <div class="form-summary-row">
+                                    <span class="form-summary-label">Goal</span>
+                                    <span class="form-summary-value" id="finalSummaryGoal">&mdash;</span>
+                                </div>
+                                <div class="form-summary-row">
+                                    <span class="form-summary-label">Name</span>
+                                    <span class="form-summary-value" id="finalSummaryName">&mdash;</span>
+                                </div>
+                                <div class="form-summary-row">
+                                    <span class="form-summary-label">Phone</span>
+                                    <span class="form-summary-value" id="finalSummaryPhone">&mdash;</span>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-whatsapp" onclick="openWhatsAppPortfolioReview()">
                                 <i class="fab fa-whatsapp"></i> Chat on WhatsApp
                             </button>
                         </div>
@@ -662,7 +630,7 @@
             </div>
 
             <div style="text-align: center; margin-top: var(--space-2xl);">
-                <button class="btn btn-secondary btn-lg" onclick="scrollToForm()">Get Your Review Today</button>
+                <button class="btn btn-secondary btn-lg" onclick="scrollToForm()">Get My Portfolio Reviewed</button>
             </div>
         </div>
     </section>
@@ -710,7 +678,7 @@
 
     <!-- Sticky Mobile CTA Button -->
     <div id="stickyCta" class="sticky-cta">
-        <button onclick="scrollToForm()" class="btn btn-block">Get Free Review</button>
+        <button onclick="scrollToFormFromHero()" class="btn btn-block">Get My Portfolio Reviewed</button>
     </div>
 
     <!-- JavaScript Files -->
@@ -721,16 +689,37 @@
 
     <!-- Application JavaScript -->
     <script>
-        // Form State Management
+        /* ================================================
+           PHASE 8.1 — CONVERSION FUNNEL
+           2-step portfolio review intake form
+           ================================================ */
+
+        // Portfolio value display labels
+        const PORTFOLIO_VALUE_LABELS = {
+            'below-5l':  'Below ₹5L',
+            '5l-10l':   '₹5L–₹10L',
+            '10l-25l':  '₹10L–₹25L',
+            '25l-50l':  '₹25L–₹50L',
+            '50l-plus': '₹50L+'
+        };
+
+        // Goal display labels
+        const GOAL_LABELS = {
+            'wealth':     'Wealth Creation',
+            'retirement': 'Retirement',
+            'education':  "Child's Education",
+            'tax':        'Tax Planning',
+            'other':      'Other'
+        };
+
+        // Form State — 2-step flow
         const formState = {
             step: 1,
-            name: '',
-            email: '',
-            phone: '',
-            experience: '',
-            investmentType: '',
-            portfolioValue: '',
-            primaryGoal: ''
+            portfolioValue: '',   // Step 1
+            primaryGoal: '',      // Step 1
+            name: '',             // Step 2
+            phone: '',            // Step 2 (normalised 10-digit)
+            email: ''             // Step 2
         };
 
         // Initialize on page load
@@ -758,12 +747,11 @@
             setupThemeToggle();
         }
 
-        // Mobile Menu Functions
+        /* ===== Mobile Menu ===== */
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             const toggle = document.getElementById('menuToggle');
             if (!menu || !toggle) return;
-            
             const isActive = menu.classList.toggle('active');
             toggle.classList.toggle('active', isActive);
             toggle.setAttribute('aria-expanded', String(isActive));
@@ -779,69 +767,59 @@
             }
         }
 
-        // Form Navigation Functions
+        /* ===== Form Navigation ===== */
         function goToStep(stepNumber) {
             document.querySelectorAll('.form-step').forEach(step => {
                 step.classList.remove('active');
             });
-            document.getElementById(`step-${stepNumber}`).classList.add('active');
+            const target = document.getElementById(`step-${stepNumber}`);
+            if (target) target.classList.add('active');
             formState.step = stepNumber;
             updateProgress();
+            // Populate the inline Step-1 summary when entering Step 2
+            if (stepNumber === 2) {
+                updateInlineSummary();
+            }
         }
 
+        /* ===== Step Validation ===== */
         function validateStep(stepNumber) {
             let isValid = false;
 
             if (stepNumber === 1) {
-                const name = document.getElementById('name').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const phone = document.getElementById('phone').value.trim();
-
-                if (!UTILS.isValidName(name)) {
-                    showFieldError('name', 'Please enter a valid name');
+                // Step 1: Portfolio value + Goal (both required option buttons)
+                if (!formState.portfolioValue) {
+                    showFieldError('portfolioValue', 'Please select your approximate portfolio value');
                     return;
                 }
-                if (!UTILS.isValidEmail(email)) {
-                    showFieldError('email', 'Please enter a valid email');
+                if (!formState.primaryGoal) {
+                    showFieldError('primaryGoal', 'Please select your primary financial goal');
+                    return;
+                }
+                isValid = true;
+
+            } else if (stepNumber === 2) {
+                // Step 2: Name, Phone, Email
+                const name  = document.getElementById('name').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const email = document.getElementById('email').value.trim();
+
+                if (!UTILS.isValidName(name)) {
+                    showFieldError('name', 'Please enter your full name (at least 2 characters)');
                     return;
                 }
                 if (!UTILS.isValidPhone(phone)) {
-                    showFieldError('phone', 'Please enter a valid 10-digit Indian phone number');
+                    showFieldError('phone', 'Please enter a valid 10-digit Indian mobile number');
+                    return;
+                }
+                if (!UTILS.isValidEmail(email)) {
+                    showFieldError('email', 'Please enter a valid email address');
                     return;
                 }
 
-                formState.name = name;
-                formState.email = email;
+                formState.name  = name;
                 formState.phone = UTILS.normalizePhone(phone);
-                isValid = true;
-            } else if (stepNumber === 2) {
-                if (!formState.experience) {
-                    showFieldError('experience', 'Please select your experience level');
-                    return;
-                }
-                isValid = true;
-            } else if (stepNumber === 3) {
-                if (!formState.investmentType) {
-                    showFieldError('investmentType', 'Please select investment type');
-                    return;
-                }
-                isValid = true;
-            } else if (stepNumber === 4) {
-                const portfolio = document.getElementById('portfolioValue').value;
-                const goal = document.getElementById('primaryGoal').value;
-
-                if (!portfolio) {
-                    showFieldError('portfolioValue', 'Please select portfolio value range');
-                    return;
-                }
-                if (!goal) {
-                    showFieldError('primaryGoal', 'Please select primary goal');
-                    return;
-                }
-
-                formState.portfolioValue = portfolio;
-                formState.primaryGoal = goal;
-                updateSummary();
+                formState.email = email;
                 isValid = true;
             }
 
@@ -851,8 +829,9 @@
             }
         }
 
+        /* ===== Option Button Selection (aria-pressed) ===== */
         function selectOption(button, fieldName, value) {
-            // Remove previous selection and aria state
+            // Deselect all siblings and reset aria state
             const group = button.closest('.option-group');
             if (group) {
                 group.querySelectorAll('.option-btn').forEach(btn => {
@@ -860,18 +839,16 @@
                     btn.setAttribute('aria-pressed', 'false');
                 });
             }
-
-            // Add selection to clicked button
+            // Apply to clicked button
             button.classList.add('selected');
             button.setAttribute('aria-pressed', 'true');
-
-            // Store in form state
+            // Persist in state
             formState[fieldName] = value;
-
-            // Clear any error state on this field
+            // Clear error on this field
             clearFieldError(fieldName);
         }
 
+        /* ===== Field Error Helpers ===== */
         function showFieldError(fieldId, message) {
             let field = document.getElementById(fieldId);
             if (!field) {
@@ -881,9 +858,7 @@
                 const group = field.closest('.form-group') || field;
                 if (group) {
                     const errorEl = group.querySelector('.form-error');
-                    if (errorEl) {
-                        errorEl.textContent = message;
-                    }
+                    if (errorEl) errorEl.textContent = message;
                     group.classList.add('error');
                 }
             }
@@ -899,73 +874,149 @@
                 if (group) {
                     group.classList.remove('error');
                     const errorEl = group.querySelector('.form-error');
-                    if (errorEl) {
-                        errorEl.textContent = '';
-                    }
+                    if (errorEl) errorEl.textContent = '';
                 }
             }
         }
 
+        /* ===== Progress Bar (2-step) ===== */
         function updateProgress() {
-            const progress = (formState.step / 5) * 100;
-            document.getElementById('progressBar').style.width = progress + '%';
-            document.getElementById('currentStep').textContent = `Step ${formState.step}`;
+            const TOTAL_STEPS = 2;
+            const progress = (formState.step / TOTAL_STEPS) * 100;
+            const bar = document.getElementById('progressBar');
+            if (bar) bar.style.width = progress + '%';
+            const stepEl = document.getElementById('currentStep');
+            if (stepEl) stepEl.textContent = `Step ${formState.step}`;
         }
 
-        function updateSummary() {
-            document.getElementById('summaryName').textContent = formState.name;
-            document.getElementById('summaryEmail').textContent = formState.email;
-            document.getElementById('summaryPortfolio').textContent = formState.portfolioValue;
-            document.getElementById('summaryGoal').textContent = formState.primaryGoal;
+        /* ===== Inline Step-2 Summary (shows Step-1 selections with edit) ===== */
+        function updateInlineSummary() {
+            const portfolioLabel = PORTFOLIO_VALUE_LABELS[formState.portfolioValue] || formState.portfolioValue;
+            const goalLabel = GOAL_LABELS[formState.primaryGoal] || formState.primaryGoal;
+            const inlinePortfolio = document.getElementById('summaryPortfolioInline');
+            const inlineGoal = document.getElementById('summaryGoalInline');
+            if (inlinePortfolio) inlinePortfolio.textContent = portfolioLabel;
+            if (inlineGoal) inlineGoal.textContent = goalLabel;
         }
 
+        /* ===== Phone Masking (display only — last 2 digits visible) ===== */
+        function maskPhone(phone) {
+            if (!phone || phone.length < 3) return phone;
+            return '•'.repeat(phone.length - 2) + phone.slice(-2);
+        }
+
+        /* ===== Final Success Summary ===== */
+        function updateFinalSummary() {
+            const portfolioLabel = PORTFOLIO_VALUE_LABELS[formState.portfolioValue] || formState.portfolioValue;
+            const goalLabel = GOAL_LABELS[formState.primaryGoal] || formState.primaryGoal;
+            const el = id => document.getElementById(id);
+            if (el('finalSummaryPortfolio')) el('finalSummaryPortfolio').textContent = portfolioLabel;
+            if (el('finalSummaryGoal'))      el('finalSummaryGoal').textContent = goalLabel;
+            if (el('finalSummaryName'))      el('finalSummaryName').textContent = formState.name;
+            if (el('finalSummaryPhone'))     el('finalSummaryPhone').textContent = maskPhone(formState.phone);
+        }
+
+        /* ===== Form Submit ===== */
         function submitPortfolioForm(event) {
             event.preventDefault();
 
-            // Track conversion
+            // Re-validate Step 2 fields on submit
+            const name  = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            if (!UTILS.isValidName(name)) {
+                showFieldError('name', 'Please enter your full name');
+                return;
+            }
+            if (!UTILS.isValidPhone(phone)) {
+                showFieldError('phone', 'Please enter a valid 10-digit Indian mobile number');
+                return;
+            }
+            if (!UTILS.isValidEmail(email)) {
+                showFieldError('email', 'Please enter a valid email address');
+                return;
+            }
+
+            formState.name  = name;
+            formState.phone = UTILS.normalizePhone(phone);
+            formState.email = email;
+
+            // Track conversion (portfolio metadata only — contact excluded from analytics)
             ANALYTICS.trackPortfolioReviewCompleted({
-                name: formState.name,
-                email: formState.email,
                 portfolio_value: formState.portfolioValue,
-                primary_goal: formState.primaryGoal
+                primary_goal:    formState.primaryGoal
             });
 
-            // Save to localStorage
-            UTILS.saveToStorage('nanda_lead_data', formState);
+            // Persist to localStorage (local state only — no backend in Phase 8.1)
+            UTILS.saveToStorage(CONFIG.STORAGE.LEAD_DATA, {
+                portfolioValue: formState.portfolioValue,
+                primaryGoal:    formState.primaryGoal,
+                submittedAt:    new Date().toISOString()
+                // Note: contact details not stored in analytics storage
+            });
 
             // Show success state
-            document.querySelectorAll('.form-step').forEach(step => {
-                step.classList.remove('active');
-            });
-            document.getElementById('step-success').classList.add('active');
-            document.getElementById('successName').textContent = formState.name;
+            document.querySelectorAll('.form-step').forEach(step => step.classList.remove('active'));
+            const successStep = document.getElementById('step-success');
+            if (successStep) successStep.classList.add('active');
 
-            // TODO: Send to API endpoint when backend is ready
-            // Example:
-            // fetch(CONFIG.API.BASE_URL + CONFIG.API.ENDPOINTS.LEADS, {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(formState)
-            // }).then(...)
+            // Populate success display
+            const successNameEl = document.getElementById('successName');
+            if (successNameEl) successNameEl.textContent = formState.name;
+            updateFinalSummary();
 
-            UTILS.log('Portfolio review submitted:', formState);
+            UTILS.log('Portfolio review form submitted (local state — WhatsApp handoff pending)');
         }
 
-        // Navigation Functions
+        /* ===== WhatsApp Contextual Handoff (Change 5) ===== */
+        // Builds a contextual WhatsApp message from portfolio form state.
+        // Includes Name so the business can identify the lead.
+        // Does NOT expose phone or email in the URL or message.
+        function buildPortfolioReviewWhatsAppMessage() {
+            const portfolioLabel = PORTFOLIO_VALUE_LABELS[formState.portfolioValue] || formState.portfolioValue;
+            const goalLabel      = GOAL_LABELS[formState.primaryGoal] || formState.primaryGoal;
+            return [
+                'Hi Nanda Financial, I just requested a Mutual Fund Portfolio Review on your website.',
+                '',
+                `Name: ${formState.name}`,
+                `Portfolio: ${portfolioLabel}`,
+                `Goal: ${goalLabel}`,
+                '',
+                "I'd like to discuss the review."
+            ].join('\n');
+        }
+
+        // Opens WhatsApp with contextual portfolio review message after form submission
+        function openWhatsAppPortfolioReview() {
+            ANALYTICS.trackWhatsAppClick('portfolio_review_handoff');
+            const message = buildPortfolioReviewWhatsAppMessage();
+            const url = `https://wa.me/${CONFIG.BUSINESS.whatsapp}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        /* ===== Navigation / Scroll Functions ===== */
+        // Scrolls to the educational portfolio review section (nav links)
         function scrollToPortfolioReview() {
-            ANALYTICS.trackCtaClicked('scroll_to_portfolio', 'hero');
+            ANALYTICS.trackCtaClicked('scroll_to_portfolio_review', 'navigation');
             UTILS.scrollTo('portfolio-review');
         }
 
+        // Scrolls directly to the intake form (secondary CTAs)
         function scrollToForm() {
             ANALYTICS.trackCtaClicked('scroll_to_form', 'various');
             UTILS.scrollTo('form-section');
         }
 
+        // Hero primary CTA — routes directly to the intake form, not educational cards
+        function scrollToFormFromHero() {
+            ANALYTICS.trackCtaClicked('hero_primary_cta', 'hero');
+            UTILS.scrollTo('form-section');
+        }
+
         function handleStickyCtaVisibility() {
             const formSection = document.getElementById('form-section');
-            const stickyCta = document.getElementById('stickyCta');
-            
+            const stickyCta   = document.getElementById('stickyCta');
             if (formSection && stickyCta) {
                 const formRect = formSection.getBoundingClientRect();
                 if (formRect.top > window.innerHeight) {
@@ -976,7 +1027,7 @@
             }
         }
 
-        // WhatsApp Integration
+        /* ===== WhatsApp Helpers ===== */
         function openWhatsAppDefault() {
             ANALYTICS.trackWhatsAppClick('default');
             const message = CONFIG.WHATSAPP_MESSAGES.DEFAULT;
@@ -990,7 +1041,7 @@
             window.open(url, '_blank');
         }
 
-        // Dynamic Doodle Bar
+        /* ===== Dynamic Doodle Bar ===== */
         function updateDoodleBar() {
             const doodle = document.getElementById('doodle-bar');
             if (doodle) {
@@ -998,11 +1049,10 @@
             }
         }
 
-        // Theme Toggle
+        /* ===== Theme Toggle ===== */
         function setupThemeToggle() {
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme = UTILS.getFromStorage(CONFIG.STORAGE.THEME_PREFERENCE);
-            
+            const savedTheme  = UTILS.getFromStorage(CONFIG.STORAGE.THEME_PREFERENCE);
             if (savedTheme) {
                 applyTheme(savedTheme);
             } else if (prefersDark) {
@@ -1019,14 +1069,14 @@
             UTILS.saveToStorage(CONFIG.STORAGE.THEME_PREFERENCE, theme);
         }
 
-        // Clear field errors on input
+        // Clear field errors on user input
         document.addEventListener('input', (e) => {
             if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') {
                 clearFieldError(e.target.id);
             }
         });
 
-        // Track form start
+        // Track form engagement start
         document.getElementById('portfolioForm')?.addEventListener('focus', () => {
             ANALYTICS.trackFormStarted('portfolio_review');
         }, true);

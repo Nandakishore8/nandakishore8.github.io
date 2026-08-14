@@ -362,3 +362,76 @@ input[type='radio'] {
     flex: 1;
   }
 }
+
+/* ============================================
+   FORM SUMMARY — Phase 8.1
+   Inline Step-2 summary + Final success summary
+   ============================================ */
+
+/* Inline summary shown in Step 2 (shows Step-1 selections with edit links) */
+.form-summary {
+  background: var(--bg-lighter);
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+/* Final read-only summary shown in the success state */
+.form-final-summary {
+  background: var(--bg-light);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  margin: var(--space-lg) auto;
+  max-width: 360px;
+  text-align: left;
+}
+
+/* Shared row layout */
+.form-summary-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+}
+
+.form-summary-row + .form-summary-row {
+  border-top: 1px solid var(--border-light);
+}
+
+.form-summary-label {
+  flex: 0 0 72px;
+  font-size: var(--text-xs);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text-light);
+}
+
+.form-summary-value {
+  flex: 1;
+  font-size: var(--text-sm);
+  font-weight: var(--fw-medium);
+  color: var(--text-dark);
+}
+
+/* Inline edit button (only in .form-summary, not .form-final-summary) */
+.form-summary-edit {
+  flex-shrink: 0;
+  background: none;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-semibold);
+  padding: 2px var(--space-sm);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+.form-summary-edit:hover {
+  background: var(--primary-light);
+}
