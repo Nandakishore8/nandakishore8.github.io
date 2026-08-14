@@ -3,6 +3,8 @@
    Validators, Formatters, DOM Helpers
    ======================================== */
 
+const _CONFIG = typeof CONFIG !== 'undefined' ? CONFIG : (typeof require !== 'undefined' ? require('./config.js') : {});
+
 const UTILS = {
   /* ========== VALIDATION ========== */
   
@@ -12,17 +14,35 @@ const UTILS = {
    * @returns {boolean}
    */
   isValidEmail: (email) => {
-    return CONFIG.VALIDATION.EMAIL_REGEX.test(email);
+    return _CONFIG.VALIDATION.EMAIL_REGEX.test(email);
   },
   
   /**
+   * Normalize Indian phone number to 10 digits
+   * @param {string} phone
+   * @returns {string} 10-digit phone string or original cleaned
+   */
+  normalizePhone: (phone) => {
+    if (!phone) return '';
+    let cleaned = phone.replace(/\D/g, '');
+    if (cleaned.length === 12 && cleaned.startsWith('91')) {
+      cleaned = cleaned.slice(2);
+    } else if (cleaned.length === 11 && cleaned.startsWith('0')) {
+      cleaned = cleaned.slice(1);
+    }
+    return cleaned;
+  },
+
+  /**
    * Validate Indian phone number
-   * @param {string} phone - Phone number (10 digits)
+   * Accepts 10-digit mobile numbers optionally prefixed with +91, 91, or 0
+   * @param {string} phone - Phone number
    * @returns {boolean}
    */
   isValidPhone: (phone) => {
-    const cleaned = phone.replace(/\D/g, '');
-    return CONFIG.VALIDATION.PHONE_REGEX.test(cleaned);
+    if (!phone) return false;
+    const normalized = UTILS.normalizePhone(phone);
+    return _CONFIG.VALIDATION.PHONE_REGEX.test(normalized);
   },
   
   /**
@@ -32,8 +52,8 @@ const UTILS = {
    */
   isValidName: (name) => {
     const trimmed = name.trim();
-    return trimmed.length >= CONFIG.VALIDATION.MIN_NAME_LENGTH &&
-           trimmed.length <= CONFIG.VALIDATION.MAX_NAME_LENGTH;
+    return trimmed.length >= _CONFIG.VALIDATION.MIN_NAME_LENGTH &&
+           trimmed.length <= _CONFIG.VALIDATION.MAX_NAME_LENGTH;
   },
   
   /**
@@ -42,8 +62,8 @@ const UTILS = {
    * @returns {boolean}
    */
   isValidPortfolioValue: (value) => {
-    return value >= CONFIG.VALIDATION.PORTFOLIO_VALUE_MIN &&
-           value <= CONFIG.VALIDATION.PORTFOLIO_VALUE_MAX;
+    return value >= _CONFIG.VALIDATION.PORTFOLIO_VALUE_MIN &&
+           value <= _CONFIG.VALIDATION.PORTFOLIO_VALUE_MAX;
   },
   
   /* ========== FORMATTING ========== */
@@ -234,7 +254,7 @@ const UTILS = {
    * @param {number} delay - Delay in ms
    * @returns {function}
    */
-  debounce: (fn, delay = CONFIG.TIMEOUTS.DEBOUNCE) => {
+  debounce: (fn, delay = (_CONFIG.TIMEOUTS && _CONFIG.TIMEOUTS.DEBOUNCE) || 300) => {
     let timeoutId;
     return (...args) => {
       clearTimeout(timeoutId);
@@ -248,7 +268,7 @@ const UTILS = {
    * @param {number} delay - Delay in ms
    * @returns {function}
    */
-  throttle: (fn, delay = CONFIG.TIMEOUTS.THROTTLE) => {
+  throttle: (fn, delay = (_CONFIG.TIMEOUTS && _CONFIG.TIMEOUTS.THROTTLE) || 500) => {
     let lastCall = 0;
     return (...args) => {
       const now = Date.now();
@@ -270,7 +290,7 @@ const UTILS = {
     try {
       localStorage.setItem(key, JSON.stringify(value));
     } catch (e) {
-      if (CONFIG.DEBUG) console.warn('LocalStorage write failed:', e);
+      if (_CONFIG.DEBUG) console.warn('LocalStorage write failed:', e);
     }
   },
   
@@ -284,7 +304,7 @@ const UTILS = {
       const item = localStorage.getItem(key);
       return item ? JSON.parse(item) : null;
     } catch (e) {
-      if (CONFIG.DEBUG) console.warn('LocalStorage read failed:', e);
+      if (_CONFIG.DEBUG) console.warn('LocalStorage read failed:', e);
       return null;
     }
   },
@@ -297,7 +317,7 @@ const UTILS = {
     try {
       localStorage.removeItem(key);
     } catch (e) {
-      if (CONFIG.DEBUG) console.warn('LocalStorage remove failed:', e);
+      if (_CONFIG.DEBUG) console.warn('LocalStorage remove failed:', e);
     }
   },
   
@@ -309,7 +329,7 @@ const UTILS = {
    * @param {*} data
    */
   log: (message, data = null) => {
-    if (CONFIG.DEBUG) {
+    if (_CONFIG.DEBUG) {
       if (data) {
         console.log(`[Nanda] ${message}`, data);
       } else {
@@ -324,7 +344,7 @@ const UTILS = {
    * @param {*} data
    */
   warn: (message, data = null) => {
-    if (CONFIG.DEBUG) {
+    if (_CONFIG.DEBUG) {
       if (data) {
         console.warn(`[Nanda] ${message}`, data);
       } else {

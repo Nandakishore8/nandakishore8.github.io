@@ -99,7 +99,7 @@
                 <img src="logo.jpg" alt="Nanda Financial Services Logo">
                 <div class="logo-text">
                     <h1>Nanda Financial</h1>
-                    <p>Portfolio Review & Advisory</p>
+                    <p>Mutual Fund Distribution & Review</p>
                 </div>
             </a>
 
@@ -143,7 +143,7 @@
             <div class="hero-content">
                 <!-- Trust Badge -->
                 <div class="hero-badge">
-                    <span>✅ AMFI Registered | ✅ Free Review | ✅ Expert Guidance</span>
+                    <span>AMFI-registered Mutual Fund Distributor | Free Portfolio Review | Investor Guidance</span>
                 </div>
 
                 <!-- Headline -->
@@ -176,7 +176,7 @@
                         Get My Portfolio Reviewed
                     </button>
                     <button class="btn btn-whatsapp" onclick="openWhatsAppDefault()">
-                        <i class="fab fa-whatsapp"></i> Talk to Advisor
+                        <i class="fab fa-whatsapp"></i> Talk to Specialist
                     </button>
                 </div>
             </div>
@@ -443,16 +443,16 @@
                         <h3>Investment Experience</h3>
                         <p>Help us understand your background</p>
 
-                        <div class="form-group">
+                        <div class="form-group" id="group-experience">
                             <label>How would you describe your investing experience? <span class="required">*</span></label>
-                            <div class="option-group">
-                                <button type="button" class="option-btn" onclick="selectOption(this, 'experience', 'beginner')">
+                            <div class="option-group" role="group" aria-label="Investment experience options">
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'experience', 'beginner')">
                                     Beginner - New to investing
                                 </button>
-                                <button type="button" class="option-btn" onclick="selectOption(this, 'experience', 'intermediate')">
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'experience', 'intermediate')">
                                     Some Experience - 2-5 years
                                 </button>
-                                <button type="button" class="option-btn" onclick="selectOption(this, 'experience', 'advanced')">
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'experience', 'advanced')">
                                     Experienced - 5+ years
                                 </button>
                             </div>
@@ -470,16 +470,16 @@
                         <h3>Investment Type</h3>
                         <p>What type of investments do you have?</p>
 
-                        <div class="form-group">
+                        <div class="form-group" id="group-investmentType">
                             <label>How do you invest? <span class="required">*</span></label>
-                            <div class="option-group">
-                                <button type="button" class="option-btn" onclick="selectOption(this, 'investmentType', 'sip')">
+                            <div class="option-group" role="group" aria-label="Investment type options">
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'investmentType', 'sip')">
                                     SIP (Systematic Investment Plan)
                                 </button>
-                                <button type="button" class="option-btn" onclick="selectOption(this, 'investmentType', 'lumpsum')">
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'investmentType', 'lumpsum')">
                                     Lump Sum (One-time investments)
                                 </button>
-                                <button type="button" class="option-btn" onclick="selectOption(this, 'investmentType', 'both')">
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'investmentType', 'both')">
                                     Both SIP and Lump Sum
                                 </button>
                             </div>
@@ -563,7 +563,7 @@
                         </div>
 
                         <div class="privacy-notice">
-                            Your information is confidential and will only be used for portfolio analysis. We do not share your data with third parties. <a href="#privacy">Privacy Policy</a>
+                            Your information is confidential and will only be used for portfolio analysis. We do not share your data with third parties. <a href="privacy-policy.html">Privacy Policy</a>
                         </div>
 
                         <div class="form-buttons">
@@ -607,8 +607,8 @@
 
                 <div class="card card-success">
                     <div class="card-body">
-                        <h3 style="color: var(--success); margin-top: 0;">No Conflicts</h3>
-                        <p>We provide portfolio reviews based on your best interests. We earn trail commissions from fund houses, which are disclosed.</p>
+                        <h3 style="color: var(--success); margin-top: 0;">Transparent Commission Model</h3>
+                        <p>As an AMFI-registered distributor, we operate with transparent commission disclosures. We receive regulated trail commissions directly from fund houses.</p>
                     </div>
                 </div>
 
@@ -673,7 +673,7 @@
             <div style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-2xl); display: grid; margin-bottom: var(--space-2xl);">
                 <div>
                     <h3 style="color: var(--bg-white); margin-top: 0;">Nanda Financial Services</h3>
-                    <p>AMFI Registered Mutual Fund Distributor</p>
+                    <p>AMFI-registered Mutual Fund Distributor</p>
                     <p style="font-size: var(--text-xs); color: rgba(255, 255, 255, 0.7);">ARN: 332725<br>Registration Date: 30/06/2025<br>Valid Till: 23/06/2028</p>
                 </div>
 
@@ -699,9 +699,10 @@
 
             <div style="border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: var(--space-lg);">
                 <p style="margin: 0; color: rgba(255, 255, 255, 0.8); text-align: center;">
-                    © 2026 Nanda Financial Services. All rights reserved. | 
-                    <a href="#privacy" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Privacy Policy</a> | 
-                    <a href="#terms" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Terms</a>
+                    © 2026 Nanda Financial Services. All rights reserved. |
+                    <a href="privacy-policy.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Privacy Policy</a> |
+                    <a href="terms.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Terms</a> |
+                    <a href="disclosure.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Disclosures</a>
                 </p>
             </div>
         </div>
@@ -761,21 +762,21 @@
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             const toggle = document.getElementById('menuToggle');
+            if (!menu || !toggle) return;
             
-            if (menu.classList.contains('active')) {
-                menu.classList.remove('active');
-                toggle.setAttribute('aria-expanded', 'false');
-            } else {
-                menu.classList.add('active');
-                toggle.setAttribute('aria-expanded', 'true');
-            }
+            const isActive = menu.classList.toggle('active');
+            toggle.classList.toggle('active', isActive);
+            toggle.setAttribute('aria-expanded', String(isActive));
         }
 
         function closeMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             const toggle = document.getElementById('menuToggle');
-            menu.classList.remove('active');
-            toggle.setAttribute('aria-expanded', 'false');
+            if (menu) menu.classList.remove('active');
+            if (toggle) {
+                toggle.classList.remove('active');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
         }
 
         // Form Navigation Functions
@@ -805,13 +806,13 @@
                     return;
                 }
                 if (!UTILS.isValidPhone(phone)) {
-                    showFieldError('phone', 'Please enter a valid 10-digit phone number');
+                    showFieldError('phone', 'Please enter a valid 10-digit Indian phone number');
                     return;
                 }
 
                 formState.name = name;
                 formState.email = email;
-                formState.phone = phone;
+                formState.phone = UTILS.normalizePhone(phone);
                 isValid = true;
             } else if (stepNumber === 2) {
                 if (!formState.experience) {
@@ -851,37 +852,56 @@
         }
 
         function selectOption(button, fieldName, value) {
-            // Remove previous selection
+            // Remove previous selection and aria state
             const group = button.closest('.option-group');
-            group.querySelectorAll('.option-btn').forEach(btn => {
-                btn.classList.remove('selected');
-            });
+            if (group) {
+                group.querySelectorAll('.option-btn').forEach(btn => {
+                    btn.classList.remove('selected');
+                    btn.setAttribute('aria-pressed', 'false');
+                });
+            }
 
             // Add selection to clicked button
             button.classList.add('selected');
+            button.setAttribute('aria-pressed', 'true');
 
             // Store in form state
             formState[fieldName] = value;
+
+            // Clear any error state on this field
+            clearFieldError(fieldName);
         }
 
         function showFieldError(fieldId, message) {
-            const field = document.getElementById(fieldId);
+            let field = document.getElementById(fieldId);
+            if (!field) {
+                field = document.getElementById(`group-${fieldId}`) || document.querySelector(`[name="${fieldId}"]`);
+            }
             if (field) {
-                const errorEl = field.parentElement.querySelector('.form-error');
-                if (errorEl) {
-                    errorEl.textContent = message;
+                const group = field.closest('.form-group') || field;
+                if (group) {
+                    const errorEl = group.querySelector('.form-error');
+                    if (errorEl) {
+                        errorEl.textContent = message;
+                    }
+                    group.classList.add('error');
                 }
-                field.parentElement.classList.add('error');
             }
         }
 
         function clearFieldError(fieldId) {
-            const field = document.getElementById(fieldId);
+            let field = document.getElementById(fieldId);
+            if (!field) {
+                field = document.getElementById(`group-${fieldId}`) || document.querySelector(`[name="${fieldId}"]`);
+            }
             if (field) {
-                field.parentElement.classList.remove('error');
-                const errorEl = field.parentElement.querySelector('.form-error');
-                if (errorEl) {
-                    errorEl.textContent = '';
+                const group = field.closest('.form-group') || field;
+                if (group) {
+                    group.classList.remove('error');
+                    const errorEl = group.querySelector('.form-error');
+                    if (errorEl) {
+                        errorEl.textContent = '';
+                    }
                 }
             }
         }
@@ -972,15 +992,9 @@
 
         // Dynamic Doodle Bar
         function updateDoodleBar() {
-            const hour = new Date().getHours();
             const doodle = document.getElementById('doodle-bar');
-            
-            if (hour < 12) {
-                doodle.textContent = '🌅 Good Morning! Get your free portfolio review today.';
-            } else if (hour < 17) {
-                doodle.textContent = '☀️ Good Afternoon! Review your mutual funds now.';
-            } else {
-                doodle.textContent = '🌙 Good Evening! Plan your tomorrow, today.';
+            if (doodle) {
+                doodle.textContent = '✨ Get Your Free Portfolio X-Ray Report — Identify Overlaps, Costs & Optimization Opportunities';
             }
         }
 

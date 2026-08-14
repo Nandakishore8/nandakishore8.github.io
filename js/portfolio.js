@@ -7,6 +7,9 @@
    Defines portfolio, fund, and lead data models.
 */
 
+const _CONFIG = typeof CONFIG !== 'undefined' ? CONFIG : (typeof require !== 'undefined' ? require('./config.js') : {});
+const _UTILS = typeof UTILS !== 'undefined' ? UTILS : (typeof require !== 'undefined' ? require('./utils.js') : {});
+
 const PORTFOLIO = {
   
   /**
@@ -26,7 +29,7 @@ const PORTFOLIO = {
    */
   createPortfolio: (investorInfo = {}) => {
     return {
-      id: UTILS.generateId(),
+      id: _UTILS.generateId(),
       investor: {
         name: investorInfo.name || '',
         email: investorInfo.email || '',
@@ -71,7 +74,7 @@ const PORTFOLIO = {
    */
   addFund: (portfolio, fundData) => {
     const fund = {
-      id: UTILS.generateId(),
+      id: _UTILS.generateId(),
       name: fundData.name || '',
       schemeCode: fundData.schemeCode || '',
       type: fundData.type || 'Equity', // Equity, Debt, Hybrid, Index, ELSS
@@ -212,9 +215,10 @@ const PORTFOLIO = {
     
     // Concentration check (0-100)
     // Check if any single fund is >30% of portfolio
-    const maxConcentration = Math.max(
-      ...distribution.map(d => parseFloat(d.percentage))
-    );
+    const distValues = Object.values(distribution);
+    const maxConcentration = distValues.length > 0
+      ? Math.max(...distValues.map(d => parseFloat(d.percentage) || 0))
+      : 0;
     metrics.concentration = maxConcentration > 30 ? 50 : 100;
     
     // Cost analysis (0-100)
@@ -237,8 +241,8 @@ const PORTFOLIO = {
    * @param {object} portfolio
    */
   saveToLocal: (portfolio) => {
-    UTILS.saveToStorage(CONFIG.STORAGE.PORTFOLIO_DRAFT, portfolio);
-    UTILS.log('Portfolio saved to localStorage', portfolio.id);
+    _UTILS.saveToStorage((_CONFIG.STORAGE && _CONFIG.STORAGE.PORTFOLIO_DRAFT) || 'nanda_portfolio_draft', portfolio);
+    _UTILS.log('Portfolio saved to localStorage', portfolio.id);
   },
   
   /**
@@ -246,7 +250,7 @@ const PORTFOLIO = {
    * @returns {object|null}
    */
   loadFromLocal: () => {
-    return UTILS.getFromStorage(CONFIG.STORAGE.PORTFOLIO_DRAFT);
+    return _UTILS.getFromStorage((_CONFIG.STORAGE && _CONFIG.STORAGE.PORTFOLIO_DRAFT) || 'nanda_portfolio_draft');
   },
   
   /**
