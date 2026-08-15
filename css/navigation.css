@@ -257,7 +257,7 @@ header.scrolled {
 }
 
 /* Tablet and up */
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   header {
     padding: var(--space-md) var(--space-xl);
   }
