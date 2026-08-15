@@ -26,9 +26,10 @@
     <meta name="twitter:description" content="Understand your portfolio. Get a free analysis today.">
     <meta name="twitter:image" content="og-image.jpg">
 
+    <!-- Fonts: Instrument Serif (display) + DM Sans (body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Google Tag Manager -->
@@ -48,6 +49,8 @@
     <link rel="stylesheet" href="css/forms.css">
     <link rel="stylesheet" href="css/dark-mode.css">
     <link rel="stylesheet" href="css/enhancements.css">
+    <!-- Stripe-quality overrides — loaded last to win specificity -->
+    <link rel="stylesheet" href="css/stripe-quality.css">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -94,17 +97,17 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           <span><strong>50+</strong> portfolios reviewed</span>
         </div>
-        <span class="stats-bar-divider" aria-hidden="true">·</span>
+        <span class="stats-bar-divider" aria-hidden="true">&middot;</span>
         <div class="stats-bar-item">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           <span><strong>AMFI-registered</strong> distributor</span>
         </div>
-        <span class="stats-bar-divider" aria-hidden="true">·</span>
+        <span class="stats-bar-divider" aria-hidden="true">&middot;</span>
         <div class="stats-bar-item">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           <span><strong>Zero</strong> selling pressure</span>
         </div>
-        <span class="stats-bar-divider" aria-hidden="true">·</span>
+        <span class="stats-bar-divider" aria-hidden="true">&middot;</span>
         <div class="stats-bar-item">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           <span>Response within <strong>1 working day</strong></span>
@@ -113,7 +116,7 @@
     </div>
 
     <!-- Header -->
-    <header>
+    <header id="siteHeader">
         <div class="header-container">
             <a href="/" class="logo-section">
                 <img src="logo.jpg" alt="Nanda Financial Services Logo" width="44" height="44" loading="eager">
@@ -168,7 +171,7 @@
                     <span>AMFI-registered Mutual Fund Distributor &middot; ARN 332725</span>
                 </div>
 
-                <h1>Free Mutual Fund Portfolio Review</h1>
+                <h1>Free Mutual Fund<br><em>Portfolio Review</em></h1>
 
                 <p class="hero-subtitle">
                     Understand what is working, what overlaps, and where your portfolio may need attention across diversification, costs, risk and goal alignment.
@@ -683,6 +686,15 @@
               updateIcon();
             });
           });
+        })();
+
+        /* ── Header scroll shadow ──────────────────────────── */
+        (function(){
+          const hdr = document.getElementById('siteHeader');
+          if (!hdr) return;
+          window.addEventListener('scroll', function(){
+            hdr.classList.toggle('scrolled', window.scrollY > 8);
+          }, { passive: true });
         })();
 
         /* ── Scroll reveal ─────────────────────────────────── */
