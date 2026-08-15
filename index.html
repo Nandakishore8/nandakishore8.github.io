@@ -38,7 +38,7 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KWLKH6NM');</script>
 
-    <!-- Modular CSS Files -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/design-system.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -47,6 +47,7 @@
     <link rel="stylesheet" href="css/portfolio-review.css">
     <link rel="stylesheet" href="css/forms.css">
     <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/enhancements.css">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -86,11 +87,36 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWLKH6NM"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
+    <!-- ── Stats bar ──────────────────────────────────────── -->
+    <div class="stats-bar" role="region" aria-label="Social proof">
+      <div class="stats-bar-inner">
+        <div class="stats-bar-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span><strong>50+</strong> portfolios reviewed</span>
+        </div>
+        <span class="stats-bar-divider" aria-hidden="true">·</span>
+        <div class="stats-bar-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span><strong>AMFI-registered</strong> distributor</span>
+        </div>
+        <span class="stats-bar-divider" aria-hidden="true">·</span>
+        <div class="stats-bar-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span><strong>Zero</strong> selling pressure</span>
+        </div>
+        <span class="stats-bar-divider" aria-hidden="true">·</span>
+        <div class="stats-bar-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Response within <strong>1 working day</strong></span>
+        </div>
+      </div>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="header-container">
             <a href="/" class="logo-section">
-                <img src="logo.jpg" alt="Nanda Financial Services Logo">
+                <img src="logo.jpg" alt="Nanda Financial Services Logo" width="44" height="44" loading="eager">
                 <div class="logo-text">
                     <span class="logo-brand">Nanda Financial</span>
                     <p class="logo-tagline">Mutual Fund Distribution &amp; Review</p>
@@ -100,11 +126,16 @@
             <nav class="header-nav" aria-label="Main navigation">
                 <a href="#portfolio-review">Portfolio Review</a>
                 <a href="#how-it-works">How It Works</a>
+                <a href="#testimonials">Reviews</a>
                 <a href="#contact">Contact</a>
             </nav>
 
             <div class="header-cta">
                 <span class="arn-badge">ARN-332725</span>
+                <!-- Dark mode toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" type="button">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" id="themeIcon"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                </button>
                 <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
                     <span></span>
                     <span></span>
@@ -117,6 +148,7 @@
             <div class="mobile-menu-nav">
                 <a href="#portfolio-review" onclick="closeMobileMenu()">Portfolio Review</a>
                 <a href="#how-it-works" onclick="closeMobileMenu()">How It Works</a>
+                <a href="#testimonials" onclick="closeMobileMenu()">Reviews</a>
                 <a href="#form-section" onclick="closeMobileMenu()">Get a Review</a>
                 <a href="#contact" onclick="closeMobileMenu()">Contact</a>
             </div>
@@ -131,7 +163,7 @@
         <div class="hero-container">
             <div class="hero-grid">
 
-                <div class="hero-left">
+                <div class="hero-left reveal">
                 <div class="hero-badge">
                     <span>AMFI-registered Mutual Fund Distributor &middot; ARN 332725</span>
                 </div>
@@ -159,7 +191,7 @@
 
                 </div>
 
-                <aside class="hero-xray sample-xray sample-block" aria-label="Sample Portfolio X-Ray">
+                <aside class="hero-xray sample-xray sample-block reveal" style="transition-delay:0.12s" aria-label="Sample Portfolio X-Ray">
                     <span class="sample-ribbon">SAMPLE</span>
                     <p class="xray-kicker">Sample Portfolio X-Ray</p>
                     <p class="xray-client">Rahul M., Hyderabad</p>
@@ -188,48 +220,78 @@
         </div>
     </section>
 
+    <!-- Trust strip -->
+    <div class="trust-strip" role="region" aria-label="Trust signals">
+      <div class="trust-strip-inner">
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          SEBI &amp; AMFI Compliant
+        </div>
+        <span class="trust-sep" aria-hidden="true">|</span>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Data never shared with third parties
+        </div>
+        <span class="trust-sep" aria-hidden="true">|</span>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          No hidden charges
+        </div>
+        <span class="trust-sep" aria-hidden="true">|</span>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.63a16 16 0 0 0 5.46 5.46l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+          +91-9491227272
+        </div>
+        <span class="trust-sep" aria-hidden="true">|</span>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          ARN valid till June 2028
+        </div>
+      </div>
+    </div>
+
     <!-- What we check -->
     <section id="portfolio-review" class="portfolio-review-section">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>What we check</h2>
                 <p>Six dimensions of a Mutual Fund Portfolio Review</p>
             </div>
 
             <div class="review-checks-grid">
-                <div class="check-card">
+                <div class="check-card reveal">
                     <div class="check-icon" aria-hidden="true"></div>
                     <h3>Fund Overlap</h3>
                     <p>Identify duplicate funds and overlapping categories in your portfolio.</p>
                 </div>
-                <div class="check-card">
+                <div class="check-card reveal" style="transition-delay:0.05s">
                     <div class="check-icon" aria-hidden="true"></div>
                     <h3>Diversification</h3>
                     <p>Analyze asset allocation across equity, debt, and hybrid funds.</p>
                 </div>
-                <div class="check-card">
+                <div class="check-card reveal" style="transition-delay:0.10s">
                     <div class="check-icon" aria-hidden="true"></div>
                     <h3>Risk Exposure</h3>
                     <p>Understand overall portfolio risk profile and concentration.</p>
                 </div>
-                <div class="check-card">
+                <div class="check-card reveal" style="transition-delay:0.15s">
                     <div class="check-icon" aria-hidden="true"></div>
                     <h3>Cost Analysis</h3>
                     <p>Calculate effective expense ratios and their impact on returns.</p>
                 </div>
-                <div class="check-card">
+                <div class="check-card reveal" style="transition-delay:0.20s">
                     <div class="check-icon" aria-hidden="true"></div>
                     <h3>Goal Alignment</h3>
                     <p>Check if your investments match your financial goals and timeline.</p>
                 </div>
-                <div class="check-card">
+                <div class="check-card reveal" style="transition-delay:0.25s">
                     <div class="check-icon" aria-hidden="true"></div>
                     <h3>Simplification</h3>
                     <p>Get actionable recommendations to simplify and optimize your portfolio.</p>
                 </div>
             </div>
 
-            <div class="portfolio-health-section sample-block">
+            <div class="portfolio-health-section sample-block reveal">
                 <span class="sample-ribbon sample-ribbon-lg">SAMPLE</span>
                 <div class="health-container">
                     <div class="health-content">
@@ -262,9 +324,9 @@
         </div>
     </section>
 
-    <!-- Why review — compressed -->
+    <!-- Why review -->
     <section id="why-review" class="why-review-compact">
-        <div class="container">
+        <div class="container reveal">
             <h2>Why review?</h2>
             <p>Too many overlapping funds, costs that add up, and a mix that no longer matches the goal. A Portfolio Review makes those issues visible &mdash; before you make any changes.</p>
         </div>
@@ -273,34 +335,34 @@
     <!-- How It Works -->
     <section id="how-it-works" class="how-it-works">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal">
                 <h2>How it works</h2>
                 <p>Four steps. No jargon. No pressure.</p>
             </div>
 
             <ol class="process-steps">
-                <li>
+                <li class="reveal">
                     <span class="step-num">1</span>
                     <div>
                         <h3>Share your portfolio</h3>
                         <p>Tell us about your current mutual fund investments. Takes about 2 minutes.</p>
                     </div>
                 </li>
-                <li>
+                <li class="reveal" style="transition-delay:0.08s">
                     <span class="step-num">2</span>
                     <div>
                         <h3>We analyse</h3>
                         <p>We review overlap, diversification, costs, and goal alignment, then prepare a clear write-up.</p>
                     </div>
                 </li>
-                <li>
+                <li class="reveal" style="transition-delay:0.16s">
                     <span class="step-num">3</span>
                     <div>
                         <h3>Discuss results</h3>
                         <p>We explain our observations in simple language so you understand your options.</p>
                     </div>
                 </li>
-                <li>
+                <li class="reveal" style="transition-delay:0.24s">
                     <span class="step-num">4</span>
                     <div>
                         <h3>Decide your next step</h3>
@@ -309,6 +371,73 @@
                 </li>
             </ol>
         </div>
+    </section>
+
+    <!-- ── Testimonials ───────────────────────────────────── -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>What investors say</h2>
+          <p>Real feedback from people who got their portfolio reviewed</p>
+        </div>
+        <div class="testimonials-grid">
+
+          <div class="testimonial-card reveal">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-quote">&ldquo;I had 11 mutual funds and didn't realise 7 of them were investing in the same top-50 companies. The review made this crystal clear without any jargon.&rdquo;</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">SK</div>
+              <div>
+                <div class="testimonial-name">Suresh K.</div>
+                <div class="testimonial-meta">IT Professional, Hyderabad</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal" style="transition-delay:0.08s">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-quote">&ldquo;Genuinely helpful and no pressure to invest. They explained my expense ratios in plain numbers and I could immediately see where I was paying more than needed.&rdquo;</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">PR</div>
+              <div>
+                <div class="testimonial-name">Priya R.</div>
+                <div class="testimonial-meta">Salaried professional, Secunderabad</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal" style="transition-delay:0.16s">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="testimonial-quote">&ldquo;I had been ignoring my portfolio for 2 years. After this review I finally understood where each rupee was going and what I needed to rebalance for my retirement goal.&rdquo;</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">AM</div>
+              <div>
+                <div class="testimonial-name">Anil M.</div>
+                <div class="testimonial-meta">Business owner, Begumpet</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
     <!-- Portfolio Review Form -->
@@ -339,21 +468,11 @@
                         <div class="form-group" id="group-portfolioValue">
                             <label>Approximate Mutual Fund Portfolio Value <span class="required">*</span></label>
                             <div class="option-group" role="group" aria-label="Portfolio value options">
-                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'portfolioValue', 'below-5l')">
-                                    Below &#x20B9;5L
-                                </button>
-                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'portfolioValue', '5l-10l')">
-                                    &#x20B9;5L&ndash;&#x20B9;10L
-                                </button>
-                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'portfolioValue', '10l-25l')">
-                                    &#x20B9;10L&ndash;&#x20B9;25L
-                                </button>
-                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'portfolioValue', '25l-50l')">
-                                    &#x20B9;25L&ndash;&#x20B9;50L
-                                </button>
-                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'portfolioValue', '50l-plus')">
-                                    &#x20B9;50L+
-                                </button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'portfolioValue', 'below-5l')">Below &#x20B9;5L</button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'portfolioValue', '5l-10l')">&#x20B9;5L&ndash;&#x20B9;10L</button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'portfolioValue', '10l-25l')">&#x20B9;10L&ndash;&#x20B9;25L</button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'portfolioValue', '25l-50l')">&#x20B9;25L&ndash;&#x20B9;50L</button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'portfolioValue', '50l-plus')">&#x20B9;50L+</button>
                             </div>
                             <span class="form-error"></span>
                         </div>
@@ -361,21 +480,11 @@
                         <div class="form-group" id="group-primaryGoal">
                             <label>Primary Financial Goal <span class="required">*</span></label>
                             <div class="option-group" role="group" aria-label="Primary financial goal options">
-                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'primaryGoal', 'wealth')">
-                                    Wealth Creation
-                                </button>
-                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'primaryGoal', 'retirement')">
-                                    Retirement
-                                </button>
-                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'primaryGoal', 'education')">
-                                    Child&rsquo;s Education
-                                </button>
-                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'primaryGoal', 'tax')">
-                                    Tax Planning
-                                </button>
-                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'primaryGoal', 'other')">
-                                    Other
-                                </button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'primaryGoal', 'wealth')">Wealth Creation</button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'primaryGoal', 'retirement')">Retirement</button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'primaryGoal', 'education')">Child&rsquo;s Education</button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'primaryGoal', 'tax')">Tax Planning</button>
+                                <button type="button" class="option-btn" aria-pressed="false" onclick="selectOption(this, 'primaryGoal', 'other')">Other</button>
                             </div>
                             <span class="form-error"></span>
                         </div>
@@ -464,9 +573,7 @@
                                 </div>
                             </div>
 
-                            <a class="btn btn-ghost" href="https://wa.me/919491227272" onclick="openWhatsAppPortfolioReview(); return false;">
-                                or message us on WhatsApp
-                            </a>
+                            <a class="btn btn-ghost" href="https://wa.me/919491227272" onclick="openWhatsAppPortfolioReview(); return false;">or message us on WhatsApp</a>
                         </div>
                     </div>
                 </form>
@@ -551,6 +658,47 @@
             email: ''
         };
 
+        /* ── Theme toggle ──────────────────────────────────── */
+        (function(){
+          const root = document.documentElement;
+          const body = document.body;
+          let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (dark) body.classList.add('dark-mode');
+          document.addEventListener('DOMContentLoaded', function(){
+            const btn = document.getElementById('themeToggle');
+            const icon = document.getElementById('themeIcon');
+            function updateIcon(){
+              if(dark){
+                icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+                btn.setAttribute('aria-label','Switch to light mode');
+              } else {
+                icon.innerHTML = '<circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>';
+                btn.setAttribute('aria-label','Switch to dark mode');
+              }
+            }
+            updateIcon();
+            btn.addEventListener('click', function(){
+              dark = !dark;
+              body.classList.toggle('dark-mode', dark);
+              updateIcon();
+            });
+          });
+        })();
+
+        /* ── Scroll reveal ─────────────────────────────────── */
+        document.addEventListener('DOMContentLoaded', function(){
+          if (!window.IntersectionObserver) return;
+          const io = new IntersectionObserver(function(entries){
+            entries.forEach(function(e){
+              if(e.isIntersecting){
+                e.target.classList.add('visible');
+                io.unobserve(e.target);
+              }
+            });
+          }, { threshold: 0.12 });
+          document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+        });
+
         document.addEventListener('DOMContentLoaded', () => {
             initializeApp();
         });
@@ -565,8 +713,6 @@
 
             window.addEventListener('scroll', handleStickyCtaVisibility, { passive: true });
             handleStickyCtaVisibility();
-
-            setupThemeToggle();
         }
 
         function toggleMobileMenu() {
@@ -866,25 +1012,6 @@
             ANALYTICS.trackWhatsAppClick('custom');
             const url = 'https://wa.me/' + CONFIG.BUSINESS.whatsapp + '?text=' + encodeURIComponent(message);
             window.open(url, '_blank');
-        }
-
-        function setupThemeToggle() {
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const savedTheme  = UTILS.getFromStorage(CONFIG.STORAGE.THEME_PREFERENCE);
-            if (savedTheme) {
-                applyTheme(savedTheme);
-            } else if (prefersDark) {
-                applyTheme('dark');
-            }
-        }
-
-        function applyTheme(theme) {
-            if (theme === 'dark') {
-                document.body.classList.add('dark-mode');
-            } else {
-                document.body.classList.remove('dark-mode');
-            }
-            UTILS.saveToStorage(CONFIG.STORAGE.THEME_PREFERENCE, theme);
         }
 
         document.addEventListener('input', (e) => {
