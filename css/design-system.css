@@ -133,6 +133,10 @@
     --border-light: #404040;
     --border-medium: #505050;
     --glass: rgba(26, 26, 26, 0.95);
+    --accent: #dcecff;
+    --primary: #3b82f6;
+    --primary-dark: #1d4ed8;
+    --secondary: #fbbf24;
     --green: #3ecf8e;
     --green-dark: #2ea36f;
     --green-light: #12301f;

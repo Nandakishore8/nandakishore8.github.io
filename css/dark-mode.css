@@ -85,6 +85,27 @@ body.dark-mode footer {
   background: #071a35;
 }
 
+/* OS-level dark preference fallback (when the .dark-mode class isn't applied) */
+@media (prefers-color-scheme: dark) {
+  body:not(.light-mode) .hero {
+    --hero-bg: #0d1726;
+    --hero-text: #d8e4f1;
+    --hero-accent: #6ee7b7;
+    background: radial-gradient(circle at 88% 18%, rgba(59, 130, 246, 0.22), transparent 24rem),
+      linear-gradient(135deg, #0d1726 0%, #101d2e 55%, #0a1d39 100%);
+  }
+
+  body:not(.light-mode) footer {
+    background: #071a35;
+  }
+
+  body:not(.light-mode) .hero .btn-primary,
+  body:not(.light-mode) .btn-primary,
+  body:not(.light-mode) .sticky-cta button {
+    color: #ffffff;
+  }
+}
+
 body.dark-mode .xray-flag-warn {
   background: rgba(255, 165, 0, 0.12);
   color: #ffb84d;
