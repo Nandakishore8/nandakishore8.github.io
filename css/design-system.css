@@ -18,6 +18,10 @@
   --success: #00C853;           /* Growth Green */
   --success-dark: #008c35;      /* Darker green */
   --success-light: #e8f5e9;     /* Light background */
+
+  --green: #157A4D;             /* Restrained Financial Green - primary CTAs */
+  --green-dark: #0F5C3A;        /* CTA hover */
+  --green-light: #E7F4EC;       /* CTA tint background */
   
   --warning: #FFA500;           /* Warning Orange */
   --warning-light: #fff3e0;     /* Light background */
@@ -129,6 +133,9 @@
     --border-light: #404040;
     --border-medium: #505050;
     --glass: rgba(26, 26, 26, 0.95);
+    --green: #3ecf8e;
+    --green-dark: #2ea36f;
+    --green-light: #12301f;
   }
 }
 

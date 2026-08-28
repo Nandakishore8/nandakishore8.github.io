@@ -6,7 +6,6 @@ Allow: /
 Disallow: /private/
 Disallow: /admin/
 Disallow: /*.json$
-Disallow: /*.xml$
 
 # Sitemaps
 Sitemap: https://www.mutualfundreview.in/sitemap.xml

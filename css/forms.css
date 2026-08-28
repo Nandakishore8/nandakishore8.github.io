@@ -103,6 +103,12 @@ label .required {
   color: var(--error);
 }
 
+label .optional {
+  color: var(--text-light);
+  font-weight: var(--fw-normal);
+  text-transform: lowercase;
+}
+
 /* Input Fields */
 input[type='text'],
 input[type='email'],
@@ -236,12 +242,12 @@ textarea {
 }
 
 .btn-next {
-  background-color: var(--primary);
+  background-color: var(--green);
   color: var(--bg-white);
 }
 
 .btn-next:hover:not(:disabled) {
-  background-color: var(--primary-dark);
+  background-color: var(--green-dark);
 }
 
 .btn-back {

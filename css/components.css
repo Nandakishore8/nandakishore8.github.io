@@ -26,15 +26,15 @@
   cursor: not-allowed;
 }
 
-/* Primary Button */
+/* Primary Button — restrained financial green (single dominant conversion color) */
 .btn-primary {
-  background-color: var(--primary);
+  background-color: var(--green);
   color: var(--bg-white);
   box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover:not(:disabled) {
-  background-color: var(--primary-dark);
+  background-color: var(--green-dark);
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
@@ -507,6 +507,25 @@ input[type='radio'] {
 .tooltip:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
+}
+
+/* ========== SAMPLE GAUGES ========== */
+
+/* Base gauge — dimensions live here; color variants live in hero.css / portfolio-review.css */
+.gauge {
+  display: block;
+  width: 100%;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--bg-light);
+  overflow: hidden;
+}
+
+.gauge-bar {
+  display: block;
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
 }
 
 /* ========== TAGS ========== */
