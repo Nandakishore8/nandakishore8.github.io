@@ -376,6 +376,102 @@
   margin: var(--space-sm) 0;
 }
 
+/* Donut chart (hero panel) */
+.xray-donut-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-top: var(--space-sm);
+}
+
+.xray-donut {
+  width: 96px;
+  height: 96px;
+  flex: 0 0 96px;
+  transform: rotate(-90deg);
+}
+
+.donut-ring,
+.donut-seg {
+  fill: none;
+  stroke-width: 16;
+}
+
+.donut-ring {
+  stroke: var(--border-light);
+}
+
+.donut-equity { stroke: var(--accent); }
+.donut-debt   { stroke: var(--primary); }
+.donut-hybrid { stroke: var(--secondary); }
+
+.xray-donut-wrap .allocation-legend {
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+/* Floating depth card (hero) */
+.hero-grid {
+  position: relative;
+}
+
+.hero-float {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--text-xs);
+  color: var(--text-medium);
+  z-index: 2;
+}
+
+.hero-float strong {
+  color: var(--accent);
+}
+
+.hero-float-alert {
+  bottom: 22px;
+  left: -16px;
+  transform: rotate(-2deg);
+}
+
+@media (min-width: 1024px) {
+  .hero-float-alert {
+    left: -28px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero-float {
+    display: none;
+  }
+}
+
+/* Scroll reveal (progressive enhancement — applied via JS only) */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 .xray-metrics {
   list-style: none;
   padding: 0;

@@ -38,16 +38,16 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KWLKH6NM');</script>
 
-    <!-- Modular CSS Files (v=20260829d: Portfolio X-Ray redesign cache-bust) -->
-    <link rel="stylesheet" href="css/design-system.css?v=20260829d">
-    <link rel="stylesheet" href="css/components.css?v=20260829d">
-    <link rel="stylesheet" href="css/layout.css?v=20260829d">
-    <link rel="stylesheet" href="css/navigation.css?v=20260829d">
-    <link rel="stylesheet" href="css/hero.css?v=20260829d">
-    <link rel="stylesheet" href="css/portfolio-review.css?v=20260829d">
-    <link rel="stylesheet" href="css/sections.css?v=20260829d">
-    <link rel="stylesheet" href="css/forms.css?v=20260829d">
-    <link rel="stylesheet" href="css/dark-mode.css?v=20260829d">
+    <!-- Modular CSS Files (v=20260829e: Portfolio X-Ray redesign cache-bust) -->
+    <link rel="stylesheet" href="css/design-system.css?v=20260829e">
+    <link rel="stylesheet" href="css/components.css?v=20260829e">
+    <link rel="stylesheet" href="css/layout.css?v=20260829e">
+    <link rel="stylesheet" href="css/navigation.css?v=20260829e">
+    <link rel="stylesheet" href="css/hero.css?v=20260829e">
+    <link rel="stylesheet" href="css/portfolio-review.css?v=20260829e">
+    <link rel="stylesheet" href="css/sections.css?v=20260829e">
+    <link rel="stylesheet" href="css/forms.css?v=20260829e">
+    <link rel="stylesheet" href="css/dark-mode.css?v=20260829e">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -273,16 +273,19 @@
 
                     <div class="xray-alloc">
                         <p class="xray-kicker">Asset Allocation</p>
-                        <div class="allocation-bar" role="img" aria-label="Illustrative asset allocation: Equity 72 percent, Debt 18 percent, Hybrid 10 percent">
-                            <span class="allocation-seg allocation-seg-equity" style="width:72%"></span>
-                            <span class="allocation-seg allocation-seg-debt" style="width:18%"></span>
-                            <span class="allocation-seg allocation-seg-hybrid" style="width:10%"></span>
+                        <div class="xray-donut-wrap">
+                            <svg class="xray-donut" viewBox="0 0 100 100" role="img" aria-label="Illustrative allocation: Equity 72 percent, Debt 18 percent, Hybrid 10 percent">
+                                <circle class="donut-ring" cx="50" cy="50" r="40"/>
+                                <circle class="donut-seg donut-equity" cx="50" cy="50" r="40" stroke-dasharray="180.96 251.33" stroke-dashoffset="0"/>
+                                <circle class="donut-seg donut-debt" cx="50" cy="50" r="40" stroke-dasharray="45.24 251.33" stroke-dashoffset="-180.96"/>
+                                <circle class="donut-seg donut-hybrid" cx="50" cy="50" r="40" stroke-dasharray="25.13 251.33" stroke-dashoffset="-226.2"/>
+                            </svg>
+                            <ul class="allocation-legend">
+                                <li class="legend-equity">Equity 72%</li>
+                                <li class="legend-debt">Debt 18%</li>
+                                <li class="legend-hybrid">Hybrid 10%</li>
+                            </ul>
                         </div>
-                        <ul class="allocation-legend">
-                            <li class="legend-equity">Equity 72%</li>
-                            <li class="legend-debt">Debt 18%</li>
-                            <li class="legend-hybrid">Hybrid 10%</li>
-                        </ul>
                     </div>
 
                     <ul class="xray-metrics">
@@ -310,6 +313,11 @@
 
                     <p class="xray-note">Illustrative example &mdash; not an analysis of any real portfolio.</p>
                 </aside>
+
+                <div class="hero-float hero-float-alert" aria-hidden="true">
+                    <span class="xm-chip xm-warn">&#9888; Overlap</span>
+                    <span><strong>7 overlapping funds</strong> detected in sample</span>
+                </div>
 
             </div>
         </div>
@@ -1421,6 +1429,35 @@
             handleStickyCtaVisibility();
 
             setupThemeToggle();
+
+            setupScrollReveal();
+        }
+
+        /* Subtle scroll reveal — progressive enhancement; content visible without JS */
+        function setupScrollReveal() {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            if (!('IntersectionObserver' in window)) return;
+
+            const targets = document.querySelectorAll(
+                '.problem-grid, .problem-punchline, .demo-panel, .review-checks-grid, ' +
+                '.who-for-grid, .notfor-grid, .report-viewer, .report-cta, .ba-grid, ' +
+                '.dvr-table-wrap, .objections-grid, .faq-list, .form-container'
+            );
+            if (!targets.length) return;
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+            targets.forEach(el => {
+                el.classList.add('reveal');
+                io.observe(el);
+            });
         }
 
         function toggleMobileMenu() {

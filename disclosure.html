@@ -11,24 +11,16 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/dark-mode.css">
-    <style>
-        .legal-content { max-width: 900px; margin: 0 auto; padding: var(--space-2xl) var(--space-md); }
-        .legal-content h2 { margin-top: var(--space-2xl); margin-bottom: var(--space-lg); color: var(--primary); }
-        .legal-content h3 { margin-top: var(--space-lg); margin-bottom: var(--space-md); color: var(--accent); }
-        .legal-content p { margin-bottom: var(--space-md); line-height: var(--line-relaxed); }
-        .legal-content ul { margin-left: var(--space-lg); margin-bottom: var(--space-md); }
-        .legal-content li { margin-bottom: var(--space-sm); }
-        .disclosure-box { background: var(--primary-light); border-left: 4px solid var(--primary); padding: var(--space-lg); border-radius: var(--radius-md); margin: var(--space-lg) 0; }
-    </style>
+    <link rel="stylesheet" href="css/legal.css?v=20260829e">
 </head>
 <body>
-    <header>
+    <header class="legal-header">
         <div class="header-container">
             <a href="index.html" class="logo-section">
                 <img src="logo.jpg" alt="Nanda Financial Services Logo" style="width: 48px; height: 48px;">
                 <div class="logo-text">
-                    <h1>Nanda Financial</h1>
-                    <p>Mutual Fund Distribution & Review</p>
+                    <span class="logo-brand">Nanda Financial</span>
+                    <p class="logo-tagline">Mutual Fund Distribution &amp; Review</p>
                 </div>
             </a>
             <nav class="header-nav">
@@ -42,7 +34,7 @@
         </div>
     </header>
 
-    <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: var(--bg-white); padding: var(--space-3xl) var(--space-md); text-align: center;">
+    <section class="legal-hero">
         <h1>Disclosure & Commission Information</h1>
         <p>Transparent Information About Our Operations</p>
     </section>
@@ -171,16 +163,14 @@
         </p>
     </div>
 
-    <footer style="background: var(--accent); color: var(--bg-white); padding: var(--space-2xl) var(--space-md); text-align: center; margin-top: var(--space-3xl);">
-        <p style="margin: 0 0 var(--space-md) 0;">
-            <a href="index.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Home</a> |
-            <a href="privacy-policy.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Privacy Policy</a> |
-            <a href="terms.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Terms of Service</a> |
-            <a href="disclosure.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Disclosures</a>
+    <footer class="legal-footer">
+        <p class="lf-links">
+            <a href="index.html">Home</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="disclosure.html">Disclosures</a>
         </p>
-        <p style="margin: 0; font-size: var(--text-xs); color: rgba(255, 255, 255, 0.7);">
-            © 2026 Nanda Financial Services. All rights reserved. | ARN: 332725 | AMFI-registered Mutual Fund Distributor
-        </p>
+        <p class="lf-note">&copy; 2026 Nanda Financial Services. All rights reserved. | ARN: 332725 | AMFI-registered Mutual Fund Distributor</p>
     </footer>
 </body>
 </html>
