@@ -38,16 +38,16 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KWLKH6NM');</script>
 
-    <!-- Modular CSS Files (v=20260829b: Portfolio X-Ray redesign cache-bust) -->
-    <link rel="stylesheet" href="css/design-system.css?v=20260829b">
-    <link rel="stylesheet" href="css/components.css?v=20260829b">
-    <link rel="stylesheet" href="css/layout.css?v=20260829b">
-    <link rel="stylesheet" href="css/navigation.css?v=20260829b">
-    <link rel="stylesheet" href="css/hero.css?v=20260829b">
-    <link rel="stylesheet" href="css/portfolio-review.css?v=20260829b">
-    <link rel="stylesheet" href="css/sections.css?v=20260829b">
-    <link rel="stylesheet" href="css/forms.css?v=20260829b">
-    <link rel="stylesheet" href="css/dark-mode.css?v=20260829b">
+    <!-- Modular CSS Files (v=20260829c: Portfolio X-Ray redesign cache-bust) -->
+    <link rel="stylesheet" href="css/design-system.css?v=20260829c">
+    <link rel="stylesheet" href="css/components.css?v=20260829c">
+    <link rel="stylesheet" href="css/layout.css?v=20260829c">
+    <link rel="stylesheet" href="css/navigation.css?v=20260829c">
+    <link rel="stylesheet" href="css/hero.css?v=20260829c">
+    <link rel="stylesheet" href="css/portfolio-review.css?v=20260829c">
+    <link rel="stylesheet" href="css/sections.css?v=20260829c">
+    <link rel="stylesheet" href="css/forms.css?v=20260829c">
+    <link rel="stylesheet" href="css/dark-mode.css?v=20260829c">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -287,15 +287,23 @@
                     <ul class="xray-metrics">
                         <li>
                             <span class="xm-label">Overlap</span>
-                            <span class="xm-chip xm-warn">&#9888; Areas requiring attention</span>
+                            <span class="xm-chip xm-warn">&#9888; Attention</span>
+                        </li>
+                        <li>
+                            <span class="xm-label">Diversification</span>
+                            <span class="xm-chip xm-ok">&#10003; Broad</span>
                         </li>
                         <li>
                             <span class="xm-label">Risk</span>
                             <span class="xm-chip">Moderate</span>
                         </li>
                         <li>
-                            <span class="xm-label">Cost</span>
-                            <span class="xm-chip xm-warn">Review required</span>
+                            <span class="xm-label">Costs</span>
+                            <span class="xm-chip xm-warn">&#9888; Review</span>
+                        </li>
+                        <li>
+                            <span class="xm-label">Goal Alignment</span>
+                            <span class="xm-chip xm-ok">&#10003; Aligned</span>
                         </li>
                     </ul>
 
@@ -725,13 +733,26 @@
                 <p>A structured report &mdash; then a discussion, in plain language.</p>
             </div>
 
-            <div class="report-grid">
-                <div class="report-card">
-                    <p class="report-kicker">Page 1 of 5</p>
-                    <h3>Portfolio Overview</h3>
+            <div class="report-viewer sample-block">
+                <span class="sample-ribbon">ILLUSTRATIVE SAMPLE</span>
+
+                <div class="demo-tabs report-tabs" role="tablist" aria-label="Sample report pages">
+                    <button type="button" class="demo-tab active" id="rtab-overview" role="tab" aria-selected="true" aria-controls="rpage-overview" onclick="switchReportTab('overview', this)">1 &middot; Overview</button>
+                    <button type="button" class="demo-tab" id="rtab-overlap" role="tab" aria-selected="false" aria-controls="rpage-overlap" tabindex="-1" onclick="switchReportTab('overlap', this)">2 &middot; Overlap</button>
+                    <button type="button" class="demo-tab" id="rtab-risk" role="tab" aria-selected="false" aria-controls="rpage-risk" tabindex="-1" onclick="switchReportTab('risk', this)">3 &middot; Risk</button>
+                    <button type="button" class="demo-tab" id="rtab-costs" role="tab" aria-selected="false" aria-controls="rpage-costs" tabindex="-1" onclick="switchReportTab('costs', this)">4 &middot; Costs</button>
+                    <button type="button" class="demo-tab" id="rtab-goals" role="tab" aria-selected="false" aria-controls="rpage-goals" tabindex="-1" onclick="switchReportTab('goals', this)">5 &middot; Goals</button>
+                </div>
+
+                <div id="rpage-overview" class="demo-view active" role="tabpanel" aria-labelledby="rtab-overview">
+                    <div class="report-page-head">
+                        <p class="report-kicker">Page 1 of 5</p>
+                        <h3>Portfolio Overview</h3>
+                    </div>
                     <div class="report-score">
                         <span class="report-score-num">78</span>
                         <span class="report-score-den">/ 100</span>
+                        <span class="report-score-note">Portfolio Health</span>
                     </div>
                     <ul class="report-bars">
                         <li>
@@ -743,42 +764,104 @@
                             <span class="gauge" aria-hidden="true"><span class="gauge-bar" style="width:50%"></span></span>
                         </li>
                         <li>
-                            <span>Cost</span>
+                            <span>Risk balance</span>
+                            <span class="gauge" aria-hidden="true"><span class="gauge-bar" style="width:74%"></span></span>
+                        </li>
+                        <li>
+                            <span>Cost efficiency</span>
                             <span class="gauge" aria-hidden="true"><span class="gauge-bar" style="width:60%"></span></span>
                         </li>
                     </ul>
-                    <p style="margin-top: var(--space-md); margin-bottom: 0;">One score summarising how the pieces fit together.</p>
+                    <p class="demo-insight">One score summarising how the pieces fit together &mdash; plus a dimension-by-dimension breakdown on the pages that follow.</p>
                 </div>
 
-                <div class="report-card">
-                    <p class="report-kicker">Page 2 of 5</p>
-                    <h3>Fund Overlap</h3>
-                    <p class="report-stat">7 areas</p>
-                    <p>requiring attention &mdash; funds holding substantially the same stocks, so risk may be duplicated rather than spread.</p>
-                </div>
-
-                <div class="report-card">
-                    <p class="report-kicker">Page 3 of 5</p>
-                    <h3>Risk &amp; Allocation</h3>
-                    <div class="check-visual" style="margin-bottom: var(--space-md);" aria-hidden="true">
-                        <span class="allocation-bar cv-bar"><span class="allocation-seg allocation-seg-equity" style="width:72%"></span><span class="allocation-seg allocation-seg-debt" style="width:18%"></span><span class="allocation-seg allocation-seg-hybrid" style="width:10%"></span></span>
+                <div id="rpage-overlap" class="demo-view" role="tabpanel" aria-labelledby="rtab-overlap" hidden>
+                    <div class="report-page-head">
+                        <p class="report-kicker">Page 2 of 5</p>
+                        <h3>Fund Overlap</h3>
                     </div>
-                    <p>Equity-heavy mix with concentration flagged &mdash; growth-oriented, but less spread than the fund count suggests.</p>
+                    <div class="demo-flow">
+                        <div class="demo-flow-col">
+                            <p class="xray-kicker">You own</p>
+                            <span class="fund-chip">Fund A</span>
+                            <span class="fund-chip">Fund B</span>
+                            <span class="fund-chip">Fund C</span>
+                        </div>
+                        <div class="demo-flow-arrow" aria-hidden="true">&rarr;</div>
+                        <div class="demo-flow-col">
+                            <p class="xray-kicker">Underlying</p>
+                            <div class="shared-box">Shared holdings<span>Similar stocks appearing across funds</span></div>
+                        </div>
+                        <div class="demo-flow-arrow" aria-hidden="true">&rarr;</div>
+                        <div class="demo-flow-col">
+                            <p class="xray-kicker">Finding</p>
+                            <div class="shared-box shared-box-warn">7 areas<span>requiring attention</span></div>
+                        </div>
+                    </div>
+                    <p class="demo-insight">Illustrative: multiple funds can create overlapping exposure even when their names look different.</p>
                 </div>
 
-                <div class="report-card">
-                    <p class="report-kicker">Page 4 of 5</p>
-                    <h3>Cost Analysis</h3>
-                    <p class="report-stat">&#8776;1.9%</p>
-                    <p>illustrative blended expense ratio &mdash; above typical category averages, and worth understanding over a multi-year horizon.</p>
+                <div id="rpage-risk" class="demo-view" role="tabpanel" aria-labelledby="rtab-risk" hidden>
+                    <div class="report-page-head">
+                        <p class="report-kicker">Page 3 of 5</p>
+                        <h3>Risk &amp; Allocation</h3>
+                    </div>
+                    <div class="risk-rows">
+                        <div class="risk-row">
+                            <span class="risk-label">Equity</span>
+                            <span class="risk-bar" aria-hidden="true"><span class="risk-bar-fill" style="width:72%"></span></span>
+                            <span class="risk-value">72%</span>
+                        </div>
+                        <div class="risk-row">
+                            <span class="risk-label">Debt</span>
+                            <span class="risk-bar" aria-hidden="true"><span class="risk-bar-fill risk-fill-debt" style="width:18%"></span></span>
+                            <span class="risk-value">18%</span>
+                        </div>
+                        <div class="risk-row">
+                            <span class="risk-label">Hybrid</span>
+                            <span class="risk-bar" aria-hidden="true"><span class="risk-bar-fill risk-fill-hybrid" style="width:10%"></span></span>
+                            <span class="risk-value">10%</span>
+                        </div>
+                    </div>
+                    <p class="demo-insight">Illustrative: a growth-oriented mix with concentration flagged &mdash; less spread than the fund count suggests.</p>
                 </div>
 
-                <div class="report-card">
-                    <p class="report-kicker">Page 5 of 5</p>
-                    <h3>Goal Alignment</h3>
-                    <p class="report-stat">2 of 5</p>
-                    <p>illustrative goals clearly matched &mdash; the remaining areas are discussed against time horizons, with no obligation to act.</p>
+                <div id="rpage-costs" class="demo-view" role="tabpanel" aria-labelledby="rtab-costs" hidden>
+                    <div class="report-page-head">
+                        <p class="report-kicker">Page 4 of 5</p>
+                        <h3>Cost Analysis</h3>
+                    </div>
+                    <div class="risk-rows">
+                        <div class="risk-row">
+                            <span class="risk-label">Illustrative &mdash; higher cost</span>
+                            <span class="risk-bar" aria-hidden="true"><span class="risk-bar-fill risk-fill-warn" style="width:82%"></span></span>
+                            <span class="risk-value">&#8776;&#8377;19k / yr*</span>
+                        </div>
+                        <div class="risk-row">
+                            <span class="risk-label">Illustrative &mdash; lower cost</span>
+                            <span class="risk-bar" aria-hidden="true"><span class="risk-bar-fill risk-fill-ok" style="width:48%"></span></span>
+                            <span class="risk-value">&#8776;&#8377;11k / yr*</span>
+                        </div>
+                    </div>
+                    <p class="demo-insight">*On a &#8377;10L portfolio at assumed average expense ratios of 1.9% vs 1.1% &mdash; a simplified illustration of cost drag, not a comparison of actual funds or a prediction of returns.</p>
                 </div>
+
+                <div id="rpage-goals" class="demo-view" role="tabpanel" aria-labelledby="rtab-goals" hidden>
+                    <div class="report-page-head">
+                        <p class="report-kicker">Page 5 of 5</p>
+                        <h3>Goal Alignment</h3>
+                    </div>
+                    <div class="goal-chain">
+                        <div class="goal-step"><span class="gs-label">Goal</span><span class="gs-value">Child&rsquo;s education</span></div>
+                        <div class="goal-arrow" aria-hidden="true">&darr;</div>
+                        <div class="goal-step"><span class="gs-label">Time Horizon</span><span class="gs-value">~9 years</span></div>
+                        <div class="goal-arrow" aria-hidden="true">&darr;</div>
+                        <div class="goal-step"><span class="gs-label">Alignment</span><span class="gs-value">Structure reviewed against horizon</span></div>
+                    </div>
+                    <p class="demo-insight">Illustrative: each goal is checked against its time horizon, with observations &mdash; not obligations &mdash; to act.</p>
+                </div>
+
+                <p class="showcase-note">Illustrative sample &mdash; not investment advice. Actual reports are prepared from the portfolio you share.</p>
             </div>
 
             <div class="report-cta">
@@ -939,7 +1022,7 @@
                 <form id="portfolioForm" onsubmit="submitPortfolioForm(event)">
 
                     <div id="step-1" class="form-step active">
-                        <h3>Your Portfolio</h3>
+                        <h3>Start Your Portfolio X-Ray</h3>
                         <p>Two quick questions to get started &mdash; fund details can wait until the review</p>
 
                         <div class="form-group" id="group-portfolioValue">
@@ -1661,6 +1744,46 @@
             const target = tabs[next];
             if (target) {
                 switchXrayTab(target.id.replace('tab-', ''), target);
+                target.focus();
+            }
+        });
+
+        /* ========== SAMPLE REPORT VIEWER TABS ========== */
+
+        function switchReportTab(pageName, btn) {
+            ANALYTICS.trackCtaClicked('report_page_tab', 'sample_report', pageName);
+
+            document.querySelectorAll('.report-tabs .demo-tab').forEach(t => {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
+                t.setAttribute('tabindex', '-1');
+            });
+            document.querySelectorAll('[id^="rpage-"]').forEach(v => {
+                v.classList.remove('active');
+                v.setAttribute('hidden', '');
+            });
+
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+            btn.setAttribute('tabindex', '0');
+
+            const view = document.getElementById('rpage-' + pageName);
+            if (view) {
+                view.classList.add('active');
+                view.removeAttribute('hidden');
+            }
+        }
+
+        document.querySelector('.report-tabs')?.addEventListener('keydown', (e) => {
+            if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+            const tabs = Array.from(document.querySelectorAll('.report-tabs .demo-tab'));
+            const current = tabs.findIndex(t => t.classList.contains('active'));
+            const next = e.key === 'ArrowRight'
+                ? (current + 1) % tabs.length
+                : (current - 1 + tabs.length) % tabs.length;
+            const target = tabs[next];
+            if (target) {
+                switchReportTab(target.id.replace('rtab-', ''), target);
                 target.focus();
             }
         });
